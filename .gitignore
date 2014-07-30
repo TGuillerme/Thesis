@@ -1,0 +1,45 @@
+
+# Compiled source #
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# LaTeX #
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.fff
+*.lof
+*.lot
+*.out
+*.toc
+*.ttt
+*.fdb_latexmk
+
+# beamer
+*.nav
+*.snm
+
+# OS generated files #
+*.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# R #
+*.Rhistory
+*.Rapp.history
+
+# *.\#*
+# \#*\#
+
+ignore/
+*.Rcheck/
+
+#Example folders
+Thesis-template/
+Thesis-Sive/
