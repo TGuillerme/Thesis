@@ -1,0 +1,169 @@
+\chapter{Are vulture restaurants needed to sustain the densest breeding population of the African White-backed Vulture?}
+\label{chap:pdp}
+%\thesischapter{Are vulture restaurants needed to sustain the densest breeding population of the African White-backed Vulture?}
+\textit{Authors:} Adam Kane, Andrew L Jackson, Ara Monadjem, M Angels Colomer \& Antoni Margalida
+
+%Adam Kane$^1$, Andrew L Jackson$^1$, Ara Monadjem$^2$, M Angels Colomer$^3$ \& Antoni Margalida$^3$
+\vspace{10 mm}
+
+\noindent
+\textit{\uppercase{A}uthor contributions} I conceived the idea, collected the data, incorporated the foraging radius model, helped develop the p-systems model, interpreted the results and wrote the manuscript; AJ gave input on the manuscript; AM supplied some data for carrion availabilty and gave input on the manuscript; MC created the analytical rules for the p-systems model and ran it; AMar developed the p-systems model and commented on drafts of the manuscript.
+
+
+\vspace{10 mm}
+
+\noindent
+\textit{Status:} This manuscript has been published at Animal Conservation.
+\newpage
+
+\noindent
+
+\section{\uppercase{A}bstract}
+
+As obligate scavengers, vultures are entirely dependent on carrion resources. In this study we model the carrion ecology of an ecosystem in Swaziland which is home to the densest breeding population of the African White-backed Vulture (\textit{Gyps africanus}). We collected data on life-history parameters of the avian scavenging guild of the area as well as the potential food available from the ungulate fauna. By using novel Population Dynamics P-Systems we show that, despite a closure of supplementary feeding stations in Swaziland, carrion provided by wild ungulate biomass is currently enough to sustain this vulture species. However, in light of forecasted vulture population increases, food will become limiting. We discuss the significance of the cessation of the supplementary feeding sites which now forces these birds to forage farther afield, endangering them to poisoning events. We put these results in the context of carcass biomass management and suggest conservation actions to secure the viability of vulture populations and the important ecosystem services they provide. We argue that the reestablishment of vulture restaurants in Swaziland would lessen their exposure to hazards outside of protected areas.
+\newpage
+
+\section{\uppercase{I}ntroduction}
+
+Carrion ecology examines the link between the organic material provided by animal carcasses and ecosystem functioning \citep{barton2013role}. Carcasses are an ephemeral resource and among members of the scavenger community, avian carnivores are probably the group with the most evident adaptive traits to utilise carrion \citep{devault2003scavenging, wilson2011scavenging}. Indeed, the \textit{Gyps} vultures are entirely dependent on dead animal biomass \citep{mundy1992vultures}. Given the patchiness of carrion, vultures are under selection pressures to be as energetically conservative as possible in order to exploit such an unpredictable food \citep{ruxton2002modelling,ruxton2004obligate}.
+In sub-Saharan Africa, poisoning, food reduction and habitat loss are key threats to the avian scavenging guild \citep{monadjem2003threatened}. Thus the practice of providing supplementary resources is a common conservation tool \citep{piper1999modelling,piper2005supplementary}. As these 'vulture restaurants' or 'feeding stations' can make carrion more predictable in space and time \citep{oro2008testing}, there are implications for the ecosystem services and foraging behaviour of the species affected \citep{deygout2010impact,margalida2010sanitary,monsarrat2013predictability}. Although these issues have important management and conservation implications, studies focused on the effects of food shortage on vulture species have not been documented until recent times \citep{camina2006griffon,piper2005supplementary,zuberogoitia2010reduced}. \\
+\indent
+The African White-backed Vulture (AWBV) population of Swaziland is an interesting case study for examining the effect of potential fluctuating food availability given that, at an estimated 300 pairs, it represents the densest nesting population of the birds in the world \citep{monadjem2005nesting}. Historical data show that this AWBV population has increased during the latter part of the 20th century, the reasons for this are unclear \citep{monadjem2003threatened}. In one conservation area (Mkhaya) the species founded a nesting population in the 1980s which grew to 15 pairs in the late 90s \citep{monadjem2003threatened}. Supplementary feeding sites have also been established in the country but of seven vulture restaurants that were operational in Swaziland at the turn of the century only one is currently operational \citep{monadjem2003nesting}. These sites would have provided the vultures with a significant proportion (40\%) of their annual food requirements \citep{monadjem2003nesting}. This represents an apparent paradox because the population of vultures has not declined in the face of this reduction in available food. Thus, we hypothesised that there are enough carcasses from wild fauna to sustain the AWBV population of Swaziland. Our aim was to determine the energy balance for these birds and use this information to inform conservation measures.
+In order to address this question we needed to determine where the birds forage, how much carrion they require and how much naturally-occurring food is available to them. 
+
+\section{\uppercase{M}odel building}
+\subsection{Study area and species}
+
+The Hlane-Mlawula-Mbuluzi reserve network in Swaziland (figure \ref{fig:radius_map}) contains the majority (at least 202 nests) of the country's AWBV breeding population \citep{monadjem2005nesting}. Located in the east of Swaziland, the area is characterised as Lowveld Savanna \citep{acocks1988veld} with Acacia providing suitable nesting trees for the vultures \citep{monadjem2005nesting}. The rest of the nesting birds of this species are known from other non-contiguous conservation areas (approx. 12 nests at Mkhaya) and protected cattle ranches (19 nests at the Big Bend Conservancy and 6 at IYSIS) \citep{monadjem2005nesting}. AWBVs appear to actively avoid unprotected government ranches in the country for nesting, but their reason for doing so is unclear \citep{monadjem2005nesting}.  In total, Swaziland is home to six other avian scavenger species (obligate and facultative) which take a considerable portion of their diet as carrion. These are the Cape Vulture (which forages but does not nest in Swaziland), the White-headed Vulture (\textit {Trigonoceps occipitalis}), the Lappet-faced Vulture (\textit {Torgos tracheliotos}), the Marabou Stork (\textit {Leptoptilos crumeniferus}), the Tawny Eagle (\textit {Aquila rapax}) and the Bateleur (\textit {Terathopius ecaudatus}).  The majority of the large ungulates in Swaziland (table \ref{tab:carrion_amount}) also live in this Hlane-Mlawula-Mbuluzi reserve \citep{monadjem2003threatened}.
+
+%--------------------------------------
+% Map with radius
+\begin{figure}[H] %!htb keeps the figure in this section before moving onto the discussion
+	  \centering
+	  \includegraphics[keepaspectratio, totalheight=0.9\textheight]{chap3/figures/radius_map.pdf}
+	    \caption[Map of African White-backed Vulture foraging radius] %This is the label in table of contents
+	    {Foraging radius (45 km) of African White-backed Vultures when they have dependants on the nest. The points represent recorded nesting sites with Hlane as the origin of the circles.  Some major national parks are highlighted. The inset shows the possible feeding range (260 km) when there are no young but the bird is still nesting in Swaziland. }%this is under the figure
+	  \label{fig:radius_map}
+	\end{figure}
+	
+%------------------------------------------	
+
+
+
+
+
+%\subsection{Model parameters for avian scavengers}
+\subsection{Foraging radius}
+We first determined the potential foraging range of the vultures to see which habitats harbouring natural fauna are available to the birds. We used an extension of the central place forager theory known as the foraging radius concept which was developed by Pennycuick \citep{sinclair1995serengeti}. The concept states that every animal is energetically constrained in terms of the spatial range they can cover while foraging \citep{sinclair1995serengeti}. Factors such as cost of movement, basal metabolic rate, presence of dependent young etc. contribute to the overall cost of foraging \citep{ruxton2002modelling}. Many animals must return to a site after they forage every day (as central place foragers). The idea is especially applicable to birds during the breeding season where the origin from which they range is the nest. \\ 
+\indent
+After foraging the adults must return to incubate the egg, relieve their mate or feed their young. The following is a model describing the energy budget of the closely related R{\"u}ppell's vulture (\textit{Gyps rueppellii}) which was used to estimate the foraging radius of that species \citep{ruxton2002modelling}:
+
+\[r = \frac{Qc + Qdt - T(E_{ma}+\frac{E_{mc}}{2})}{2k +\frac{2Qd}{V}}\]
+
+We employed the same model and applied values from our focal species, the African White-backed Vulture where available. Q is the energy density of the carrion (5.2 x 10$^{-6}$ J) \citep{ruxton2002modelling}; c is the bird's crop capacity (1.2 kg) \citep{houston1975digestive}; d is the digestion rate (0.055 kg hour$^{-1}$) \citep{ruxton2002modelling}; T is the foraging cycle (48 hours) and refers to the fact that the parents take turns to forage with one remaining on the nest each day \citep{mundy1992vultures}; k is the flight cost (2.0 J m$^{-1}$) \citep{pennycuick1972soaring}; V is the flight speed (45 km hr$^{-1}$) \citep{pennycuick1972soaring,tucker1988gliding} and r is the foraging radius. If values for the AWBV were not available we used other \textit{Gyps} species as a close approximation, in this case for t, the foraging time (8 hours) \citep{xirouchakis2007seasonal}; E$_{ma}$ and E$_{mc}$ the adult and chick's metabolic rate respectively (24 Watts and 42 Watts) \citep{sinclair1995serengeti,houston1976breeding}. The energy requirements were calculated using hand-reared individuals but \cite{houston1976breeding} argues the costs between wild and captive birds are similar owing to the low energies that are required for flight. \\
+\indent
+During the period of nestling dependency the foraging radius of the breeding vultures is estimated at 45 km (figure \ref{fig:radius_map}). If we remove the cost of provisioning the chick it gives a value of approximately 260 km. Thus the foraging radius the vultures have during the time of nestling dependence restricts them to foraging in the national parks of Swaziland.
+
+
+\subsection{Food requirements of avian scavengers}
+
+The food requirements of individual African White-backed Vultures have been described before \citep{houston1976breeding,mundy1992vultures}. We compiled data on both the adult and nestling energetic requirements for Swaziland using these studies. African White-backed Vultures in Southern Africa typically begin nesting in May-June \citep{monadjem2003nesting} and incubate their single egg for 56-58 days \citep{mundy1992vultures}. Once hatched the altricial chicks are dependent on their parents for a further four months whereupon they fledge from the nest \citep{mundy1992vultures}. The adults are therefore constrained as central place foragers for approximately six months of the year and for four of those they must meet with the additional cost of provisioning the chick. An adult African White-backed Vulture requires approximately 400g of food per day \citep{mundy1992vultures}. The nestling is fed by its parents for approximately four months of the year and consumes a total of 31kg of food during this time (an average of 258g per chick per day) \citep{mundy1992vultures}. Outside of the breeding season adult birds can range away from their typcial nesting sites and may even roost in Kruger National Park (Monadjem pers. comm.). We followed the same approach for the other species in the Swaziland avian scavenging guild (table \ref{tab:food_req}). We also collected data on relevant life history traits such as age at sexual maturity and longevity (table \ref{tab:life_hist}).
+
+\subsection{Model parameters for ungulate carrion}
+To determine carrion availability we collected the most recent ungulate population data covering all of Swaziland \citep{monadjem2003threatened}. Ungulate masses and life history traits such as adult and juvenile mortality were taken from the PanTHERIA database \citep{jones2009pantheria}. We also considered the following: 1) 30\% of ungulate mortality is due to direct predation \citep{sinclair1995serengeti}, this is significant because vultures very rarely feed on predator kills and most large mammalian predators are absent from Swaziland \citep{houston1974food,monadjem2003threatened}; 2) 55\% of a carcass is edible by AWBVs \citep{sinclair1995serengeti} because this species consumes the viscera and soft muscles  \citep{kruuk1967competition}; 3) 15\% of the edible carcass is consumed by invertebrates and bacteria \citep{sinclair1995serengeti}; 4) AWBVs avoid montane environments (cf. Cape Vultures, \textit {Gyps coprotheres}) and as such the ungulate population in the Highveld of Swaziland could be discounted from the total carrion available (A. Monadjem unpubl. data.); 5) the total carrion available annually in Swaziland is not evenly spread throughout the year; the dry season of May to August claims approximately half of the ungulate dead \citep{sinclair1995serengeti}. Therefore, only half of this total is spread over the remaining eight months; and 6) Given that the ungulates are contained within actively managed reserves, where culling takes place, we set the population of each species as constant using the surveyed numbers reported by \cite{monadjem2003threatened}.
+
+
+\subsection{Population dynamics P system model}
+
+Using this information we developed a population dynamics P system (PDP) model \citep{colomer2013population}. This integrated data on food availability, food requirements and population dynamics of the avian scavenging guild and the ungulate populations of Swaziland to determine if carcass availability could meet the demands of the AWBV population over a 20 year period (AWBVs have been recorded as living for 20 years \citep{de2009database}. PDP models are computational methods that are analogous to the machinery of cells \citep{colomer2013population}. 
+
+%------------------------------------------
+% Schematic of P-system cell
+\begin{figure}[H] %!htb keeps the figure in this section before moving onto the discussion
+	  \centering
+	  \includegraphics{chap3/figures/psystem}
+	    \caption[Schematic of P-system cell] %This is the label in table of contents
+	    {Schematic of P-system cell showing a)the cell and its components b) the hierarchy of the membrane structure and c) how this structure is written analytically. Figure is taken from \cite{colomer2013population}.}%this is under the figure
+	  \label{fig:psystem}
+	\end{figure}
+	
+%------------------------------------------	
+
+
+The analogy of a PDP system to a real ecosystem has been drawn before \citep{colomer2013population,colomer2011bio,margalida2011can} and serves well to illustrate the intuition behind this relatively new method. The cells of the model correspond to the physical space of the environment (figure \ref{fig:psystem}). Animals (which, along with things like resources, are represented by model 'objects') will feed, reproduce, develop etc. within an environment which is accounted for by a set of mathematical rules describing these behaviours in the model. Just as animals can move between different areas when circumstances become unfavourable (e.g. food shortages) so their simulated counterparts can migrate between the different spatial environments of the model (e.g. between South Africa and Swaziland). The membranes within the cells of an environment separate out specific processes that are applied to the objects in the model (e.g. the different rules associated with different seasons) (see supplementary information 'PDP Model Components'). The advantage of this approach is that PDP models can integrate a large volume of information and compute the output of a large number of species in parallel and in a relatively short time. In addition, PDP models have been developed and applied to similar ecosystems before \citep{margalida2012modelling}. The syntax of the model rules take the following form:
+\[r \equiv \left(x\right)_{e_{j}} \xrightarrow{p\left(r\right)}\left ( y_{l} \right )_{e_{jl}}\]
+This is an example of a rule describing the movement of an object x (e.g. an animal) from environment e$_{j}$ to e$_{jl}$  where it becomes object y (e.g. a mature version of an animal). The p(r) element is a function stating the probability of the rule taking place \citep{colomer2013population}. The symbol $\equiv$ means the rule is equal by definition to what follows. The model was implemented in the program MeCoSim \citep{perez2010mecosim}. Please see the supplementary information for the rules of this model. 
+
+%------------------------------------------
+% Flow diagram for P-systems
+\begin{figure}[H] %!htb keeps the figure in this section before moving onto the discussion
+	  \centering
+	  \includegraphics{chap3/figures/flow_plot.pdf}
+	    \caption[Flow diagram for PDP system model] %This is the label in table of contents
+	    {Flow diagram representing changes in the status of the avian scavengers over time. The italicised text show conditionals for food availability which determine the path the birds can take. Starting at the 'Reproduction' stage at the upper left hand side this represents the point at which the birds have their young. They undergo 'Natural Mortality' during this period and 'Feeding'. If there is enough food during this time they can progress to period 2, otherwise they perish and so on through the year until they reproduce again. The 'Movement' stages indicate points whereby the birds can leave Swaziland because they are not constrained by the presence of young. Some of the explicit model rules are highlighted at the boxes for movement, reproduction, mortality and feeding. These are described in detail in the supplementary material chapter for this section. Note that not all rules are laid out here such as those involved in the setup and resetting of the model.}%this is under the figure
+	  \label{fig:flow_plot}
+	\end{figure}
+	
+%------------------------------------------	
+There are two environments in our model delimited by the foraging radius of the birds when they are on the nest as defined in our foraging radius calculations. So when the reduced foraging radius of the birds is no longer applicable, the birds are able to forage in the new environment where food is not limiting (figure \ref{fig:flow_plot}). This restricts the birds to game reserves in Swaziland when they have a reduced foraging potential. A bird outside the breeding season could range hundreds of kilometres on a single foraging trip. A year in the model was divided into four temporal periods: Period 1 = July-August, Period 2 = September-October, Period 3 = November-April, Period 4 = May-June. These periods reflected differences in food availability, in foraging ranges and in food requirements (table \ref{tab:season_change}). 
+
+\begin{table}
+\small %!htb keeps the table in this section before moving onto the next block of text
+		\caption[Carcass data] %This goes into  your list of tables
+				{Identity, number of species and average carrion provided per year of the ungulate population of Swaziland.} 
+		\input{chap3/tables/carrion_amount}
+		\label{tab:carrion_amount}
+	\end{table}
+
+\section{\uppercase{R}esults}
+%\subsection{Foraging radius}
+
+%------------------------------------------
+% Carrion dynamics over time
+\begin{figure}[H] %!htb keeps the figure in this section before moving onto the discussion
+	  \centering
+	  \includegraphics[keepaspectratio]{chap3/figures/Carrion_plot.pdf}
+	    \caption[Balance of carrion availability across time in Swaziland] %This is the label in table of contents
+	    {Carrion balance across time in the different periods of the year. The horizontal bar represents the point below which the demands of the avian scavenging guild are no longer met by the carrion provided by wildlife in Swaziland. Periods 1 and 2 are the life stages when young are present and food requirements are higher as a result. }%this is under the figure
+	  \label{fig:Carrion_plot}
+	\end{figure}
+	
+%------------------------------------------	
+
+
+According to our model most of the biomass available to the scavengers is provided by impala (\textit{Aepyceros melampus}) (33 \%), blue wildebeest (\textit{Connochaetes taurinus}) (13 \%) and zebra (\textit{Equus burchellii}) (9 \%) with the remaining 21 species contributing the remaining carrion (table \ref{tab:carrion_amount}). Initially, only period 3 (from November to April) has insufficient food for the scavenging guild but eventually as the scavenger populations grow, periods 1 (July-August) and 2 (September-October) see a net food deficit at year 5 and 13 respectively. Period 4 (May-June) also develops a decline, although at a shallower rate (figure \ref{fig:Carrion_plot}). Period 3, which never sees enough carrion to sustain the scavengers, is a time when the birds can forage outside of Swaziland.  In general the avian scavengers see an increase in their number over the 20 year run of the model (although, note that stochastic effects see the single pair of Lappet-faced vultures go extinct in the system) (figure \ref{fig:Scavengers_plot}). 
+
+
+
+%------------------------------------------	
+
+% Scavenger pop dynamics over time
+\begin{figure}[H] %!htb keeps the figure in this section before moving onto the discussion
+	  \centering
+	  \includegraphics[keepaspectratio, totalheight=0.6\textheight]{chap3/figures/Scavengers_plot.pdf}
+	    \caption[Avian scavenging guild population dynamics in Swaziland] %This is the label in table of contents
+	    {Number of pairs of avian scavengers living in Swaziland across time. All species except the Lappet-faced Vulture see a population increase due to the amount of wild carrion available. This one extinction occurs owing to its tiny initial population size. The bottom panel shows the AWBV trend separately for reasons of clarity because of its much larger population size. }%this is under the figure
+	  \label{fig:Scavengers_plot}
+	\end{figure}
+	
+%------------------------------------------	
+
+
+\section{\uppercase{D}iscussion}
+
+The key prediction from our model is that the carrion of Swaziland is sufficient to cover the energetic requirements of the current AWBV population and most of the other scavenging avifauna (figure \ref{fig:Scavengers_plot}), but only for the time being (figure \ref{fig:Carrion_plot}). The trend of the energy balance makes it clear that, as vulture numbers rise, food will soon become a limiting factor. There is already a predicted net deficit in energy balance for six months of the year, from November-April (figure \ref{fig:Scavengers_plot}). Fortunately this is a period during which the birds can forage outside of Swaziland. However, this reduction in available food could force the birds to spend more time foraging outside of protected areas, increasing the risk of non-natural mortality factors, like poisoning, with important consequences on population dynamics if adult survival is affected \citep{monadjem2014effect}. Although our model suggests that AWBVs in Swaziland will see an increase in their population for a while, the temporal food shortages identified could reduce their breeding output during this period of growth. In Europe, for example, after the outbreak of bovine spongiform encephalopathy in 2001, carcasses were destroyed in authorised plants which reduced the amount of food available to the vultures \citep{margalida2010sanitary}. A long-term study on bearded vultures (\textit{Gypaetus barbatus}) showed this reduction provoked a delay in laying dates, a regressive trend in clutch size, breeding success and survival following this policy change \citep{margalida2014man}. 
+
+
+We can be confident in our predictions given that the radius we obtained for the vulture foraging movements is consistent with values reported from the literature. For instance the average movement recorded in the Serengeti was 51 km and in Kruger 34 km \citep{mundy1992vultures}. A more recent study of immature AWBVs showed a mean distance travelled per day of 33.39 km \citep{phipps2013foraging}. It has been noted that, while nesting without a chick, the birds can fly over 240 km between the nest and a carcass and this is consistent with our value of 260 km \citep{houston1975digestive}. Kruger National Park is almost 100 km from Hlane, the main site of the nesting birds, and smaller reserves such as Mawewe Cattle/ Game Project are all in excess of the radius. 
+\indent
+ 
+ This indicates that the original vulture resturants in Swaziland that have since closed were not necessary in terms of providing food. However this is not to say they are unneeded. Indeed, these findings suggest further intervention, and modification of existing strategies will be required. Vulture restaurants could be established and stocked more frequently during times of food deficiency. Although there are a number of problems associated with supplying supplementary food to wild populations, such as a conditioned dependence on supplemental food \citep{robb2008food}, a well-managed vulture restaurant system could minimise these issues while maximising the benefits. For instance a study of \textit{Gyps fulvus}, showed "[f]eeding stations were particularly used when resources were scarce (summer) or when flight conditions were poor (winter), limiting long-ranging movements" \citep{monsarrat2013predictability}. Supplementary feeding can minimise the risk of poisoning (increasing survival) that follows from species foraging outside of protected areas which has been documented in other vulture species \citep{oro2008testing}. 
+Swaziland seems well placed to act as a habitat for a greater number of AWBVs than that of the current population. With the species on the decline globally it is incumbent on us to secure this valuable population. By ensuring that there is no deficit of carrion at any stage of the year (figure \ref{fig:Carrion_plot}) we would give the birds the best chance to flourish in this area. Indeed it could act as a source population for other suitable areas in the region as its population increases. \\
+\indent
+There is another advantage to creating a long term vulture restaurant in that it would create the opportunity to capture and tag these birds. High resolution data on the foraging behaviour of this population specifically and AWBVs in general are lacking. We know little of their age class structure and whether other vagrant populations visit Swaziland without nesting in the country \citep{monadjem2003threatened}. Tracking data would improve our knowledge about these issues allowing managers and policy-makers to adopt more objective decisions based on the evidence. 
+The value of theoretical modelling, like PDP P systems, is also underscored by the results generated in this study and others like it \citep{margalida2012modelling,margalida2011can}. We should note that any model is only as good as the data used to parameterise it. Consequently basic and up to date biological data are of utmost importance if we are to derive accurate predictions. These methods are another tool for stakeholders to use in identifying threats and solutions to conserving the target species. \\
+\indent
+The conservation implications obtained with this theoretical approach are that the carrying capacity of African White-backed Vultures in Swaziland is reaching maximum values according to natural food provided by the ecosystem. The dependence of the birds on food resources provided by neighbouring areas shows the importance of international agreements for conservation and the coordination of management actions \citep{lambertucci2014apex}. The establishment of well-managed vulture restaurants in Swaziland should be seriously considered. 
+
+
+

@@ -1,0 +1,112 @@
+\documentclass[twoside,12pt]{mythesis}%this is the mythesis.cls file % twoside,openright,versioninfo
+%\documentclass[12pt]{mythesis} %Change to single sided layout for softbound printing
+
+
+% Consider:
+% \newcommand{\ie}{i.\,e.}
+% \newcommand{\Ie}{I.\,e.}
+% \newcommand{\eg}{e.\,g.}
+% \newcommand{\Eg}{E.\,g.}
+
+\usepackage{fixltx2e}
+\usepackage{textcomp}
+\usepackage{fullpage}
+\usepackage{float}
+\usepackage{latexsym}
+\usepackage{url}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{array}
+\usepackage[version=3]{mhchem}
+\usepackage{ifthen}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage{amsthm}
+\usepackage{amstext}
+\usepackage{enumerate}
+%\usepackage[osf]{mathpazo}
+\usepackage{dcolumn}
+\usepackage{lineno}
+\usepackage{longtable}
+\pagenumbering{arabic}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4} %number of subsections that are allowed
+
+
+%------------------------- 
+%Add package to set page margins - probably only need this for the final printed version (two sided printing)?
+
+\usepackage{geometry}
+
+\geometry{
+	a4paper,
+	total={210mm,297mm},
+	left={35mm},
+    right={20mm},
+	top={20mm},
+	bottom={20mm},
+}	
+%Need to add it to the declaration and acknowledgements and list of figures
+%--------------------------
+
+%% Symbols
+% unresolved:
+\newcommand{\ud}{\mathrm{d}}
+\newcommand{\drel}{\ensuremath{r_{\mathrm{rel}}}}
+\newcommand{\nmax}{\ensuremath{n_\mathrm{max}}}
+
+%Information for the title page
+%Some of this is hard coded in mythesis.cls but you can over write if you need to
+\title{Macroevolution with fossil and living taxa}
+
+%
+\author{Thomas Guillerme}
+%
+\month{\textsc{October}} \year{2015}
+\previousdegrees{B.Sc., Universit\'{e}e Montpellier 2, 2010\\
+                 M.Sc., Universit\'{e}e Montpellier 2, 2012}
+\degreetitle{Doctor of Philosophy}
+\institution{Trinity College Dublin}
+\school{School of Natural Sciences}
+\department{Zoology}
+
+%End of preamble.
+%--------------------------------------
+\begin{document}
+
+\maketitle %puts in your title
+
+\input{declaration}
+\input{summary}
+\input{acknowledgements}
+
+\allcontents %tells it to make a table of contents with figure and table lists too
+ 
+\cleardoublepage
+\mainbody
+
+\input{introduction} 
+\input{Missing_mammals/Missing_mammals-draft}	
+\input{discussion}
+
+\formatbibliography 
+\bibliographystyle{sysbio} 
+
+\bibliography{refs_thesis} %you may also call you bibliography something different. This is refs-thesis.bib
+
+
+%\formatappendices
+%\input{phylo_appendix}
+%\input{data_appendix}
+
+
+\end{document}

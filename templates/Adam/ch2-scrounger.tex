@@ -1,0 +1,215 @@
+\chapter{Vultures acquire information on carcass location from scavenging eagles}
+\label{chap:scrounger}
+
+%\thesischapter{Vultures acquire information on carcass location from scavenging eagles}
+%  {Adam Kane, Andrew L Jackson, Darcy L Ogada, Ara Monadjem & Luke McNally}
+\textit{Authors:} Adam Kane, Andrew L Jackson, Darcy L Ogada, Ara Monadjem \& Luke McNally
+%Adam Kane$^1$, Andrew L Jackson$^1$, Darcy L Ogada$^2$, Ara Monadjem$^3$ \& Luke McNally$^4$
+
+\vspace{10 mm}
+\noindent
+\textit{\uppercase{A}uthor contributions} 
+I conceived the idea, analysed the videos for arrival times and competitive interactions, created and ran the IBMs, ran the statisitcs on these sections, helped LM develop the game theory model and wrote the manuscript; 
+AJ developed the permutation tests and gave input on the manuscript; DO recorded the videos on which this study is based and gave feedback on the manuscript; AM gave feedback on the manuscript; LM created the game theory model, advised on the statistics and gave feedback on the manuscript.
+
+\vspace{10 mm}
+
+\noindent
+\textit{Status:} This manuscript has been published at Proceedings of the Royal Society B.
+
+\newpage
+
+\noindent
+
+\section{\uppercase{A}bstract}
+
+Vultures are recognised as the archetypal scavengers of the natural world. While it is well known that vultures use conspecific social information as they forage, the possibility of inter-guild social information transfer and the resulting multi-species social dilemmas has not been explored. Here we use data on arrival times at carcasses to show that such social information transfer occurs with raptors acting as producers of information and vultures acting as scroungers of information. We develop a game-theoretic model to show that competitive asymmetry, whereby vultures dominate raptors at carcasses, predicts this evolutionary outcome. The eagles, which arrive earlier, benefit from gaining a finder's fee enabling them to exist in a producer role. We support our theoretical prediction using empirical data from competitive interactions at carcasses. Finally, we use an individual based model to show that these producer-scrounger dynamics lead to vultures being vulnerable to declines in raptor populations. Our results show that social information transfer can lead to important non-trophic interactions among species and highlight important potential links among social evolution, community ecology and conservation biology. With vulture populations suffering global declines our study underscores the importance of ecosystem-based management for these endangered keystone species. 
+\newpage
+
+\section{\uppercase{I}ntroduction}
+
+Animals base their decisions on both personal and public information \citep{dall2005information,schmidt2010ecology,sumpter2008information,couzin2009collective}. This is applicable to every facet of an animal's life, be it feeding, movement, mating etc. with high fidelity information allowing an individual to make decisions conducive to its survival \citep{dall2005information,mcnamara2010information,danchin2004public}. Public information can be separated into that which is gained from conspecifics and that from heterospecifics \citep{dall2005information}. Conspecific information transfer is essential for basic behavioural functions like sexual reproduction or cooperative hunting \citep{handegard2012dynamics}. But species overlap in the resources they use \citep{fedriani2000competition,kruuk1967competition}, and the environments they inhabit \citep{fedriani2000competition,kruuk1967competition} which gives the possibility of inter-guild information transfer \citep{seppanen2007social,seppanen2007interspecific,forsman2009experimental}. \\
+\indent
+Consider the social \textit{Gyps} vultures, a group that is known to forage collectively for carrion. In flight they appear to keep in visual contact with conspecifics \citep{houston1974food}. Once one vulture discovers and descends to a carcass the information is conveyed to others in the area, this activity can create a local enhancement effect \citep{jackson2008effect}. But such social behaviour renders vultures' foraging efficiency susceptible to population declines; with every individual lost, the network is less effective at detecting carrion \citep{jackson2008effect}. 
+Although vultures are the most well-known group of avian scavengers there are a number of other species within the family Accipitridae such as eagles (hereafter raptors) that take carrion as a significant proportion of their diet \citep{mundy1992vultures}. Coexistence among all of these species is possible by both temporal and resource partitioning \citep{mundy1992vultures,houston1975ecological}. But with any shared resource, direct interactions between them will result, and the possibility of social information transfer among species emerges. \\
+\indent A distinct pattern of arrival of avian scavengers to carrion has been highlighted before \citep{mundy1982comparative,kendall2013alternative,cortes2012resource}. Indeed, the African White-backed Vulture (\textit{Gyps africanus}) has been noted in using many other scavengers as a means of local enhancement while foraging \citep{kruuk1967competition}. Yet these heterospecific interactions and their potential for information transfer have not been explored in any detail \citep{mundy1982comparative}. \\
+\indent Given the current extreme declines in vulture populations \citep{ogada2012dropping,green2004diclofenac} and their key role in many ecosystems as biomass recyclers \citep{ogada2012effects,sekercioglu2006increasing}, understanding vulture foraging ecology is also of applied relevance. Here we provide evidence for producer-scrounger dynamics among scavenging vulture and raptor species by testing the hypothesis that vultures scrounge information from raptors, and explore its evolutionary underpinnings using a game theoretic model. We conclude by outlining the consequences of this system's properties for vulture conservation.
+
+
+\section{\uppercase{T}est for producer scrounger dynamics}
+
+To test for the occurrence of producer-scrounger dynamics between vultures and raptors we observed arrival times of avian scavengers to a number of experimental carcasses placed out. Our observations were made on 46 videos recorded in the Mpala Research Centre in the Laikipia District of Kenya which had scavenging avifauna (a subset of the videos used in \cite{ogada2012effects}). The carcasses of partially skinned goat and cow carcasses were set out at dawn (06.15 - 07.20) in an open area of the Mpala Ranch which consists of 20,000 ha of savannah. Carrion size ranged from 20 - 340 kg with a mean of 80 kg and did not have a significant effect on the number of avian scavengers present \citep{ogada2012effects}. We focused on the closely related and morphologically similar \textit{Gyps} vultures, the African White-backed Vulture and the R{\"u}ppell's Vulture (\textit {Gyps rueppellii}), as well as the congeneric Tawny (\textit {Aquila rapax}) and Steppe Eagles (\textit {Aquila nipalensis}). Some differences between the eagles include the tendency for the Steppes to be slightly larger and more social \citep{clark1992taxonomy}. These four species were by far the most abundant in the recordings (>95\%) and formed our vulture and raptor groups respectively \citep{ogada2012effects}. 
+For each video we noted the arrival time and species of every animal. Initially, we compared the probability of producing information on carcass location by looking at which of the two groups, \textit{Gyps} vultures or raptors, landed at the carcass first. A binomial test on the 46 videos showed that the first bird to land at a carcass was significantly more likely to be a raptor than a vulture (Binomial test, 38 successes, 46 trials, expected probability = 0.5, results in observed probability = 0.83, 95\% C.I. 0.69-0.92, p-value < 0.001 (figure \ref{fig:arrival_plot})).
+
+%------------------------------------------	
+
+% Plot of bird arrival times at carcasses 
+\begin{figure}[H] %!htb keeps the figure in this section before moving onto the discussion
+	  \centering
+	  \includegraphics[keepaspectratio,totalheight=0.8\textheight]{chap2/figures/arrival_plot.pdf}
+	    \caption[Arrival times of vultures and raptors to carcasses] %This is the label in table of contents
+	    {Recorded arrival times of individual vultures and raptors at carrion across 46 videos. The red lines are raptors, black are vultures. }%this is under the figure
+	  \label{fig:arrival_plot}
+	\end{figure}
+	
+%------------------------------------------	
+
+We used randomisation tests to test if the birds were following each other rather than simply arriving independently but with different timing to the carcasses. Where a raptor landed first we generated a null distribution of arrival times for the first scrounger (a \textit{Gyps} vulture) over the length of each recording by randomising the arrival times of the birds. From this distribution we assessed if the first scrounger followed more closely than expected under an assumption of independent foraging. Then, in order to make a population level inference across permutation tests, we use a binomial test where the expected probability of observing a significant result by chance is 0.05 (as per the definition of a p-value where at an alpha of 0.05, we would expect 5\% of test results to be significant according to the null model). Vultures were found to follow raptors more closely than expected by chance (i.e. with p<0.05) in 20 of the 38 videos (figure \ref{fig:pvalue_plot}a) which is significantly more cases  of vultures following raptors than expected (Binomial test with 20 successes, 38 trials, expected probability = 0.05 results in an observed probability = 0.53, 95\% C.I. 0.36-0.69, p-value <0.001).
+Similarly, in six of the eight occasions when vultures landed at the carcass first, raptors followed more closely than expected by chance (figure \ref{fig:pvalue_plot}b), which is significantly more cases than expected (Binomial test with 6 successes, 8 trials, expected probability = 0.05, results in an observed probability = 0.75, 95\% C.I. 0.35-0.97, p-value< 0.001). 
+
+%------------------------------------------	
+
+% Plot of p-values
+\begin{figure}[H] %!htb keeps the figure in this section before moving onto the discussion
+	  \centering
+	  \includegraphics[keepaspectratio]{chap2/figures/pvalue_plot.pdf}
+	    \caption[Histogram plot of p-values] %This is the label in table of contents
+	    {Histograms of p-values showing the number of videos where it was significantly probable that (a) the vultures were following the raptors and (b) the raptors were following the vultures. The vertical lines show the level of significance at p = 0.05.}%this is under the figure
+	  \label{fig:pvalue_plot}
+	\end{figure}
+	
+%------------------------------------------	
+
+\section{\uppercase{P}roducer scrounger model}
+
+While our analyses suggest that both raptors and vultures follow each other to carcasses, the higher frequency of raptors being the first to land at a carcass leads to raptors acting predominantly in a producing role. This can manifest by raptors providing information on the location of the resource or by engaging in carcass opening whereby the raptor uses its relatively stronger bill to get through an ungulate hide \citep{kendall2013alternative}, with vultures acting predominantly as scroungers. This result raises the question of how these divergent roles evolved? We hypothesised that competitive ability may have a strong effect on the strategy typically adopted in each species. If individuals of one species can competitively dominate those of another this may favour scrounging by the dominant species: producers may gain an exclusive share of the resource by arriving first at the carcass (a "finder's fee") \citep{vickery1991producers}, but dominant scroungers may be able to effectively monopolise the remainder of the resource once they arrive, while also gaining information available publically on the locations of carcasses. \\
+\indent
+We used the game-theoretic framework of the producer-scrounger game to test the evolutionary feasibility of this prediction. In a producer-scrounger game an animal needs to invest either in producing some resource (e.g. information), or exploit the investment from another individual \citep{morand2010learning}. We consider a scenario where vultures and raptors forage in the same area. We assume that time spent feeding at a carcass is small relative to search time \citep{mundy1992vultures,barta1998effect}. Individual vultures and raptors can assume one of two strategies: producer or scrounger. Producers find carcasses at a rate proportional to the carcass density; while all scroungers in a group will follow producers to the carcasses they find, but don't find carcasses for themselves (probabilistic following by scroungers cannot qualitatively affect our results). While in reality vultures and raptors will likely use mixed strategies, this simple scenario allows us to abstract the essential elements of the evolutionary dynamics in a simple framework.
+
+From our assumptions we can write the numbers of vultures and raptors at a carcass found by a vulture as $m_{v,v}$ = 1+$v_s$ and $m_{v,r}$ = $r_s$, respectively, where $v_s$ and $r_s$ are the numbers of vultures and raptors that are scroungers. Similarly the numbers of vultures and raptors at a carcass found by a raptor are $m_{r,v}$ = $v_s$ and $m_{r,r}$ = 1 + $r_s$, respectively. We assume that new carcasses arrive in the area and decay at fixed rates (both set at 1) and are consumed almost instantaneously when found. Assuming that carcass dynamics occur on a faster timescale than the population dynamics of vultures and raptors the steady-state density of carcasses is then given as d = 1/(1 + $r_p$ + $v_p$), where $v_p$ and $r_p$ are the numbers of vultures and raptors that are producers. The rates of food consumption for producing and scrounging vultures are:
+
+\begin{equation}
+\pi _{v,p} = \left ( \frac{1}{1+r_{p}+v_{p}} \right )\left ( a+(1-a)\frac{x}{xm_{v,v} + m_{v,r}} \right )
+\end{equation}
+
+and
+
+\begin{equation}%
+\pi _{v,s} = \left ( \frac{1}{1+r_{p}+v_{p}} \right ) \left ( 1-a \right ) \left (\frac{v_{p}x}{xm_{v,v} + m_{v,r} }+\frac{r_{p}x}{xm_{r,v}+m_{r,r}}\right)
+\end{equation}
+
+Similarly the rates of food consumption for producing and scrounging raptors are:
+
+\begin{equation}
+\pi _{r,p} = \left ( \frac{1}{1+r_{p}+v_{p}} \right )\left ( a+(1-a)\frac{1}{xm_{v,v} + m_{v,r}} \right )
+\end{equation}
+
+and
+
+\begin{equation}
+\pi _{r,s} = \left ( \frac{1}{1+r_{p}+v_{p}} \right ) \left ( 1-a \right ) \left (\frac{v_{p}}{xm_{v,v} + m_{v,r} }+\frac{r_{p}}{xm_{r,v}+m_{r,r}}\right)
+\end{equation}
+
+\vspace{10 mm}
+
+Here a is the proportion of a carcass that is monopolised by the individual that finds it (the "finder's fee"), and the variable x is the competitive ability of vultures compared to that of raptors, specifically the number of raptors that a vulture is equivalent to in terms of competitive ability. The proportion of the carcass remaining after the finder's fee (1-a) is shared among all birds at the carcass proportionally to their relative competitive ability. For example, at a carcass found by a raptor, a scrounging vulture's share would be x/(x$m_{r,v}$ + $m_{r,r}$). The vulture is competitively equivalent to x raptors so gets a positive weighting of x in the numerator. As other vultures will have a similar competitive ability, the number of vultures at the carcass ($m_{r,v}$) is also weighted by x. This leads to each bird receiving a share proportional to its competitive ability relative to the other birds present at the carcass. The probability that a vulture wins a one-on-one interaction with a raptor is then defined as x/(1 + x). This process could then be seen as a series of competitive interactions over small proportions of the carcass, leading to birds on average receiving a share proportional to their relative competitive ability.
+
+While the equilibrium number of carcasses (1/(1 + $r_p$ + $v_p$)) available declines with the density of producers of both species as more carcasses are found and consumed, the food acquisition rate of scroungers is also positively weighted by producer densities as they are able to follow individuals to carcasses more frequently. This means that, while producers are only affected negatively by other producers (owing to reduction in carcass densities), scroungers are affected both positively (owing to their increasing rate of following to carcasses) and negatively (owing to reduction in carcass density) by producer density. 
+We write the dynamics \citep{hofbauer2003evolutionary} of producers and scroungers in the vulture and raptor populations as:
+
+\begin{equation}
+\frac{\mathrm{dv_{p}} }{\mathrm{d} t} = v_{p}\left ( \pi _{v,p}- \alpha \right )
+\end{equation}
+
+\begin{equation}
+\frac{\mathrm{dv_{s}} }{\mathrm{d} t} = v_{s}\left ( \pi _{v,s}- \alpha \right )
+\end{equation}
+
+\begin{equation}
+\frac{\mathrm{dr_{p}} }{\mathrm{d} t} = r_{p}\left ( \pi _{v,p}- \beta + \frac{\gamma }{1+r_{p} +r_{s}}\right )
+\end{equation}
+and
+\begin{equation}
+\frac{\mathrm{dr_{s}} }{\mathrm{d} t} = r_{s}\left ( \pi _{r,s}- \beta + \frac{\gamma }{1+r_{p} +r_{s}}\right )
+\end{equation}
+
+
+Here $\alpha$ and $\beta$ are the mortality rates for vultures and raptors, respectively. The additional term $\gamma$ / (1 + $r_p$ + $r_s$) captures additional food intake by raptors owing to their additional source of energy through predation. Here we assume that some prey enters the area at rate $\gamma$, dies at a fixed rate of 1, and is found by raptors at rate 1 and then instantaneously consumed. Again we assume that the dynamics of the prey population happen on a faster time-scale than the raptor population dynamics so that the steady-state density of prey can be used. Varying the parameter $\gamma$ then allows us to vary raptor's relative reliance on carcasses as a food source. 
+
+Unfortunately no analytical solutions are available for our model, so we examine the evolutionary dynamics of the producer-scrounger interaction using numerical evaluation of steady-state of equations 3.5-3.8. The results of the model displayed in figure \ref{fig:game_plot} show the impact of competitive ability, finder's advantage and the availability of prey items to raptors. Notice in plots (a) and (c) that there is a transition from high raptor population densities to high vulture densities as vultures become more dominant over raptors (the switch occurring when the probability a vulture wins is greater than 0.5).  The availability of extra food from predation in plot (c) allows the raptors to persist at higher population densities suppressing the increasing vulture numbers relative to plot (a).  The effect of increasing relative competitive ability is also realised in driving up the proportion of birds scrounging. The outcome of varying the size of the finder's fee is evident as we can see a lower proportion of scroungers when the amount of food consumed by the producer is high. A competitively dominant species gains a larger share of the resource. It follows that any finder's fee is of less value to them than it is to the competitively inferior species. Thus the competitively dominant species is more likely to forego a finder's fee in order to benefit from the increased rate of information acquisition that can be facilitated by scrounging.
+
+%------------------------------------------	
+
+% Plot of game theory
+\begin{figure}[H] %!htb keeps the figure in this section before moving onto the discussion
+	  \centering
+	  \includegraphics[keepaspectratio, totalheight=0.7\textheight]{chap2/figures/game_plot.pdf}
+	    \caption[Game theory plot] %This is the label in table of contents
+	    {Game theory results. Panels on the left (a, c) are the population densities for each species (vultures, solid lines; raptors, dashed lines), panels on the right (b, d) are the frequencies of scroungers in both the vulture and raptor populations. The top panels (a, b) are where raptors rely strongly on carcasses ($\gamma$ = 0.05); the bottom panels (c, d) are when they rely more weakly on carcasses ($\gamma$ = 0.15). Colours indicate different values for the finder's fee (black, a = 0.05; dark grey, a = 0.2; light grey, a = 0.5) The x-axis is the probability that a vulture wins a one on one interaction, x/ (1+x).  Mortality rates are $\alpha$ = 0.1 and $\beta$ = 0.1 for all panels.}%this is under the figure
+	  \label{fig:game_plot}
+	\end{figure}
+	
+%------------------------------------------	
+
+\section{\uppercase{T}est of competitive ability}
+
+The results of our model demonstrate the potential importance of competitive asymmetry in the evolutionary outcome of inter-guild producer-scrounger dynamics. To test our model prediction of competitive dominance by vultures we analysed competitive interactions between \textit{Gyps} and raptor species at carcasses from our videos. We followed \cite{bamford2010associations} in our analysis of agonistic interactions between the birds.  In each case of aggression we noted the initiator, the winner and the loser. The loser was defined as a bird spatially displaced by the direct action of another individual. 
+There were 461 interactions in total. We used a binomial generalized linear mixed model with video as a random effect to test the significance of the interactions (figure \ref{fig:competition_plot}). \\ 
+\indent
+In support of our theoretical predictions we found vultures are more likely to be the initiator of an aggressive interaction (n = 274 Vs 187, $\beta$ = 0.7414, s.e. = 0.1987, p < 0.001, probability = 0.68, 95\% C.I. 0.59-0.76 (figure \ref{fig:competition_plot} a)); vultures are more likely to win when they initiate the contest (n= 265/274, $\beta$ = 3.6942, s.e. = 0.4134, p < 0.001, probability = 0.98, 95\% C.I. 0.95-0.99 (figure \ref{fig:competition_plot} b)) and raptors are more likely to win when they initiate a contest (n = 170/187, $\beta$ = 2.4893, s.e. = 0.3473, p <0.001, probability = 0.92, 95\% C.I. 0.86-0.96). The probability that a vulture wins when they initiate a contest is also significantly greater than the probability that a raptor wins when they are the initiator ($\beta$ = 1.2049, s.e. = 0.4685, p = 0.0101). Finally, vultures are more likely to win overall (n = 282 Vs 179, ($\beta$ = 0.9567, s.e. = 0.2303, p < 0.001, probability = 0.72, 95\% C.I. 0.62-0.80 (figure \ref{fig:competition_plot} c)).
+
+%------------------------------------------	
+
+% Plot of competition
+\begin{figure}[H] %!htb keeps the figure in this section before moving onto the discussion
+	  \centering
+	  \includegraphics[keepaspectratio, totalheight=0.25\textheight]{chap2/figures/competition_plot.pdf}
+	    \caption[Competitive interactions between vultures and raptors] %This is the label in table of contents
+	    {The results of the competitive interactions (a) shows the probability that a species was an initiator (b) the probability that an initiator wins a contest and (c) the overall competitive ability. Given are the means with 95\% confidence intervals.}%this is under the figure
+	  \label{fig:competition_plot}
+	\end{figure}
+	
+%------------------------------------------	
+
+\section{\uppercase{E}ffect of raptor density on vulture foraging efficiency}
+
+The producer-scrounger dynamics that we have illustrated suggest a possible ecological interaction whereby vultures are using raptors to locate carcasses. This would imply that vultures may be vulnerable to declines in raptor populations as their ability to locate food will also decline. To examine this possibility we created an individual based model (IBM) in the program NetLogo \citep{tisue2004netlogo} to explore the effect of raptors on the foraging efficiency of the vultures. Our model is a modified version of \cite{jackson2008effect} and \cite{jackson2011evolutionary}, both of which examined vulture foraging behaviour. The main difference is that we include raptors alongside vultures. 
+Our video analysis suggests raptors can find carcasses before vultures. The question is what is it about their biology that allows them to achieve this? A recent study found that Lappet-faced Vultures can discover carrion before African White-backed Vultures despite their smaller population size \citep{spiegel2013factors}. We incorporate the changes they deemed likely to impact differential search efficiencies which are applicable to raptors, namely, visual acuity \citep{howland2004allometry}, flying height, roost departure time and dispersion of the birds at the start of the foraging day owing to different roost arrangements. 
+
+The eye of a Tawny Eagle has an axial length of 26.51 mm (c.f. African White-backed Vultures that measure 20.71 mm) \citep{howland2004allometry}. This gives a measure of visual acuity of 81.5 cycles $m^{-1}$ (again c.f. African White-backed Vultures with a measure 57.5 $m^{-1}$) \citep{spiegel2013factors,howland2004allometry}. So this species has better absolute and relative eyesight if we accept these measures, which is further increased by its probable lower flying height \citep{mundy1992vultures}. Moreover, raptors can depart earlier in the day owing to their lower wing loading relative to the larger \textit{Gyps} vultures (2 kg Vs 5.5 kg) \citep{mundy1992vultures}. The social \textit{Gyps} are also more densely aggregated at their roost sites \citep{mundy1992vultures} relative to the solitary raptors. Vultures are also known to fly at great altitudes \citep{mundy1992vultures}. It has been noted that "producer individuals may fly low to increase their probability of detecting a patch when they fly over it" \citep{vickery1991producers}. By flying above the producing raptors the vultures have the potential to notice any raptor that descends to a carcass. A typical altitude of 350 m and 300 m has been reported for the R{\"u}ppell's Vulture and African White-backed Vulture respectively \citep{mundy1992vultures}. Although the flying height of Tawny and Steppe Eagles is unknown, and despite having different flight styles, these species occupy a similar ecological niche to the Bateleur Eagle (\textit{Terathopius ecaudatus}) which often feeds on carrion \citep{steyn1980breeding}. The Bateleur has been recorded cruising at a height of just 50 m above ground \citep{mundy1992vultures}. We can justifiably make the assumption that the two raptors that predominate our data fly at a similar altitude while foraging or at least below that of the \textit{Gyps} vultures.  
+
+A summary of the model runs can be seen in Table \ref{tab:netlogo}. At the beginning of the IBM the raptors were randomly allocated in the simulation space that corresponds to a square of 100 x 100 km with periodic boundary conditions so that a bird that flies off the edge of the square will reappear on the opposite side. The vultures are located in a single patch which represents their roost. The raptors forage for seven hours and the vultures five hours \citep{spiegel2013factors}. The vultures change direction by 45 degrees once every eight minutes which is based on the time they spend in thermals \citep{xirouchakis2009foraging}; since raptors are less dependent on thermals they change direction at double this rate. Both have a constant speed as they attempt to find a single randomly located carcass. Both vultures and raptors can find the carrion by themselves. We varied the relative detection distances between the groups such that they are equal; and then that raptors are 2, 3 and 4 times better. For each of these we varied the number of raptors from 1-10 relative to the 90 vultures present in the simulation (Table \ref{tab:netlogo}). Vultures can detect carrion at 1 km and other scavengers on a carcass at 4 km \citep{jackson2011evolutionary,pennycuick1972soaring}, the increase in the latter owing to local enhancement \citep{jackson2008effect}. When a vulture discovers a carcass it 'feeds' on it with the model calculating the average amount of food eaten by the vultures at the end of the simulated foraging session. Each simulation was replicated 200 times. We square root transformed our dependent variable data so it would allow us to perform parametric tests and performed the analysis using linear models.
+Our simulation results show a significant increase in vulture foraging efficiency with raptor density (figure \ref{fig:netlogo_plot}), indicating that declines in raptor numbers may lead to declines in vulture populations because of a reduced ability to find or open carcasses.
+
+%------------------------------------------
+
+\begin{table}[H]
+%\small %!htb keeps the table in this section before moving onto the next block of text
+		\caption[NetLogo parameter values] %This goes into  your list of tables
+				{Parameter values of the individual-based models that were written in NetLogo.
+The first row represents the case of equal detection distance between raptors and vultures; the second is where raptors can see twice the distance and so on. Enhanced range relates to instances where a local enhancement effect is at play, i.e. the carcass is already occupied by a bird.
+   
+} 
+		\input{chap2/tables/netlogo}
+		\label{tab:netlogo}
+	\end{table}
+
+
+
+%------------------------------------------	
+
+
+
+
+%------------------------------------------
+% Plot of NetLogo
+\begin{figure}[H] %!htb keeps the figure in this section before moving onto the discussion
+	  \centering
+	  \includegraphics[keepaspectratio,totalheight=0.6\textheight]{chap2/figures/netlogo_plot.pdf}
+	    \caption[Results of agent-based model] %This is the label in table of contents
+	    {Mean vulture food intake (arbitrary units) as a function of raptor number for four scenarios of differing relative detection distance. (a) equal distance (GLM, $\beta$ = 0.3214, s.e. = 0.1232, p = 0.00916), (b) twice distance (GLM, $\beta$ = 0.3269, s.e. = 0.123, p =0.00794), (c) triple distance (GLM, $\beta$ = 0.5047, s.e. = 0.1198, p <0.001), (d) quadruple distance (GLM, $\beta$ = 0.6052, s.e. = 0.1254, p <0.001). }%this is under the figure
+	  \label{fig:netlogo_plot}
+	\end{figure}
+	
+%------------------------------------------	
+
+\section{\uppercase{D}iscussion}
+
+Our results suggest that there is a producer-scrounger game occurring between \textit{Gyps} vultures and scavenging raptors, with the competitive dominance of vultures favouring a scrounging strategy on their part. 
+The biology of the two groups further lends itself to the evolution of producer-scrounger dynamics. Flapping flight is far more energetically expensive than thermal soaring for large birds \citep{hedenstrom1993migration} and would prevent vultures from exploring a sufficient area to be effective scavengers \citep{ruxton2004obligate}. Although raptors do exploit thermals as well, their relatively small size allows them to use the weaker early-morning thermals compared with the larger vultures \citep{cone1962thermal}. Thus they are likely to encounter carrion before the vultures. \cite{kendall2013alternative} found that, for their abundance, Tawny Eagles were more likely to discover a carcass than African White-backed Vultures, and R{\"u}ppell's Vultures were never the first to arrive at a carcass which is consistent with producer-scrounger dynamics. She also reported several cases whereby the African White-backed Vultures would not feed at a carcass until a Tawny Eagle began to eat. As mentioned earlier this may be an instance of carcass opening \citep{kendall2013alternative}. The \textit{Gyps} vultures can then dominate the raptor and feed on the previously inaccessible flesh. This would certainly qualify as a producer-scrounger system. A potential follow up to this study would be to include more cameras or observers at the experimental carcasses to note the birds as they arrive from the air. This could be coupled with tracking data to get a better sense of the exact order of arrival of birds in the area.
+The proposed dynamics are not the result of an abundance of raptors happening upon carcasses more often than the vultures because raptors occur at much lower densities. In the Masai Mara, for instance, \textit{Gyps} species were recorded at an average density of 85.4 species per 100 km compared with 7.4 for Tawny eagles \citep{virani2011major}.\\
+\indent
+In sum, we show that foraging behaviour in \textit{Gyps} vultures is more complex than previously thought. Social information transfer flows within and among the vulture and raptor species. In conservation terms, the resultant non-trophic interactions \citep{kefi2012more} mean we should shift our focus to ecosystem-based management \citep{slocombe1993implementing} instead of centring our attention on one species at a time. As our individual-based model shows, in the ecosystem considered here, scrounging vultures will fare poorly with a decline in producing raptors. With raptor populations on the decline \citep{ogada2010decline}, this effect may soon be realised. More generally, we should explore other incidences of socially acquired information transfer between species: inadvertent as it often is, this will be no easy task. 
+
+
+
