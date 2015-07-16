@@ -17,7 +17,7 @@
 \medskip
 \noindent Key words: Total Evidence method, data structure, phylogenetic, fossil, topology\\
 \bigskip
-\noindent A shorter version (2500 words) as been submitted to Biology Letters as an invited submission for a special issue blablabla\\
+\noindent A shorter version (2500 words) will be submitted to Biology Letters as an invited submission for a special issue on phylogenies with living and fossil species. This special issue is open to submission in December 2015.\\
 
 \end{center}
 %---------------------------------------------
@@ -85,16 +85,60 @@ We recommend that efforts be made to collect and share more cladistic data for l
 \section{Materials and Methods}
 \subsection{Data collection and standardisation}
 We downloaded all cladistic matrices containing any living and/or fossil mammal taxa from three major public databases (accessed 10th of June 2015): Morphobank (\url{http://www.morphobank.org/} \citep{morphobank}, Graeme Lloyd's website (\url{graemetlloyd.com/matrmamm.html} and Ross Mounce's GitHub repository (\url{https://github.com/rossmounce/cladistic-data}.
-We also performed a systematic Google Scholar search (accessed 11th of June 2015) for matrices that were not uploaded to these databases (see Supplementary Materials for a detailed description of the search procedure).
-In total, we downloaded 286 matrices containing a total of 11010 operational taxonomic units (OTUs) of which 5228 were unique. % Number of unique OTUs (including fossils)
+We also performed a systematic Google Scholar search (accessed 11th of June 2015) for matrices that were not uploaded to these databases. We downloaded available matrices containing fossil and/or living mammal taxa from the three data bases using the following list of keywords:
+
+\texttt{Mammalia; Monotremata; Marsupialia; Placentalia; Macroscelidea; Afrosoricida; Tubulidentata; Hyracoidea; Proboscidea; Sirenia; Pilosa; Cingulata; Scandentia; Dermoptera; Primates; Lagomorpha; Rodentia; Erinaceomorpha; Soricomorpha; Cetacea; Artiodactyla; Cetartiodactyla; Chiroptera; Perissodactyla; Pholidota; Carnivora; Didelphimorphia; Paucituberculata; Microbiotheria; Dasyuromorphia; Peramelemorphia; Notoryctemorphia; Diprotodontia}.
+
+Note that some matrices have been downloaded from more than one database but that it is not an issue since we are interested in the total number of unique living OTUs and that if some where present in more than one matrix, they still only counted as one single OTU.
+
+\subsubsection{Morphobank}
+We used the keywords listed above in the search menu of the Morphobank repository (\texttt{http://www.morphobank.org/}) and downloaded the data associated with each project matching with the keywords.
+
+\subsubsection{Graeme Lloyd}
+We downloaded all the matrices that were available with a direct download link in the mammal data section of Graeme Lloyd's website repository (\texttt{http://graemetlloyd.com/}).
+
+\subsubsection{Ross Mounce}
+We downloaded every 601 matrix from Ross Mounce's GitHub repository (\texttt{https://github.com/rossmounce}) and then ran a shell script to select only the matrices that had any text element that match with one of the search terms.
+To make the matrix selection more thorough, we ignored the keywords case as well as the latin suffix (\textit{ia}, \textit{ata}, \textit{ea}, and \textit{a}).
+
+\subsubsection{Google scholars (accessed 11th of June 2015)}
+To make sure we didn't miss any extra matrix that wasn't available on one of these repository, we ran a extra Google Scholar search. 
+We downloaded the additional cladistic matrices from the 20 first search results matching with our selected keywords and with any of the 35 taxonomic levels (mammals Orders, Infraclasses and Class).
+We used the following key words:
+
+\texttt{\textit{order} ("morphology" OR "morphological" OR "cladistic") AND characters matrix paleontology phylogeny}
+
+were \textit{order} was replaced by all the keywords listed above. For each 33 keywords, we selected the 20 first papers to match the Google search published since 2010 resulting in 660 papers.
+Among these papers, not all contained relevant data (discrete morphological characters AND mammalian data).
+We selected only the 20 first results per search term to avoid downloading articles that were to irrelevant. Among the 660 papers, only 50 contained a total of 425 extra living OTUs (Figure ~\ref{Supp_figure_google_searches}).
+Also we decided to select only the articles published since 2010 because nearly every one of the recent published matrix contains both a fraction of morphological characters and OTUs from previous studies.
+For example in primates the character \textit{p7} coded first by \cite{ross1998phylogenetic} is reused with the same living species in \cite{seiffert2003fossil}, \cite{marivaux2005anthropoid}, \cite{seiffert2005basal}, \cite{bloch2007new}, \cite{bloch2007new}, \cite{kay2008anatomy}, \cite{silcox2008biogeographic}, \cite{seiffert2009convergent}, \cite{tabuce2009anthropoid}, \cite{boyer2010astragalar}, \cite{seiffert2010fossil}, \cite{marivaux2013djebelemur} and \cite{ni2013oldest}.
+
+\begin{figure}[!htbp]
+\centering
+    \includegraphics[width=1\textwidth]{Missing_mammals/Figures/Supp_figure_google_searches.pdf}
+\caption{Google searches additional OTUs rarefaction curve. The x axis represent the number of google scholar matches (papers, books or abstracts) and the y axis represents the cumulative number of additional living OTUs per google scholar match.}
+\label{Supp_figure_google_searches}
+\end{figure}
+
+We transformed all the non-nexus matrices (tnt, word, excel, jpeg) to nexus format manually.
+In total, we downloaded 286 matrices containing a total of 11010 operational taxonomic units (OTUs) of which 5228 were unique.
 In this study, we refer to OTUs rather than species since the entries in the downloaded matrices were not standardised and ranged from specific individual specimen names (i.e. the name of a collection item) to the family-level.
 Where possible, we considered OTUs at their lowest valid taxonomic level (i.e. species) but some OTUs were only valid at a higher taxonomic level (e.g. genus or family).
 Therefore for some orders, we sampled more genera than species (Table \ref{Table_morpho_taxa_proportion}.
 
 To select the lowest valid taxonomic level for each OTU, we standardised their taxonomy by correcting species names so they matched standard taxonomic nomenclature (e.g., \textit{H. sapiens} was transformed to \textit{Homo sapiens}.
 We designated as ``living'' all OTUs that were either present in the phylogeny of \citep{BinindaEmonds} or the taxonomy of \citep{wilson2005mammal}, and designated as ``fossil'' all OTUs that were present in the Paleobiology database (\url{https://paleobiodb.org/}.
+
 For OTUs that did not appear in these three sources, we first decomposed the name (i.e. \textit{Homo sapiens} became \textit{Homo} and \textit{sapiens} and tried to match the first element with a higher taxonomic level (family, genus etc.).
-Any OTUs that still had no matches in the sources above were designated as non-applicable (NA; see Supplementary Material for more details).
+Any OTUs that still had no matches in the sources above were designated as non-applicable (NA; see Figure \ref{Supp_figure_Taxonomic_algorithm}).
+
+\begin{figure}[!htbp]
+\centering
+    \includegraphics[width=1\textwidth]{Missing_mammals/Figures/Supp_figure_Taxonomic_algorithm.pdf}
+\caption{Taxonomic matching algorithm used in this study. For each matrix, each operational taxonomic units (OTU) is matched with the super tree from Bininda-Emonds 2007. If the OTU matches, then it is classified as living. Else it is matched with the Wilson \& Reeders 2005 taxonomy list. If the OTU matches, then it is classified as living. Else it is matched with the Paleo Database list of mammals. If the OTU matches, then it is classified as fossil. Else it is ignored.}
+\label{Supp_figure_Taxonomic_algorithm}
+\end{figure}
 
 The number of characters in each matrix ranged from 6 to 4541.
 Matrices with few characters are problematic when comparing available data among matrices because (1) they have less chance of having characters that overlap with those of other matrices \citep{wagner2000} and (2) they are more likely to contain a higher proportion of specific characters that are not-applicable across large clades (e.g. ``antler ramifications'' is a character that is only applicable to Cervidae not all mammals \citep{Brazeau2011}.
@@ -146,7 +190,7 @@ Two contrasting results are shown in Figure \ref{Figure_example_coverage} with r
 
 \begin{figure}[!htbp]
 \centering
-    \includegraphics[width=1\textwidth]{Missing_mammals/example_coverage.pdf}
+    \includegraphics[width=1\textwidth]{Missing_mammals/Figures/example_coverage.pdf}
 \caption{Phylogenetic distribution of species with available cladistic data across two mammalian orders (A: Primates; B: Carnivora).
 Edges are colored in grey when no cladistic data is available for a species and in blue when data is available.}
 \label{Figure_example_coverage}
@@ -200,8 +244,8 @@ Such an effort would be valuable not only to phylogeneticists, but also to any r
 
 %Biology letters various stuff
 
-%\bibliographystyle{sysbio}
-%\bibliography{References}
+% \bibliographystyle{sysbio}
+% \bibliography{References}
 
 %\section{SOM}
 %\newcommand{\beginsupplement}{%
