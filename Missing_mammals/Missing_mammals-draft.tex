@@ -91,17 +91,17 @@ We also performed a systematic Google Scholar search (accessed 11th of June 2015
 
 Note that some matrices have been downloaded from more than one database but that it is not an issue since we are interested in the total number of unique living OTUs and that if some where present in more than one matrix, they still only counted as one single OTU.
 
-\subsubsection{Morphobank}
+\subsubsection*{Morphobank}
 We used the keywords listed above in the search menu of the Morphobank repository (\texttt{http://www.morphobank.org/}) and downloaded the data associated with each project matching with the keywords.
 
-\subsubsection{Graeme Lloyd}
+\subsubsection*{Graeme Lloyd}
 We downloaded all the matrices that were available with a direct download link in the mammal data section of Graeme Lloyd's website repository (\texttt{http://graemetlloyd.com/}).
 
-\subsubsection{Ross Mounce}
+\subsubsection*{Ross Mounce}
 We downloaded every 601 matrix from Ross Mounce's GitHub repository (\texttt{https://github.com/rossmounce}) and then ran a shell script to select only the matrices that had any text element that match with one of the search terms.
 To make the matrix selection more thorough, we ignored the keywords case as well as the latin suffix (\textit{ia}, \textit{ata}, \textit{ea}, and \textit{a}).
 
-\subsubsection{Google scholars (accessed 11th of June 2015)}
+\subsubsection*{Google scholars (accessed 11th of June 2015)}
 To make sure we didn't miss any extra matrix that wasn't available on one of these repository, we ran a extra Google Scholar search. 
 We downloaded the additional cladistic matrices from the 20 first search results matching with our selected keywords and with any of the 35 taxonomic levels (mammals Orders, Infraclasses and Class).
 We used the following key words:
@@ -117,7 +117,7 @@ For example in primates the character \textit{p7} coded first by \cite{ross1998p
 \begin{figure}[!htbp]
 \centering
     \includegraphics[width=1\textwidth]{Missing_mammals/Figures/Supp_figure_google_searches.pdf}
-\caption{Google searches additional OTUs rarefaction curve. The x axis represent the number of google scholar matches (papers, books or abstracts) and the y axis represents the cumulative number of additional living OTUs per google scholar match.}
+\caption[Google searches additional OTUs rarefaction curve.]{Google searches additional OTUs rarefaction curve. The x axis represent the number of google scholar matches (papers, books or abstracts) and the y axis represents the cumulative number of additional living OTUs per google scholar match.}
 \label{Supp_figure_google_searches}
 \end{figure}
 
@@ -136,7 +136,7 @@ Any OTUs that still had no matches in the sources above were designated as non-a
 \begin{figure}[!htbp]
 \centering
     \includegraphics[width=1\textwidth]{Missing_mammals/Figures/Supp_figure_Taxonomic_algorithm.pdf}
-\caption{Taxonomic matching algorithm used in this study. For each matrix, each operational taxonomic units (OTU) is matched with the super tree from Bininda-Emonds 2007. If the OTU matches, then it is classified as living. Else it is matched with the Wilson \& Reeders 2005 taxonomy list. If the OTU matches, then it is classified as living. Else it is matched with the Paleo Database list of mammals. If the OTU matches, then it is classified as fossil. Else it is ignored.}
+\caption[Taxonomic matching algorithm used in this study.]{Taxonomic matching algorithm used in this study. For each matrix, each operational taxonomic units (OTU) is matched with the super tree from Bininda-Emonds 2007. If the OTU matches, then it is classified as living. Else it is matched with the Wilson \& Reeders 2005 taxonomy list. If the OTU matches, then it is classified as living. Else it is matched with the Paleo Database list of mammals. If the OTU matches, then it is classified as fossil. Else it is ignored.}
 \label{Supp_figure_Taxonomic_algorithm}
 \end{figure}
 
@@ -191,7 +191,7 @@ Two contrasting results are shown in Figure \ref{Figure_example_coverage} with r
 \begin{figure}[!htbp]
 \centering
     \includegraphics[width=1\textwidth]{Missing_mammals/Figures/example_coverage.pdf}
-\caption{Phylogenetic distribution of species with available cladistic data across two mammalian orders (A: Primates; B: Carnivora).
+\caption[Phylogenetic distribution of species with available cladistic data across Primates and Carnivora]{Phylogenetic distribution of species with available cladistic data across two mammalian orders (A: Primates; B: Carnivora).
 Edges are colored in grey when no cladistic data is available for a species and in blue when data is available.}
 \label{Figure_example_coverage}
 \end{figure}
