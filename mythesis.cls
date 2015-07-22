@@ -222,7 +222,7 @@
 % into 5.5em.  There is a case that the tables should be srunk down to 
 
 \titlecontents{figure}[5.5em]{}{%
-  \makebox[0pt][l]{\hspace*{-5.5em}\sc Figure \thecontentslabel\enspace}}%
+  \makebox[0pt][l]{\hspace*{-5.5em}\sc Fig. \thecontentslabel\enspace}}% Change back to "Fig." to "Figure" if needed
 {}{\titlerule*[1pc]{.}\contentspage}
 
 \titlecontents{table}[5.5em]{}{%

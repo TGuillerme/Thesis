@@ -2,15 +2,21 @@
 %\documentclass[12pt]{mythesis} %Change to single sided layout for softbound printing
 
 
+%\documentclass[singelsided,12pt]{mythesis} %this is the mythesis.cls file
+% twoside,openright,versioninfo
+
+
+%\documentclass[singelsided,12pt]{mythesis} %this is the mythesis.cls file
+% twoside,openright,versioninfo
+
 % Consider:
 % \newcommand{\ie}{i.\,e.}
 % \newcommand{\Ie}{I.\,e.}
 % \newcommand{\eg}{e.\,g.}
 % \newcommand{\Eg}{E.\,g.}
-
 \usepackage{fixltx2e}
 \usepackage{textcomp}
-\usepackage{fullpage}
+%\usepackage{fullpage} %Messes up the chapter headers on each page
 \usepackage{float}
 \usepackage{latexsym}
 \usepackage{url}
@@ -31,38 +37,49 @@
 \usepackage{dcolumn}
 \usepackage{lineno}
 \usepackage{longtable}
+\usepackage{natbib}
 \pagenumbering{arabic}
-
-\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%\usepackage{tikz}
 
 
 \setcounter{tocdepth}{4}
 \setcounter{secnumdepth}{4} %number of subsections that are allowed
 
+ \usepackage{caption}
+\DeclareCaptionLabelFormat{}{#1}
+\usepackage{sidecap}
+%\captionsetup[table]{name={}}
+%\captionsetup[figure]{name={}}
+\sidecaptionvpos{figure}{c}
 
-%------------------------- 
-%Add package to set page margins - probably only need this for the final printed version (two sided printing)?
+\renewcommand*{\familydefault}{\sfdefault} %% I changed the font
+\usepackage{helvet}
 
-\usepackage{geometry}
+\usepackage{geometry} %  I took this from Adams I think it is the right margins
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=35mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
 
-\geometry{
-	a4paper,
-	total={210mm,297mm},
-	left={35mm},
-    right={20mm},
-	top={20mm},
-	bottom={20mm},
-}	
-%Need to add it to the declaration and acknowledgements and list of figures
-%--------------------------
+
+%You might need to load other packages here...
+
+% New columns for chapter 4
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 %% Symbols
 % unresolved:
 \newcommand{\ud}{\mathrm{d}}
 \newcommand{\drel}{\ensuremath{r_{\mathrm{rel}}}}
 \newcommand{\nmax}{\ensuremath{n_\mathrm{max}}}
+
+
 
 %Information for the title page
 %Some of this is hard coded in mythesis.cls but you can over write if you need to
@@ -71,9 +88,9 @@
 %
 \author{Thomas Guillerme}
 %
-\month{\textsc{October}} \year{2015}
-\previousdegrees{B.Sc., Universit\'{e}e Montpellier 2, 2010\\
-                 M.Sc., Universit\'{e}e Montpellier 2, 2012}
+\month{\textsc{September}} \year{2015}
+\previousdegrees{B.Sc., Universit\'{e} Montpellier 2, 2010\\
+                 M.Sc., Universit\'{e} Montpellier 2, 2012}
 \degreetitle{Doctor of Philosophy}
 \institution{Trinity College Dublin}
 \school{School of Natural Sciences}
@@ -89,11 +106,22 @@
 \input{summary}
 \input{acknowledgements}
 
-%http://xkcd.com/1546/
-%http://xkcd.com/722/
+\newpage
+
+\chapter*{Preamble}
+
+\vline  
+
+\vfill
+\begin{center} 
+  \includegraphics[width=1\textwidth]{introduction/figures/xkcd722(CC_BY-NC_2_5).png}
+    xkcd.com/722 - CC BY-NC 2.5
+\end{center}
+\vfill
+
 
 \allcontents %tells it to make a table of contents with figure and table lists too
- 
+ %Exclude subsbubsections ?
 \cleardoublepage
 \mainbody
 
@@ -103,13 +131,11 @@
 
 \formatbibliography 
 \bibliographystyle{sysbio} 
-\bibliography{refs_thesis} %you may also call you bibliography something different. This is refs-thesis.bib
+\bibliography{References} %you may also call you bibliography something different. This is refs-thesis.bib
 
-\input{Supplementaries/Chapter2}
+\formatappendices
+\input{Supplementaries/Missing_mammals}
 
-%\formatappendices
-%\input{phylo_appendix}
-%\input{data_appendix}
 
 
 \end{document}
