@@ -123,10 +123,44 @@
 \allcontents %tells it to make a table of contents with figure and table lists too
  %Exclude subsbubsections ?
 \cleardoublepage
+
+\chapter*{Specific chapter contributions and acknowledgements} % Or move all this at the end?
+\addcontentsline{toc}{chapter}{Additional informations for each specific chapters}
+
+\section*{Effects of missing data on topological inference using a Total Evidence approach}
+\subsection*{Data availability and reproducibility}
+All the code used in this analysis is available on \href{https://github.com/TGuillerme/Total_Evidence_Method-Missing_data}{GitHub} (\href{https://github.com/TGuillerme/Total_Evidence_Method-Missing_data}{    
+goo.gl/4djNUf}) with some information on how to use the various functions. Additionally all the simulated data is available on \href{http://figshare.com/articles/Effect_of_missing_data_on_topological_inference_using_a_total_evidence_approach/1306861}{FigShare} (dx.doi.org/10.6084/m9.figshare.1306861).
+\subsection*{Contributions}
+I designed the experiment, ran the analysis, interpreted the results and wrote the manuscript. Natalie Cooper helped for designing the experiment and writing the manuscript.
+\subsection*{Acknowledgements}
+Thanks to Gavin Thomas, Fr\'{e}d\'{e}ric Delsuc, Emmanuel Douzery, Trevor Hodkinson, Andrew Jackson, Nick Matzke, and April Wright for useful comments on our simulation protocol and manuscript. Thanks to Paddy Doyle, Graziano D'Innocenzo and Sean McGrath for assistance with the computer cluster. Thanks to the two anonymous reviewers for their useful and enthusiastic comments.
+
+\section*{Missing data in living mammals}
+\subsection*{Data availability and reproducibility}
+All data and analysis code is available on GitHub (\url{https://github.com/TGuillerme/Missing_living_mammals}).
+\subsection*{Contributions}
+I designed the experiment, ran the analysis, interpreted the results and wrote the manuscript. Natalie Cooper helped for designing the experiment and writing the manuscript.
+\subsection*{Acknowledgements}
+Thanks to David Bapst, Graeme Lloyd, Nick Matzke and April Wright.
+
+\section*{Cretaceous-Palaeogene extinction does not affect mammalian disparity}
+\subsection*{Data availability and reproducibility}
+Data will be available on Dryad or Figshare.
+Code for reproducing the analysis is available on GitHub (\url{ithub.com/TGuillerme/SpatioTemporal_Disparity}).
+\subsection*{Contributions}
+I designed the experiment, ran the analysis, interpreted the results and wrote the manuscript. Natalie Cooper helped for designing the experiment and writing the manuscript.
+\subsection*{Acknowledgements}
+Thanks to Graeme Lloyd, Andrew Jackson, Gavin Thomas and Sive Finlay.
+
+\newpage
+
 \mainbody
 
 \input{introduction} 
+\input{TEM/TEM_revised}   
 \input{Missing_mammals/Missing_mammals-draft}	
+\input{STD/STD_draft}
 \input{discussion}
 
 \formatbibliography 
