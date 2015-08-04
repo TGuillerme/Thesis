@@ -1,13 +1,5 @@
-\documentclass[twoside,12pt]{mythesis}%this is the mythesis.cls file % twoside,openright,versioninfo
+\documentclass[twoside,12pt]{mythesis} % twoside,singelsided,openright,versioninfo
 %\documentclass[12pt]{mythesis} %Change to single sided layout for softbound printing
-
-
-%\documentclass[singelsided,12pt]{mythesis} %this is the mythesis.cls file
-% twoside,openright,versioninfo
-
-
-%\documentclass[singelsided,12pt]{mythesis} %this is the mythesis.cls file
-% twoside,openright,versioninfo
 
 % Consider:
 % \newcommand{\ie}{i.\,e.}
@@ -43,7 +35,7 @@
 
 
 \setcounter{tocdepth}{4}
-\setcounter{secnumdepth}{4} %number of subsections that are allowed
+\setcounter{secnumdepth}{5} %number of subsections that are allowed up to subsubsubsubsubsection!
 
  \usepackage{caption}
 \DeclareCaptionLabelFormat{}{#1}
@@ -52,7 +44,7 @@
 %\captionsetup[figure]{name={}}
 \sidecaptionvpos{figure}{c}
 
-\renewcommand*{\familydefault}{\sfdefault} %% I changed the font
+\renewcommand*{\familydefault}{\sfdefault}
 \usepackage{helvet}
 
 \usepackage{geometry} %  I took this from Adams I think it is the right margins
@@ -66,7 +58,6 @@
  }
 
 
-%You might need to load other packages here...
 
 % New columns for chapter 4
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -96,11 +87,9 @@
 \school{School of Natural Sciences}
 \department{Zoology}
 
-%End of preamble.
-%--------------------------------------
 \begin{document}
 
-\maketitle %puts in your title
+\maketitle
 
 \input{declaration}
 \input{summary}
@@ -108,7 +97,7 @@
 
 \newpage
 
-\chapter*{Preamble}
+\chapter*{Preface}
 
 \vline  
 
@@ -120,11 +109,11 @@
 \vfill
 
 
-\allcontents %tells it to make a table of contents with figure and table lists too
- %Exclude subsbubsections ?
+\allcontents
+ %Exclude subsbubsections? Keep subsections?
 \cleardoublepage
 
-\chapter*{Specific chapter contributions and acknowledgements} % Or move all this at the end?
+\chapter*{Specific chapter contributions and acknowledgements} % TG: Or move all this at the end?
 \addcontentsline{toc}{chapter}{Additional informations for each specific chapters}
 
 \section*{Effects of missing data on topological inference using a Total Evidence approach}
@@ -165,7 +154,7 @@ Thanks to Graeme Lloyd, Andrew Jackson, Gavin Thomas and Sive Finlay.
 
 \formatbibliography 
 \bibliographystyle{sysbio} 
-\bibliography{References} %you may also call you bibliography something different. This is refs-thesis.bib
+\bibliography{References}
 
 \formatappendices
 \input{Supplementaries/Missing_mammals}
