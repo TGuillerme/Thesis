@@ -45,49 +45,51 @@ However, this approach uses only the ages of certain fossils instead of the vast
 \end{enumerate}
 
 
-\section{Phylogenies with living and fossil species}
+\section{Phylogenies with living and fossil taxa}
 Nonetheless, the last three years have seen the development of the new trending Total Evidence method \citep{ronquista2012,slaterphylogenetic2013,Wood01032013,schragocombining2013,beckancient2014,Arcila2015131,Dembo2015}.
-This methods allow to combine both molecular data from living species and morphological data from living and fossil species in the same phylogenetic matrices.
+This methods allow to combine both molecular data from living taxa and morphological data from living and fossil taxa in the same phylogenetic matrices.
 It was first developed in the nineties \citep{eernissetaxonomic1993} but only recently successfully implemented in softwares \citep{Ronquist2012mrbayes,BEAST2}.
 By using both available neontological and palaeontological data, this methods allows to better study macroevolutionary patterns and processes.
 For example, it allowed great improvements on the estimation of divergence event \citep[e.g.][]{ronquista2012}; evolutionary rates \citep[e.g.][]{beckancient2014}; topology \citep[e.g.][]{Dembo2015}; traits evolution \citep[e.g.][]{slaterphylogenetic2013} or even speciation processes \citep[e.g.][]{Wood01032013}.
-There is, however, one drawback to this method: because it needs both molecular data for living species and morphological data for living and morphological species, it is susceptible to suffer from great amounts of missing data.
+There is, however, one drawback to this method: because it needs both molecular data for living taxa and morphological data for living and morphological taxa, it is susceptible to suffer from great amounts of missing data.
 
 \subsection{Effects of missing data on topological inference using a Total Evidence approach}
 As a first part of this PhD thesis, in the second chapter, I tackled the problem of missing data in Total Evidence matrices.
 I ran long term and thorough simulations to test whether the topologies inferred from Total Evidence matrices were stable to missing morphological data.
-I removed morphological data from Total Evidence matrices via three parameters where data could be missing: (1) the number of living species with molecular data but no morphological data; (2) the amount of missing data in the fossil record and (3) the number of overall morphological characters in the matrix.
+I removed morphological data from Total Evidence matrices via three parameters where data could be missing: (1) the number of living taxa with molecular data but no morphological data; (2) the amount of missing data in the fossil record and (3) the number of overall morphological characters in the matrix.
 I modified the level of data in the three parameters and in their combination and then inferred the phylogenetic topology using both Maximum Likelihood and Bayesian approach.
 Finally, I compared how the missing data parameters and their interactions as well as the phylogenetic inference method influenced the ability of estimating the correct topology.
 I found that the number of living taxa with both morphological and molecular data is the essential to recover accurate topologies.
 This study rose the question of how can we improve Total Evidence topologies and especially, how much morphological data is available for living taxa?
 
 \subsection{Morphological data availability in living mammals}
-%Stopped here
-Following this question, in the third chapter of my thesis, I looked at how many data was available in mammals.
-Following these results, I was interested in showing practical implications of this effect and monitored the morphological data availability for living mammals.
-I downloaded all the recent available morphological matrices and counted the number of living mammals with available morphological data.
-I then tested how these taxa where distributed accross the phylogeny to check if there weren't clustered in some specific clades.
-I found that a lot of data is missing but that at least most of it is randomly distributed and should not drastically effect topology.
-Since data in mammals is improvable, but is ok at higher taxonomic levels, it is an excellent candidate group for building Total Evidence phylogenies to allow macroevolutionary studies including both living and fossil species.
+Following this question, in the third chapter of my thesis, I monitored how many morphological data was available in the literature for living mammals.
+I downloaded all the recent available morphological matrices and counted the number of living mammals with available morphological data at three different taxonomic levels (taxa, genus and family) for each mammalian order.
+For each order with missing data, I measured if the data weren't clustered to some specific clades in each order using phylogenetic structure methods \citep{webb2002phylogenies}.
+I found that a lot of living mammals have no morphological data at the taxa or the genus level but, that at least most of the available data was randomly distributed.
+These results highlight the importance of cladistics, even in the age of genomics, especially for combining living and fossil data in the same phylogenies.
 
 \section{Total evidence phylogenies applications}
-These trees can allows use to capture macroevolutionary or macroecological patterns more accurately and therefore propose more solid hypothesis on processes.
-Slater and Beck have successfully build Total Evidence and tip-dated phylogenies.
-We can use these phylogenies for answering many question such as body mass evolution (Slater) or timing of diversification (beck) and that improves the whole yoke.
-Another interesting we can do with such phylogenies is to look at diversity through time more accurately.
+The two previous chapters only focused on the technical and practical side of combining living and fossil taxa into phylogenies and underlined the importance of a good data overlap between living and fossil taxa.
+However, many studies have been able to use the Total Evidence method even with low overlap between living and fossil taxa by using strong topological constraints (\citealt{ronquista2012,schragocombining2013,slaterphylogenetic2013,beckancient2014}; but see \citealt{Arcila2015131,Dembo2015}).
+This resulted in Total Evidence phylogenies were the topology are based on strong but valid \texit{a priori} topologies \citep[e.g. based on][for mammals]{meredithimpacts2011}, allowing biologists to use these phylogeny to test some macroevolutionary hypothesis.
+
+Because these phylogenetic trees capture macroevolutionary patterns more accurately (\citealt{ronquista2012,schragocombining2013,slaterphylogenetic2013,beckancient2014,Dembo2015}; but see \citealt{Arcila2015131}), they can be used as a base for testing macroevolutionary processes.
+One example of pattern often observed is the shift of ecological dominant species through time due to drastic biotic or abiotic changes in the biosphere (e.g. mass extinctions).
+For example, Brachiopoda was a dominant filter feeding shell clade during the Paleozoic (514 to 252 million years ago; Mya) but was replaced by Bivalvia at the end Permian extinction event (252 Mya) which is now the dominant filter feeding shell (\citealt{Sepkiski1981,CLAPHAM01102006} but see \citealt{Payne22052014}).
+This type of replacement pattern has also been observed in other groups such as Formaninifera \citep{Coxall01042006}, Ichtyosauria \citep{thorneresetting2011} or Plesiosauria \citealt{bensonfaunal2014} and are often related to competition \citep{brusatte50} or adaptive radiations \citep{Losos2010}.
+Another classical example is the ``replacement'' of the dominant non-avian dinosaurs by mammals after the infamous Cretaceous-Paleogene (K-Pg) extinction 66 Mya...
 
 \subsection{Cretaceous-Palaeogene extinction does not affect mammalian disparity}
-% Cheesy quote for that bit "The most erroneous stories are those we think we know best - and therefore never scrutinize or question." Gould whenever
-One interesting point about diversity it that it doesn't has to be just species richness but sometimes disparity can be important as well.
-We can use both processes plus Total Evidence trees to better describe the macroevolutionary patterns.
-These more accurate patterns can be used to explain the processes driving diversification or extinction during a mass extinction event, we need to accurately measure what's happening.
-One classical example is the K-T extinction where the effects still remain unclear after so many years of research.
-In the fourth chapter, I explore this question using Total Evidence trees and focusing on disparity rather than species diversity to see if mammals were affected by the K-Pg extinction event.
-I found that mammals do not do a damn thing around the K-Pg boundary.
+In this fourth chapter, I studied the changes of morphological diversity \citep[or disparity;][]{Wills1994} through time using Total Evidence trees from \cite{slaterphylogenetic2013} and \cite{beckancient2014} to test whether the K-Pg extinction had an effect on mammal evolution.
+I propose a new approach to describe patterns of disparity through time base on the use of Total Evidence trees.
+This approach allows more precision in describing the changes through time as well as more freedom for choosing the underlining models of morphological evolution \citep[e.g. punctuated or gradual;][]{Hunt21042015}.
+Using this approach I found no evidence of changes in disparity in mammals around the K-Pg boundary, arguing that the extinction of non-avian dinosaurs had no direct effect on mammalian evolution.
+
+%Stopped here
 
 \section{Discussion} % TG: I think if the title stays as shitty, no need for a title.
-This is just an example on how including both living and fossil species can change our vision of biodiversity.
+This is just an example on how including both living and fossil taxa can change our vision of biodiversity.
 In the last chapter, I will discuss potential more application but also problems that arise with such methods
 
-%\bibliography{References}
+\bibliography{References}
