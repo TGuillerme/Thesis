@@ -1,28 +1,78 @@
 
+\documentclass[12pt,letterpaper]{article}
 
-%---------------------------------------------
-%
-%       START
-%
-%---------------------------------------------
+%Packages
+\usepackage{xcolor}
+\usepackage{color,soul}
+\usepackage{changepage}
+\usepackage{pdflscape}
+\usepackage{fixltx2e}
+\usepackage{textcomp}
+\usepackage{fullpage}
+\usepackage{natbib}
+\usepackage{float}
+\usepackage{latexsym}
+\usepackage{url}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{array}
+\usepackage[version=3]{mhchem}
+\usepackage{ifthen}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage{amsthm}
+\usepackage{amstext}
+\usepackage{enumerate}
+\usepackage[osf]{mathpazo}
+\usepackage{dcolumn}
+\usepackage{lineno}
+\usepackage{longtable}
+\pagenumbering{arabic}
 
-\chapter[Total Evidence method and missing data]{Total Evidence method and missing data}
-\label{chap:TEM_paper}
+
+%Pagination style and stuff
+\linespread{2}
+\raggedright
+\setlength{\parindent}{0.5in}
+%\setcounter{secnumdepth}{0} 
+
+\begin{document}
+\vspace*{0.35in}
+
+%Running head
+\begin{flushright}
+%Version dated: \today
+\end{flushright}
+\bigskip
+\noindent Running head: Missing data and topology in Total Evidence method
 
 \bigskip
 \medskip
 \begin{center}
 
 \noindent{\Large \bf Effects of missing data on topological inference using a Total Evidence approach}
-\footnote{A similar version of this chapter is currently (2015/09/30) under review in Molecular Phylogenetics and Evolution. T.G. and N.C. designed the experiments; T.G. ran the analysis and interpreted the results; T.G. and N.C. wrote the manuscripts. \textit{Specific acknowledgements}: thanks to Gavin Thomas, Fr\'{e}d\'{e}ric Delsuc, Emmanuel Douzery, Trevor Hodkinson, Andrew Jackson, Nick Matzke, and April Wright for useful comments on our simulation protocol and manuscript. Thanks to Paddy Doyle, Graziano D'Innocenzo and Sean McGrath for assistance with the computer cluster. Thanks to two anonymous reviewers for their useful and encouraging comments. \textit{Data availability and reproducibility}: All the code used in this analysis is available on \href{https://github.com/TGuillerme/Total_Evidence_Method-Missing_data}{GitHub} (\href{https://github.com/TGuillerme/Total_Evidence_Method-Missing_data}{goo.gl/4djNUf}) with some information on how to use the various functions. Additionally all the simulated data is available on \href{http://figshare.com/articles/Effect_of_missing_data_on_topological_inference_using_a_total_evidence_approach/1306861}{FigShare} (dx.doi.org/10.6084/m9.figshare.1306861).} \\
-%} \\
+
+\bigskip
+
+\noindent {\normalsize \sc Thomas Guillerme$^a$$^,$$^b$$^*$, and Natalie Cooper$^a$$^,$$^b$$^,$$^c$}\\
+\noindent {\small \it 
+$^a$School of Natural Sciences, Trinity College Dublin, Dublin 2, Ireland.\\
+$^b$Trinity Centre for Biodiversity Research, Trinity College Dublin, Dublin 2, Ireland.\\
+$^c$Department of Life Sciences, Natural History Museum, Cromwell Road, London, SW7 5BD, UK.\\% E-mail: natalie.cooper@nhm.ac.uk}\\
+$^*$Corresponding author. Zoology Building, Trinity College Dublin, Dublin 2, Ireland; E-mail: guillert@tcd.ie; Fax: +353 1 6778094; Tel: +353 1 896 2571.}\\
 
 \end{center}
-%---------------------------------------------
-%
-%       ABSTRACT
-%
-%---------------------------------------------
+
+\vspace{1in}
+
+%Line numbering
+\modulolinenumbers[1]
+\linenumbers
+
+\newpage
 \section* {Abstract}
 To fully understand macroevolutionary patterns and processes, we need to include both extant and extinct species in our models.
 This requires phylogenetic trees with both living and fossil taxa at the tips.
@@ -127,17 +177,15 @@ We compared the ``best'' tree to the ``missing-data'' trees to assess the influe
 \end{enumerate}
 We repeated these four steps 50 times to account for variation in our random parameters in the simulations.
 
-\begin{figure}[h]
-\centering
-    \includegraphics[width=1\textwidth]{TEM/Figures/Fig1.eps}
-\caption{{\bf Protocol outline.}
-(1) We randomly generated a birth-death tree (the ``true'' tree) and used it to simulate a matrix with no missing data (the ``complete'' matrix).
-(2) We removed data from the morphological part of the ``complete'' matrix resulting in 125 ``missing-data'' matrices.
-(3) We built phylogenetic trees from each matrix using both Maximum Likelihood and Bayesian methods.
-(4) We compared the ``missing-data'' trees to the ``best'' tree.
-We repeated these four steps 50 times.}
-\label{Fig_Outline}
-\end{figure}
+%\begin{figure}[h]
+%\caption{{\bf Protocol outline.}
+%(1) We randomly generated a birth-death tree (the ``true'' tree) and used it to simulate a matrix with no missing data (the ``complete'' matrix).
+%(2) We removed data from the morphological part of the ``complete'' matrix resulting in 125 ``missing-data'' matrices.
+%(3) We built phylogenetic trees from each matrix using both Maximum Likelihood and Bayesian methods.
+%(4) We compared the ``missing-data'' trees to the ``best'' tree.
+%We repeated these four steps 50 times.}
+%\label{Fig_Outline}
+%\end{figure}
 
 %---------------------------------------------
 %       1-Generating the matrix
@@ -509,6 +557,18 @@ This might have an important impact on estimating topologies in the Total Eviden
 Therefore, we suggest extracting such topological backbones from the Bayesian consensus tree if needed.
 
 
+\section{Acknowledgments}
+Thanks to Gavin Thomas, Fr\'{e}d\'{e}ric Delsuc, Emmanuel Douzery, Trevor Hodkinson, Andrew Jackson, Nick Matzke, and April Wright for useful comments on our simulation protocol and manuscript. Thanks to Paddy Doyle, Graziano D'Innocenzo and Sean McGrath for assistance with the computer cluster. Thanks to two anonymous reviewers for their useful and encouraging comments. Simulations used the Lonsdale cluster maintained by the Trinity Centre for High Performance Computing and funded through grants from Science Foundation Ireland. This work was funded by a European Commission CORDIS Seventh Framework Programme (FP7) Marie Curie CIG grant (proposal number: 321696).
+
+\nolinenumbers
+
+\bibliographystyle{sysbio}
+\bibliography{References}
+
+\newpage
+\noindent
+\textbf{Figure captions}\\
+\bigskip
 
 \noindent
 \textbf{Figure 1:} Protocol outline.
@@ -577,3 +637,5 @@ Values $>$ 0.95 denote significantly similar distributions and values $<$ 0.05 d
 %\end{adjustwidth}
 \end{table}
 \end{landscape}
+
+\end{document}
