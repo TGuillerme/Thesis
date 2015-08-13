@@ -187,7 +187,10 @@
   \vfill\vfill
 
   \@month\ \@year\\[24pt]
-  {\footnotesize{\copyright} \@author, \@year}
+  % Copyright:
+  %{\footnotesize{\copyright} \@author, \@year}
+  % No! Creative commons!
+  {\footnotesize{\includegraphics[width=20mm]{CC-BY-SA.png}}}
 \end{center}
 \textspacing
 \newpage
