@@ -145,7 +145,7 @@ We repeated these four steps 50 times.}
 
 \subsection{Generating the matrix}
 \label{Generating_the_matrix}
-First we randomly generated a ``true'' tree of 50 taxa in R v. 3.0.2 \citep{R302} using the package diversitree v. 0.9-6 \citep{fitzjohndiversitree2012}.
+First we randomly generated a ``true'' tree of 50 taxa in R v. 3.0.2 \citep{R} using the package diversitree v. 0.9-6 \citep{fitzjohndiversitree2012}.
 We generated the tree using a birth death process by sampling speciation ($\lambda$) and extinction ($\mu$) rates from a uniform distribution (bounded between 0 and 1) but maintaining $\lambda$ $>$ $\mu$ \citep{paradistime-dependent2011}.
 Empirical Total Evidence matrices vary in whether they have more fossil than living taxa or vice versa.
 For example, fossil taxa make up 88\% \citep{beckancient2014}, 58\% \citep{schragocombining2013}, 48\% \citep{pyrondivergence2011}, 31\% \citep{ronquista2012} and 31\% \citep{slaterphylogenetic2013} of taxa in various studies.
@@ -705,7 +705,7 @@ This can affect our ability to recover the ``best'' tree topology through: (1) t
 The incongruence of phylogenetic signal between morphological and molecular data has previously been demonstrated to be more important in small morphological matrices (\citealt{bremer1992phylogeny,patterson1993congruence}; see \citealt{masters2002lack} for an empirical example).
 The sizes of our data matrices were constrained by the performance of our protocol: to reduce the computational time of our analysis to a reasonable level (150 CPU years), we ran our simulations on modestly-sized matrices of 1000 molecular characters and 100 morphological characters.
 Therefore, part of the decrease of the Normalised Robinson-Foulds metric and the Normalised Triplets metric in our simulations could be due to conflicting phylogenetic signal among morphological and molecular data in our matrices (Fig. \ref{Fig_Results-permeth_perparam} and Fig. \ref{Fig_Results-permeth_perparam}).
-Although these matrices are an order of magnitude smaller than some published matrices \citep[e.g.][]{springermacroevolutionary2012,nithe2013}, they are still within the size range of more modestly-sized empirical matrices \citep[e.g.][]{kellymolecular2014, sallam2011craniodental}.
+Although these matrices are an order of magnitude smaller than some published matrices \citep[e.g.][]{springermacroevolutionary2012,ni2013oldest}, they are still within the size range of more modestly-sized empirical matrices \citep[e.g.][]{kellymolecular2014, sallam2011craniodental}.
 Therefore, our simulations reflect realistic parameters.
 Nonetheless, the use of probabilistic methods (i.e. Maximum Likelihood or Bayesian) and the M\textit{kv} model \citep{lewisa2001} has been previously demonstrated to partially resolve this issue \citep{wrightbayesian2014}.
 
@@ -755,7 +755,7 @@ Our missing data parameters illustrate different sources of missing data in empi
 Filling these gaps in empirical Total Evidence matrices should lead to a substantial increase in our ability to recover the ``best'' tree topology.
 We can increase the number of living taxa with coded morphological characters by increasing research efforts in this area, and encouraging use of our vast natural history collections.
 Increasing data for fossil species is harder, since it depends on fossil preservation biases and new fossil discoveries.
-Gaps in the matrix, however, can be filled with efforts in palaeontological field work that can potentially lead to future discoveries of exceptionally preserved fossils \citep[e.g.][]{nithe2013}.
+Gaps in the matrix, however, can be filled with efforts in palaeontological field work that can potentially lead to future discoveries of exceptionally preserved fossils \citep[e.g.][]{ni2013oldest}.
 Fortunately, although these data are the most difficult to collect, they also have the least influence on whether our simulations recover the ``best'' tree topology (Fig. \ref{Fig_Results-paircomp_within}).
 Finally, although increasing the number of coded characters is relatively straightforward, the amount of time it takes to build a morphological matrix increases directly with the number of characters involved.
 One solution to this problem may be to engage with collaborative data collection projects through web portals such as \textit{MorphoBank} \citep{morphobank}, so that no single individual collects all the data.
