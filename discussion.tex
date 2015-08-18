@@ -7,21 +7,48 @@
 % 
 %---------------------
 
-\section{The future of the Total evidence method}
-Combined with tip-dating is super interesting but we need more data.
-To do so we can use plateforms such as morphobank and foster collaboration on big projects.
-Also we can make all the data available blablabla.
+\section{The future of the Total Evidence method}
+The Total Evidence method seems to be one of the promising new ways of testing macroevolutionary hypotheses \citep[e.g.][]{ronquista2012,slaterphylogenetic2013,Wood01032013,beckancient2014,Dembo2015}.
+However, as shown in the chapters 2 and 3 of the present thesis, this method seems to be sensitive to missing data \citep{GuillermeCooper,MissingMammals}.
+As discussed in chapter two, the missing data can be separated in two categories: (1) the number of morphological characters and the number of living taxa with coded morphological characters and (2) the amount of missing data in the fossil record.
+The first point is merely a technical problem since the infrastructures for coding large amount of characters exists \citep[e.g.][]{morphobank,O'Leary08022013} and the living taxa are vastly available in Natural History collection around the word.
+Therefore, we can be confident that this issue will be solved with time.
+However, the second point is more problematic since it solely depends on the stochasticity new palaeontological discoveries.
 
-However, there are some limitations:
-Maybe tip-dating isn't that good? Compared to the nice recent node dating models... (Arcila)
-Also the Mk model is really crude and overly simplistic.
+Some other limitations include the associated method for dating Total Evidence phylogenies.
+Because these phylogenies contain both living and fossil taxa, the preferred method to date such trees is to use the tip-dating method \citep[e.g.][]{ronquista2012,Wood01032013,Dembo2015}.
+\cite{ronquista2012} have demonstrated the advantage of the tip-dating on the node-dating method since it reduces the confidence intervals at the node ages compared to a classic node-dating approach.
+However, more recently, \cite{Arcila2015131} have revised this claim by comparing both method using the latests models for the node-dating method \citep[i.e. the fossilised birth-death model][]{heaththe2013} and have shown the opposite effect.
+These differences can be due to both the empirical approaches from both studies or the differences in node-dating models.
+One solution to solve this issue would be a similar thorough simulation approach presented in chapter two for testing the effect of node-dating or tip-dating on divergence time estimations.
 
-One way to improve could be a REAL total evidence dating using also trait data, biogeography, etc...
-In reality, all this parameters have an influence of lineages history and should technically be taken into account.
-But data problem is likely to increase, an needs models need to be improved as well.
-And in the end, how many parameters do we want?
+Additionally, the Total Evidence method relies on the M\textit{k} model \citep{lewisa2001} to measure the morphological distance between taxa.
+This method is a generalisation of the Jukes-Cantor evolutionary model \citep{jukes1969evolution} that allows a single mutation rate $\mu$ between all four nucleotides.
+This model of DNA evolution is a crude simplification of reality and was replaced with more generalised models closer to biological reality \citep[e.g. the GTR model allowing a different rate for each mutation;][]{tavare1986}.
+It is therefore likely that the M\textit{k} model is a crude underestimation of the reality of morphological evolution, especially since the assumption that their is a unique rate of evolution between character states has been shown to be wrong in some specific cases \citep[e.g. for Dollo traits;][]{WrightDollo}.
+\cite{spencerefficacy2013} even demonstrated that non-probabilistic method such as maximum parsimony outperforms the M\textit{k} model regarding the contentious placement of fossils such as \textit{Archaeopteryx}.
+Yet, more recent simulations have clearly demonstrated the superiority of the M\textit{k} model over maximum parsimony at estimating correct topology, even if it underestimates the reality of morphological characters evolution \citep{wrightbayesian2014}.
+
+One alternative to the Total Evidence method, the classic node-dating method, can therefore been seen as interesting solution to overcome this data problem.
+This method has recently benefited from excellent incremental implementation such as the fossilised birth-death model \citep{heaththe2013} or standardisation for choosing calibration points \citep{Parham01032012}.
+Yet, as the statistician George Box wrote, ``essentially, all models are wrong, but some are useful'' \citep{box1987empirical}.
+I argue that this is exactly the case of the Total Evidence method: despite the three major caveats discussed above, this methods remains the only efficient method to date to include the diversity of life both past and present.
+
+One research route to improve the Total Evidence method could be a \textit{Full} Total Evidence method.
+In fact, the Total Evidence methods claims to be total because it uses both molecular and morphological data \citep{eernissetaxonomic1993}, however, this does not represents the \textit{totality} of data available to biologists.
+Other sources of data such as traits (e.g. body mass), ecology (e.g. habitat) or biogeography could also be realistically added to Total Evidence methods with appropriate evolutionary models and hypothesis for each type of data \citep[e.g. respectively quantitative, multiple or geographic state speciation and extinction model - Qua-Mu-GeoSSE models;][]{fitzjohndiversitree2012}.
+However, such data sets could improve the Total Evidence trees but also make them more complex statistical by increasing the number of parameters and assumptions.
+Finally, this is also likely to simply increase the data availability problem.
 
 \section{Diversity is multidimensional}
+As shown in chapter 4, Total Evidence trees can be used to test macroevolutionary hypothesis such as the effect of biotic and abiotic events on morphological diversification.
+
+
+Diversity should be always seen as multidimensional.
+Diversity is taxonomic, phylogenetic, morphological, biogeographical, ecological, etc...
+
+Morphological diversity is already complex (morphological and cladistic; but see Hetherington and Forth, it seems to be grand).
+
 Diversity is often just seen as the sheer number of species.
 However, the processes that led to this pattern is fundamentaly intangled with all the other aspects of diversity.
 For example, specious rich groups have also so traits, etc...
@@ -34,7 +61,6 @@ However, this is more complex, species diversity is easy to interprate (many pop
 What IS disparity? What metric to use? How to express the changes etc...
 Also, all these metrics are just using proxies.
 
-But  The statistician George Box wrote "essentially, all models are wrong, but some are useful" \citep{box1987empirical}. % Modify
 This is still really promising and can be improved first by underestanding how all this works in a theoretical way (building the models).
 And only then apply it to observed patterns.
 
@@ -52,3 +78,5 @@ Mitchell: Simulations and empirical results have shown that comparative methods 
 Mitchell: by using clades with fossil data to find and fit reliable methods for inferring morphological evolution (e.g., subclade disparity through time), paleontologists and comparative biologists can work together to bring our data to as close to representative as possible.
 
 Pant: Analyses based on extant taxa alone have the potential to oversimplify or misidentify macroevolutionary patterns. This study demonstrates the impact that integration of data from the fossil record can have on reconstructions of character evolution and establishes that body size evolution in sloths was complex, but dominated by trended walks towards the enormous sizes exhibited in some recently extinct forms.
+
+%\bibliography{References}
