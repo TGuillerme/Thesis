@@ -52,7 +52,7 @@ Even though disparity analysis are becoming increasingly common in palaeobiology
 Firstly, morphological diversity is a complex concept to grasp or to interpret.
 Describing the shape of an organism is not straightforward and many mathematical methods exist (e.g. Elliptic Fourier; \citealt{Fourier1982}; Procrustes; \citealt{JamesRohlf1993129}; Convex Hull; \citealt{ANDREW1979216}).
 In biology, one major approach is to describe shape as a summary of an ordinated distance matrix based on procrustes \citep[i.e. a geometric morphometric approach][]{zelditch2012geometric}.
-In studies using this approach, shape is approximated by actual continuous measurement collected from the organisms \citep[e.g.]{friedmanexplosive2010,hopkinsdecoupling2013,finlay2015morphological}.
+In studies using this approach, shape is approximated by actual continuous measurement collected from the organisms \citep[e.g.][]{friedmanexplosive2010,hopkinsdecoupling2013,finlay2015morphological}.
 However, in our case, we used differences (read inter-taxon distances) between particular morphological features \citep[e.g.][]{foote1997evolution,Wills2001,Wesley-Hunt2005}.
 This method has been criticised by some of their users to be biased by: (1) the fact that these morphological features are not randomly collected and can distort reality \citep{Brusatte12092008}%develop
  or (2) that they are highly dependant on the quality of the fossil record \citep{Butler2012}.
@@ -76,18 +76,27 @@ This is still really promising and can be improved first by underestanding how a
 And only then apply it to observed patterns.
 
 \section{What is the real effect of combining?}
-Maybe only important when groups have actually a complex history?
-Old clades might have no living descendants and the question is therefore N/A
-Recent subclades maybe not have changed much in diversity so adding fossils might not change much.
-But we never know! Example of the giant lemur (recently extinct).
+Several studies have demonstrated the challenges and the importance of including fossils into phylogenies \citep[e.g.][]{ronquista2012,slaterphylogenetic2013,Wood01032013,beckancient2014,Dembo2015}.
+However, all these studies do not focus on the effect of adding fossil taxa to phylogenies \textit{per se} but rather perform empirical analysis while including fossil taxa and demonstrate the superiority of their findings upon previous studies.
+In fact, the effect of combining both living and fossil has yet, to my knowledge, never been tested in a simulation or theoretical way.
+Yet it is important to note that several studies actually thoroughly studied this effect on some empirical data sets and consistently found an important effect of adding fossil data in macroevolutionary studies \citep{Finarelli2006,Slateretal2012,slaterphylogenetic2013,SlaterPennel2014,pant2014complex,Mitchell2015}.
 
-Tested effects : Finarelli and Flynn, 2006; Slater et al., 2012; Slater, 2013; Pant et al., 2014   PANT:http://www.biomedcentral.com/1471-2148/14/184
+One question arising from these particular studies is whether there is a \textit{real} effect of combining both living and fossil species into macroevolutionary studies.
+In fact, one can argue that the conclusions from these studies are linked to the peculiarity of the groups studied that had a rather dynamic evolution and that combining living and fossil data reveals the true macroevolutionary patterns.
+Because the methods for combining living and fossil taxa are still challenging, it could be a futile and time consuming exercise in these following scenarios:
+\begin{enumerate}
+\item when studying some clades that have no living relatives (e.g. Trilobita; \citealt{hopkinsdecoupling2013}; Pterosauria; \citealt{Butler2012}; etc.);
+\item when studying clades with a really poor fossil record \citep[e.g. Aves where there are three orders of magnitude more known living than fossil taxa;][]{jetzthe2012,Mitchell2015};
+\item or when studying clades that have undergone a recent radiation \citep[e.g. Cichlidae][]{Genner01052007}.
+\end{enumerate}
 
+Ironically, however, each of these three scenarios can also be used to demonstrate the importance of combining living and fossil taxa into macroevolutionary studies:
+\begin{enumerate}
+\item counter intuitively, combining clades with no living relatives might be really important for understanding macroevolutionary patterns in living taxa. For example morphological study of long extinct Ostracoderma can help understanding characters evolution in later Gnatostoma \citep{Janvier2015}.
+\item in fossil poor clades, the few available fossils can actually bring precious information on the early history of the group. For example, in Aves, disparity is underestimated when ignoring fossils, even if there are only a handful of fossils available \citep[e.g. 58 fossil genera against 604 living ones;][]{Mitchell2015}.
+\item finally, excluding fossils from recent clades might also be detrimental to macroevolutionary interpretations, for example, in Lemuroidea, some sub-fossils species had a body mass several orders of magnitudes bigger than living lemurs \citep{hartwig2002primate,Jungers2008} and only went extinct at latest around 600 years ago \citep{goodman2003introduction}.
+\end{enumerate}
 
-Mitchell: Simulation-based studies have shown that many commonly used methods lack the power to discriminate between different models reliably (Boettiger et al., 2012; Slater and Pennell, 2013), and the mismatch between the patterns informed by the extant-only comparative approaches and the patterns observed in the fossil record are stark.
-Mitchell: Simulations and empirical results have shown that comparative methods have both low power (Boettiger et al., 2012) and an inability to predict non-monotonic changes in disparity.
-Mitchell: by using clades with fossil data to find and fit reliable methods for inferring morphological evolution (e.g., subclade disparity through time), paleontologists and comparative biologists can work together to bring our data to as close to representative as possible.
+Because the inherent characteristic of the deep past is to be unknown and mysterious, it is crucial to incorporate in macroevolutionary studies, the few glimpses of it that can be provided by the fossil record to continue revealing the ``grandeur [of] this view of life'' \citep{darwin}.
 
-Pant: Analyses based on extant taxa alone have the potential to oversimplify or misidentify macroevolutionary patterns. This study demonstrates the impact that integration of data from the fossil record can have on reconstructions of character evolution and establishes that body size evolution in sloths was complex, but dominated by trended walks towards the enormous sizes exhibited in some recently extinct forms.
-
-\bibliography{References}
+%\bibliography{References}
