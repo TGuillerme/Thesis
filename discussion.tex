@@ -7,31 +7,32 @@
 % 
 %---------------------
 
+In the following chapter, I first discuss the implications of the results of the chapters \ref{chap:TEM_paper} and \ref{chap:missing_mammals} and then discuss the results of chapter \ref{chap:STD_paper}.
+In both section, I discus the several methodological caveats and propose future research avenues to solve these problems.
+Finally, I discuss the overall importance of combining both living and fossil taxa into macroevolutionary studies.
+
 \section{The future of the Total Evidence method}
 The Total Evidence method seems to be one of the promising new ways of testing macroevolutionary hypotheses \citep[e.g.][]{ronquista2012,slaterphylogenetic2013,Wood01032013,beckancient2014,Dembo2015}.
-However, as shown in the chapters 2 and 3 of the present thesis, this method seems to be sensitive to missing data \citep{GuillermeCooper,MissingMammals}.
-As discussed in chapter two, the missing data can be separated in two categories: (1) the number of morphological characters and the number of living taxa with coded morphological characters and (2) the amount of missing data in the fossil record.
-The first point is merely a technical problem since the infrastructures for coding large amount of characters exists \citep[e.g.][]{morphobank,O'Leary08022013} and the living taxa are vastly available in Natural History collection around the word.
-Therefore, we can be confident that this issue will be solved with time.
-However, the second point is more problematic since it solely depends on the stochasticity new palaeontological discoveries.
+However, as shown in the chapters \ref{chap:TEM_paper} and \ref{chap:missing_mammals} of the present thesis, this method seems to be sensitive to missing data \citep{GuillermeCooper,MissingMammals}.
+As discussed in both chapters, increasing the number of morphological characters and the number of living taxa with coded morphological characters seems the most efficient way to improve the phylogenetic signal.
+This data is vastly available and easy to access in Natural History collections worldwide and informatic infrastructure have been developed for facilitating collaborative data collection \citep{morphobank}.
+Therefore in the following section, I will discuss general problems with Total Evidence phylogenies that where not developed in the chapters \ref{chap:TEM_paper} and \ref{chap:missing_mammals}. 
 
-Some other limitations include the associated method for dating Total Evidence phylogenies.
 Because these phylogenies contain both living and fossil taxa, the preferred method to date such trees is to use the tip-dating method \citep[e.g.][]{ronquista2012,Wood01032013,Dembo2015}.
+It has also been observed from empirical data that the tip-dating method also improves the ability to recover the correct topology because it can use the stratigraphic age of the fossil taxa to favor some topological solution upon others \citep[typically by minimizing implied ghost lineages;][and personal communications]{BEASTmaster}.
+Therefore, the results from chapter \ref{chap:TEM_paper} could be actually improved by including this branch length estimation aspect (i.e. using jointly Total Evidence matrices with the tip-dating method).
 \cite{ronquista2012} have demonstrated the advantage of the tip-dating on the node-dating method since it reduces the confidence intervals at the node ages compared to a classic node-dating approach.
-However, more recently, \cite{Arcila2015131} have revised this claim by comparing both method using the latests models for the node-dating method \citep[i.e. the fossilised birth-death model][]{heaththe2013} and have shown the opposite effect.
+However, more recently, \cite{Arcila2015131} have revised this claim by comparing both method using the latests models for the node-dating method \citep[i.e. using the fossilised birth-death model;][]{heaththe2013} and have shown the opposite effect.
 These differences can be due to both the empirical approaches from both studies or the differences in node-dating models.
-One solution to solve this issue would be a similar thorough simulation approach presented in chapter two for testing the effect of node-dating or tip-dating on divergence time estimations.
+One solution to solve this issue would be a similar thorough simulation approach presented in chapter \ref{chap:TEM_paper} for testing the effect of node-dating or tip-dating on divergence time estimations.
 
 Additionally, the Total Evidence method relies on the M\textit{k} model \citep{lewisa2001} to measure the morphological distance between taxa.
-This method is a generalisation of the Jukes-Cantor evolutionary model \citep{jukes1969evolution} that allows a single mutation rate $\mu$ between all four nucleotides.
+This method is a generalisation of the Jukes-Cantor evolutionary model \citep{jukes1969evolution} that allows a single mutation rate $\mu$ between all character states.
 This model of DNA evolution is a crude simplification of reality and was replaced with more generalised models closer to biological reality \citep[e.g. the GTR model allowing a different rate for each mutation;][]{tavare1986}.
-It is therefore likely that the M\textit{k} model is a crude underestimation of the reality of morphological evolution, especially since the assumption that their is a unique rate of evolution between character states has been shown to be wrong in some specific cases \citep[e.g. for Dollo traits;][]{WrightDollo}.
+It is therefore likely that the M\textit{k} model is also a crude underestimation of the reality of morphological evolution, especially since the assumption that their is a unique rate of evolution between character states has been shown to be wrong in some specific cases \citep[e.g. for Dollo traits;][]{WrightDollo}.
 \cite{spencerefficacy2013} even demonstrated that non-probabilistic method such as maximum parsimony outperforms the M\textit{k} model regarding the contentious placement of fossils such as \textit{Archaeopteryx}.
-Yet, more recent simulations have clearly demonstrated the superiority of the M\textit{k} model over maximum parsimony at estimating correct topology, even if it underestimates the reality of morphological characters evolution \citep{wrightbayesian2014}.
-
-One alternative to the Total Evidence method, the classic node-dating method, can therefore been seen as interesting solution to overcome this data problem.
-This method has recently benefited from excellent incremental implementation such as the fossilised birth-death model \citep{heaththe2013} or standardisation for choosing calibration points \citep{Parham01032012}.
-Yet, as the statistician George Box wrote, ``essentially, all models are wrong, but some are useful'' \citep{box1987empirical}.
+However, more recent simulations have clearly demonstrated the superiority of the M\textit{k} model over maximum parsimony at estimating correct topology, even if it underestimates the reality of morphological characters evolution \citep{wrightbayesian2014}.
+As the statistician George Box wrote, ``essentially, all models are wrong, but some are useful'' \citep{box1987empirical}.
 I argue that this is exactly the case of the Total Evidence method: despite the three major caveats discussed above, this methods remains the only efficient method to date to include the diversity of life both past and present.
 
 One research route to improve the Total Evidence method could be a \textit{Full} Total Evidence method.
@@ -42,10 +43,10 @@ Finally, this is also likely to simply increase the data availability problem.
 
 \section{Diversity is multidimensional}
 % link to previous paragraph
-One important point however, is that phylogenetic trees (whether they use the Total Evidence method or not) are mainly tools for observing evolutionary patterns and proposing evolutionary hypotheses.
-For example, in chapter 4, I use two independent tip-dated Total Evidence trees to test whether mass extinctions can influence surviving clade's morphological evolution.
-I argue that the use of Total Evidence tree not only improves the timing of diversification events \citep[][; which is a crucial aspect when studying effect of mass extinctions which are finites points in time]{ronquista2012} or the estimation of morphological diversity \citep[increasing accuracy in reconstructing node's ancestral characters;][]{Finarelli2006} but is also desirable in a macroevolutionary way \citep{fritzdiversity2013,benton2015}.
-However, in this particular example, I used disparity (i.e. morphological - or rather cladistic (see below) - diversity) as a proxy for testing this hypothesis.
+One important point to keep in mind however, is that phylogenetic trees (whether they use all the available data or not) are merely tools for observing evolutionary patterns and proposing evolutionary hypotheses.
+For example, in chapter \ref{chap:STD_paper}, I use two independent tip-dated Total Evidence trees to test whether mass extinctions can influence surviving clade's morphological evolution.
+I argue that the use of Total Evidence tree not only improves the timing of diversification events \citep[][; which is a crucial aspect when studying effect of mass extinctions which are finites points in time]{ronquista2012} or the estimation of morphological diversity \citep[increasing accuracy in reconstructing node's ancestral characters;][]{Finarelli2006}.
+However, in this particular example, I used disparity (i.e. morphological -- or rather cladistic; see below -- diversity) as a proxy for testing this hypothesis.
 Even though disparity analysis are becoming increasingly common in palaeobiology \citep[e.g.]{Butler2012,brusattedinosaur2012,toljagictriassic-jurassic2013,brusattegradual2014,bensonfaunal2014,Claddis,Close2015}, they still suffer from several biases.
 
 %Morphological diversity
@@ -54,22 +55,31 @@ Describing the shape of an organism is not straightforward and many mathematical
 In biology, one major approach is to describe shape as a summary of an ordinated distance matrix based on procrustes \citep[i.e. a geometric morphometric approach][]{zelditch2012geometric}.
 In studies using this approach, shape is approximated by actual continuous measurement collected from the organisms \citep[e.g.][]{friedmanexplosive2010,hopkinsdecoupling2013,finlay2015morphological}.
 However, in our case, we used differences (read inter-taxon distances) between particular morphological features \citep[e.g.][]{foote1997evolution,Wills2001,Wesley-Hunt2005}.
-This method has been criticised by some of their users to be biased by: (1) the fact that these morphological features are not randomly collected and can distort reality \citep{Brusatte12092008}%develop
+This method has been criticised by some of their users to be biased by: (1) the fact that these morphological features are not randomly collected and can distort reality by emphasising differences in the taxonomic group of interest \citep{Hopkins24032015}
  or (2) that they are highly dependant on the quality of the fossil record \citep{Butler2012}.
-However, these biases are overweighted by the advantages of (1) having many comparable morphological data among taxa \citep{Brusatte12092008} and by (2) correcting for the fossil record quality through time \citep{Butler2012}.
-Additionaly, it has been shown that even though morphometric based and cladistic based morphological diversity are different, they seem to capture the same signal \citep{foth2012different,hetherington2015cladistic}.
+However, these biases are overweighted by the advantages of (1) having many comparable morphological data among taxa \citep{Brusatte12092008} and by (2) the possibility of correcting for the fossil record quality through time \citep{Butler2012}.
+Additionally, it has been shown that even though morphometric based and cladistic based disparity are different, they seem to capture the same signal \citep{foth2012different,hetherington2015cladistic}.
 
-%Multidimensionality
+%
+% STOPEPD HERE
+%
+
+%Multidimensionality - TO CHECK
 This trend shows the clear importance of treating biodiversity as a multidimensional rather than unidimensional metric \citep[similarly as in ecology;][]{DonohueDim}.
 In fact, biodiversity is the combination of taxonomic diversity \citep[e.g.][]{Stadler12042011}, morphological diversity \citep[from cladistics or morphometrics;][]{hetherington2015cladistic} and phylogenetic diversity \citep[e.g. the evolutionary rates regimes;][]{Close2015}.
 However, similarly to the comment on the \textit{Full} Total Evidence method above, this dimensionality could also include biogeographical or ecological diversity.
 
-%Genetic diversity
-In the end, it probably all boils down to genomic diversity since all these traits are highly correlated with genetics at a mechanistic level.
-For example, taxonomic (as in species delimitations), morphology (as in heritable morphological features), ecology (as in the ``use'' of these morphological features) or even biogeography (as in drivers of population delimitations or local adaptations) all boil down to genetics.
-However, two points still justify using multidimensional diversity rather than just genetic diversity: (1) firstly even though biology boils down to genetics in a Selfish Gene way (cite Dawkins), we are still far from understanding the genetic mechanisms that leads to all of theses aspects; (2) secondly, this can be only applicable to living taxa and ignores most of the \textit{actual} biodiversity \citep{novacek1992ext,raup1993extinction}.
+%Finally, which metric?
+Finally, disparity is an abstraction of morphological diversity: it is an unique value that describes and multidimensional transformation of an actual shape \citep{Wills1994,foote1997evolution}.
+This can certainly lead to problems in the interpretation of such a value since each step have it's own caveats and limitation (describing the shape of an organism using morphometrics or cladistics and mathematically transforming this description into a matrix).
+Classically people have used the four metrics proposed by \cite{Wills1994} (sum and product of variance and range) but several problems have never been explored.
+\begin{enumerate}
+\item firstly, additionally to the practical problems discussed in chapter \ref{chap:STD_paper} the present implementations for calculating the sum and product of variance never integrate the covariance present in the ordinated matrix.
+\item secondly, even though some attempts have been made for measuring the efficiency of these metrics \citep{Ciampaglio2001} there have been yet no global assessment of the statistical power of each metric for describing multidimensional space occupancy.
+\item finally, these metrics are only describing the $n$ dimensions (i.e. the columns in the matrix) but are not directly describing the placement of the tips or nodes in the $n$ dimension (contrary to the metrics based on the rows in the matrix such as the distance between taxa and the centroid).
+\end{enumerate}
+A future development of disparity through time methods would require a better understanding of the statistical performance of these disparity metrics and how each of them would or would not be more appropriate to specific empirical situations.
 
-All this is especially when combining living and fossil, species richness is a really poor indicator of diversity.
 
 %Improvements?
 This is still really promising and can be improved first by underestanding how all this works in a theoretical way (building the models).
@@ -83,12 +93,7 @@ Yet it is important to note that several studies actually thoroughly studied thi
 
 One question arising from these particular studies is whether there is a \textit{real} effect of combining both living and fossil species into macroevolutionary studies.
 In fact, one can argue that the conclusions from these studies are linked to the peculiarity of the groups studied that had a rather dynamic evolution and that combining living and fossil data reveals the true macroevolutionary patterns.
-Because the methods for combining living and fossil taxa are still challenging, it could be a futile and time consuming exercise in these following scenarios:
-\begin{enumerate}
-\item when studying some clades that have no living relatives (e.g. Trilobita; \citealt{hopkinsdecoupling2013}; Pterosauria; \citealt{Butler2012}; etc.);
-\item when studying clades with a really poor fossil record \citep[e.g. Aves where there are three orders of magnitude more known living than fossil taxa;][]{jetzthe2012,Mitchell2015};
-\item or when studying clades that have undergone a recent radiation \citep[e.g. Cichlidae][]{Genner01052007}.
-\end{enumerate}
+Because the methods for combining living and fossil taxa are still challenging, it could be a futile and time consuming exercise in these following scenarios: (1) when studying some clades that have no living relatives (e.g. Trilobita; \citealt{hopkinsdecoupling2013}; Pterosauria; \citealt{Butler2012}; etc.); (2) when studying clades with a really poor fossil record \citep[e.g. Aves where there are three orders of magnitude more known living than fossil taxa;][]{jetzthe2012,Mitchell2015}; (3) or when studying clades that have undergone a recent radiation \citep[e.g. Cichlidae][]{Genner01052007}.
 
 Ironically, however, each of these three scenarios can also be used to demonstrate the importance of combining living and fossil taxa into macroevolutionary studies:
 \begin{enumerate}
@@ -99,4 +104,4 @@ Ironically, however, each of these three scenarios can also be used to demonstra
 
 Because the inherent characteristic of the deep past is to be unknown and mysterious, it is crucial to incorporate in macroevolutionary studies, the few glimpses of it that can be provided by the fossil record to continue revealing the ``grandeur [of] this view of life'' \citep{darwin}.
 
-%\bibliography{References}
+\bibliography{References}
