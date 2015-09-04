@@ -16,12 +16,14 @@ acknowledgement_tmp.tex
 *.blg
 *.dvi
 *.fff
-*.lof
+*.log
 *.lot
 *.out
 *.toc
 *.ttt
 *.fdb_latexmk
+*.syntctex.gz
+*.pdf
 
 # beamer
 *.nav
