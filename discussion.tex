@@ -3,49 +3,60 @@
 
 %---------------------
 %
-% DISCUSSION - MAKE IT SHORT TO! - TG: this version is a bit long I think, I'll shorten it up (biology letters style) after first round editing. 
-% 
+% DISCUSSION
+%
 %---------------------
 
-In the following chapter, I first discuss the implications of the results of the chapters \ref{chap:TEM_paper} and \ref{chap:missing_mammals} and then discuss the results of chapter \ref{chap:STD_paper}.
-In both section, I discuss the several methodological caveats and propose future research avenues to solve these problems.
+In this final chapter of my thesis, I first discuss the implications of the results of Chapters \ref{chap:TEM_paper} and \ref{chap:missing_mammals} and then of Chapter \ref{chap:STD_paper}.
+In both sections, I discuss the methodological caveats of my approaches and propose future research avenues to solve these problems.
 Finally, I discuss the overall importance of combining both living and fossil species into macroevolutionary studies.
 
 \section{The future of the Total Evidence method}
-The Total Evidence method seems to be one of the promising new ways of testing macroevolutionary hypotheses \citep[e.g.][]{ronquista2012,slaterphylogenetic2013,Wood01032013,beckancient2014,Dembo2015}.
-However, as shown in the chapters \ref{chap:TEM_paper} and \ref{chap:missing_mammals} of the present thesis, this method seems to be sensitive to missing data.
-As discussed in both chapters, increasing the number of morphological characters and the number of living taxa with coded morphological characters seems the most efficient way to improve the phylogenetic signal.
-This data is vastly available and easy to access in Natural History collections worldwide and software infrastructure have been developed for facilitating collaborative data collection \citep{morphobank}.
-Therefore, one can hope that the missing data problem among living species will be gradually solved with time.
-Thus, in the following section, I will focus on the general problems with Total Evidence phylogenies that where not developed in the discussions of chapters \ref{chap:TEM_paper} and \ref{chap:missing_mammals}. 
+The Total Evidence method is a promising way of testing macroevolutionary hypotheses using extinct and extant taxa \citep[e.g.][]{ronquista2012,slaterphylogenetic2013,Wood01032013,beckancient2014,Dembo2015}.
+However, as shown in the Chapters \ref{chap:TEM_paper} and \ref{chap:missing_mammals}, this method is quite sensitive to missing data.
+As discussed in both chapters, increasing the number of morphological characters and the number of living taxa with coded morphological characters is the most efficient way to improve the phylogenetic signal. % NC: Explain more clearly. You mean to get accurate topologies really. The signal by itself is not useful.
+This data is available and reasonably easy to access in natural history museum collections worldwide. 
+In addition, software infrastructure has been developed to facilitate collaborative data collection of this kind \citep{morphobank}.
+Therefore, hopefully the scarcity of morphological data for living species will be gradually solved with time, provided the funding exists to make such efforts possible.
+However, there are other general problems with Total Evidence phylogenies that were not developed in the discussions of Chapters \ref{chap:TEM_paper} and \ref{chap:missing_mammals}. 
 
-Because these phylogenies contain both living and fossil taxa, the preferred way to date such trees is to use the tip-dating method \citep[e.g.][]{ronquista2012,Wood01032013,Dembo2015}.
-This method relies on the age of the fossil taxa (treated as tips) to date the nodes divergence time rather than defining node calibrations \textit{a priori} \citep[cf. node-dating;][]{ronquista2012}.
-This method has two main advantages: (1) it has been observed from empirical data that it improves the ability to recover the correct topology because it can use the stratigraphic age of the fossil taxa to favor some topological solution upon others \citep[typically by minimizing implied ghost lineages;][and personal communications]{BEASTmaster}; and (2) it reduces the confidence intervals at the node ages compared to a classic node-dating approach \citep{ronquista2012}.
-This second point, however, has been revised by \cite{Arcila2015131} by comparing both method using the latests models for the node-dating method \citep[i.e. using the fossilised birth-death model;][]{heaththe2013} and showing the opposite effect (i.e. an increase in node age confidence interval with the tip-dating method).
-It would therefore be interesting to run a similar analysis than in chapter \ref{chap:TEM_paper} but adding a dating aspect to it.
+Firstly, dating Total Evidence phylogenies is difficult. 
+Because these phylogenies contain both living and fossil taxa, the preferred way to date them is to use the tip-dating method \citep[e.g.][]{ronquista2012,Wood01032013,Dembo2015}.
+This method relies on the age of the fossil taxa (treated as tips) to date the divergence times of the nodes, rather than defining node calibrations \textit{a priori} \citep[cf. node-dating;][]{ronquista2012}.
+The tip-dating method has two main advantages: (1) it has been observed using empirical data that it improves the ability to recover the correct topology because it can use the stratigraphic age of the fossil taxa to favour some topological solutions more than others, typically by minimising implied ghost lineages \citep[][and personal communications]{BEASTmaster}; and (2) it reduces the confidence intervals of the node ages compared to a classic node-dating approach \citep{ronquista2012}.
+This second point, however, has been questioned by \cite{Arcila2015131} who compared the tip-dating method and the latest models for the node-dating method, for example, the fossilised birth-death model \citep{heaththe2013}, and found the opposite effect, i.e. an increase in node age confidence interval with the tip-dating method.
+It would therefore be interesting to run a similar analysis to the simulations in Chapter \ref{chap:TEM_paper} but adding a dating aspect to it.
 By comparing dated Total-Evidence matrices using both node-dating and tip-dating, one could formally test the two advantages outlined above as well as their resilience to missing data.
 
-Additionally, a more general problem, is that the Total Evidence method relies on the M\textit{k} model \citep{lewisa2001} to measure the morphological distance between taxa.
-This method is a generalisation of the Jukes-Cantor evolutionary model \citep[JC69;][]{jukes1969evolution} that allows a single mutation rate $\mu$ between all character states.
-The JC69 model is a simplification of reality and was replaced with more generalised models closer to biological reality \citep[e.g. the GTR model allowing a different rate for each mutation;][]{tavare1986}.
-It is therefore likely that the M\textit{k} model is also a crude underestimation of the reality of morphological evolution, especially since the assumption that their is a unique transition rate between character states has been shown to be wrong in at least some specific cases \citep[e.g. for Dollo traits that are traits that have been observed to evolve from only one state \textit{a} to \textit{b} but never from \textit{b} to \textit{a};][]{WrightDollo}.
-\cite{spencerefficacy2013} even demonstrated that non-probabilistic method such as maximum parsimony outperforms the M\textit{k} model regarding the contentious placement of fossils such as \textit{Archaeopteryx}.
-However, more recent and thorough simulations have demonstrated the opposite, even if it underestimates the reality of morphological characters evolution \citep{wrightbayesian2014}.
-As the statistician George Box wrote, ``essentially, all models are wrong, but some are useful'' \citep{box1987empirical}.
-This can be typically the case for the Total Evidence method: despite the three major caveats discussed above (missing data, dating, and morphological evolution), this methods remains the only efficient method to date to include the diversity of life both past and present.
+Secondly, a more general problem is that the Total Evidence method relies on the M\textit{k} model \citep{lewisa2001} to measure the morphological distances among taxa.
+This model is a generalisation of the Jukes-Cantor evolutionary model \citep[JC69;][]{jukes1969evolution} that allows a single mutation rate $\mu$ between all character states.
+The JC69 model is a great simplification of reality and was replaced with more complex models that are closer to biological reality \citep[e.g. the GTR model that allows a different rate for each different type of nucleotide change;][]{tavare1986}.
+It is therefore likely that the M\textit{k} model is also a crude underestimation of complex reality of morphological evolution, especially as the assumption that there is a unique transition rate between character states has been shown to be wrong in at least some cases \citep[e.g. for Dollo traits that are traits that have been observed to evolve from only one state \textit{a} to \textit{b} but never from \textit{b} to \textit{a};][]{WrightDollo}.
+\cite{spencerefficacy2013} even demonstrated that non-probabilistic methods such as maximum parsimony outperform the M\textit{k} model for the placement of contentious fossils such as \textit{Archaeopteryx}.
+However, more recent and thorough simulations have demonstrated the opposite, %although the M\textit{k} model underestimates the complex reality of morphological evolution % NC: Is this a result from Aprils' paper? If som make it clearer it's not just another comment about MKV not being complex enough.
+\citep{wrightbayesian2014}.  
+%As the statistician George Box wrote, ``all models are wrong, but some are useful'' \citep{box1987empirical}.
+%This can be typically the case for the Total Evidence method: despite the three major caveats discussed above (missing data, dating, and morphological evolution), this methods remains the only efficient method to date to include the diversity of life both past and present.
+% NC: The Box quote applies to models, TEM is a method.
+% NC: Need to finish this paragraph appropriately.
 
-One way to improve the Total Evidence method could be a \textit{Full} Total Evidence method.
-In fact, the Total Evidence methods claims to be total because it uses both molecular and morphological data \citep{eernissetaxonomic1993}, however, this does not represents the \textit{totality} of data available to biologists.
-Other sources of data such as traits (e.g. body mass), ecology (e.g. habitat) or biogeography could also be realistically added to Total Evidence methods with appropriate evolutionary models and hypothesis for each type of data \citep[e.g. respectively quantitative, multiple or geographic state speciation and extinction model -- Qua-Mu-GeoSSE models;][]{fitzjohndiversitree2012}.
+Although the Total Evidence methods claims to be total because it uses both molecular and morphological data \citep{eernissetaxonomic1993}, this does not represent all of the data available to biologists.
+Thus, one way to improve the Total Evidence method could be to use a \textit{Full} Total Evidence method.
+Other sources of data such as traits (e.g. body mass), ecology (e.g. habitat) or biogeography could also be added to Total Evidence methods with appropriate evolutionary models and hypothesis for each type of data \citep[e.g. respectively quantitative, multiple or geographic state speciation and extinction model -- Qua-Mu-GeoSSE models;][]{fitzjohndiversitree2012}.
 However, such data sets could improve the Total Evidence trees but also make them more complex statistical by increasing the number of parameters and assumptions.
 Finally, this is also likely to simply increase the data availability problem.
+% NC: Ummm my reaction to this paragraph is what are you talking about??? How would this help at all? Qua-Mu-GeoSSE are methods for looking at diversification rate shifts in response to quantitative, multiple, geographic traits. NOT a method of tree building. This paragraph in nonsense.
 
-\section{Diversity is multidimensional}
+% NC: Need to finish off this section
+\section{Diversity is multidimensional} % NC: I don't like the section name here, think of a more accurate subheading rather than a catchy one.
 % link to previous paragraph
-One important point to keep in mind however, is that phylogenetic trees (whether they use all the available data or not) are merely tools for observing evolutionary patterns and testing evolutionary hypotheses.
-For example, in chapter \ref{chap:STD_paper}, I use two independent tip-dated Total Evidence trees to test whether mass extinctions can influence surviving clade's morphological evolution.
-I argue that, in such studies, the use of Total Evidence tree improves the timing of diversification events \citep[][ which is a crucial aspect when studying effect of mass extinctions which are finites points in time]{ronquista2012} or the estimation of morphological diversity \citep[increasing accuracy in reconstructing node's ancestral characters;][]{Finarelli2006}.
+One important point to keep in mind when building phylogenies, is that phylogenetic trees (whether they use all the available data or not) are tools for observing evolutionary patterns and testing evolutionary hypotheses, not the end point of the scientific endeavour.
+% NC: I wonder if this sentence could be the end of the previous section?
+
+% NC: Past tense now, you've done this! In the intro it's present tense as you're going to do it.
+
+In Chapter \ref{chap:STD_paper}, I used two tip-dated Total Evidence trees to test whether the K-Pg mass extinction event influenced morphological evolution in mammals.
+I believe that the use of Total Evidence tree improves the timing of diversification events \citep[][ which is a crucial aspect when studying effect of mass extinctions which are finites points in time]{ronquista2012} or the estimation of morphological diversity \citep[increasing accuracy in reconstructing node's ancestral characters;][]{Finarelli2006}. % NC: Not sure hwo this is relevant.
 However, in this particular example, I used disparity (i.e. morphological -- or rather cladistic -- diversity) as a proxy for testing the effect of the K-Pg extinction.
 Even though disparity analysis are becoming increasingly common in palaeobiology \citep[e.g.]{Butler2012,brusattedinosaur2012,toljagictriassic-jurassic2013,brusattegradual2014,bensonfaunal2014,Claddis,Close2015}, they still suffer from several biases.
 
@@ -77,7 +88,7 @@ In fact, biodiversity is the combination of taxonomic diversity \citep[e.g.][]{S
 However, similarly to the comment on the \textit{Full} Total Evidence method above, this multidimensionality could also include biogeographical or ecological diversity.
 Such analysis could lead to a better understanding of macroevolutionary patterns and could allow us to test more general evolutionary hypothesis such as the validity of the concept of ecological niches \citep{pearmanniche2008}.
 
-\section{What is the real effect of combining?}
+\section{What is the real effect of combining living and fossil taxa in macroevolutionary studies?}
 This whole thesis tackles practical and theoretical aspects of using both living and fossil species in macroevolutionary studies.
 Several studies have already demonstrated the challenges and the importance of including fossils into phylogenies \citep[e.g.][]{ronquista2012,slaterphylogenetic2013,Wood01032013,beckancient2014,Dembo2015}.
 However, all these studies (including the present thesis) do not focus on the effect of adding fossil taxa to phylogenies \textit{per se} but rather perform empirical or theoretical analysis while including fossil taxa and demonstrate the superiority of their findings upon previous studies.
@@ -98,6 +109,7 @@ Ironically, however, each of these three scenarios can also be used to demonstra
 
 Therefore I argue that there is no biological justification to not jointly using living and fossil species since the effect of combining them can not be known \textit{a priori}.
 Our knowledge in biology has tremendously advanced since the last half century ranging from the amazing revelation of the few glimpses of the deep past provided by the the fossil record to the understanding of the complexity and dynamics of modern ecosystems.
-Because the inherent characteristic of the deep past is to be unknown and mysterious, it is therefore crucial to incorporate all of this knowledge in macroevolutionary studies to continue revealing the ``grandeur [of] this view of life'' \citep{darwin}.
+Because the inherent characteristic of the deep past is to be unknown and mysterious, it is therefore crucial to incorporate all of this knowledge in macroevolutionary studies to continue revealing the complexities of biodiversity.
+%``grandeur [of] this view of life'' \citep{darwin}. % NC: This isn't the correct quote so don't use it, it just sounds forced.
 
 %\bibliography{References}
