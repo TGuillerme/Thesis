@@ -18,11 +18,12 @@ acknowledgement_tmp.tex
 *.fff
 *.log
 *.lot
+*.lof
 *.out
 *.toc
 *.ttt
 *.fdb_latexmk
-*.syntctex.gz
+*.synctex.gz
 *.pdf
 
 # beamer
