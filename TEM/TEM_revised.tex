@@ -23,6 +23,16 @@
 %       ABSTRACT
 %
 %---------------------------------------------
+
+% Illustration for TEM and Missing living data chapters (2 and 3)
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{TEM/Figures/MissingDataFigure.pdf}
+  \caption*{Fossil species can only branch with living ones that have morphological data available.}
+\end{figure}
+
+\newpage
+
 \section*{Abstract}
 To fully understand macroevolutionary patterns and processes, we need to include both extant and extinct species in our models.
 This requires phylogenetic trees with both living and fossil taxa at the tips.
@@ -399,24 +409,24 @@ Conversely, if the two combinations of missing data parameters differ, the Bhatt
 Because of the difficulties in representing so many pairwise comparisons in a meaningful way, we summarized these results as a heat map of Bhattacharyya Coefficients (see Fig. \ref{Fig_Results-paircomp_within1} and \ref{Fig_Results-paircomp_within2}).
 In this type of figure, parameters that have similar effects on recovering the ``best'' topology (either positive or negative effects) will be denoted by similar colour patches in the heat map representation of these comparisons (see Fig. \ref{Fig_Results-paircomp_within1} and \ref{Fig_Results-paircomp_within2}).
 
- % \begin{figure}[!h]
- % \centering
- %     \includegraphics[width=0.5\textwidth]{TEM/Figures/Fig2.pdf}
- % \caption[Bhattacharyya Coefficient calculation outline 1]{\textbf{Bhattacharyya Coefficient calculation outline 1.} A, B and C are distributions of tree similarity metrics (Normalised Robinson-Foulds or Normalised Triplets metrics) for any combination of missing data parameters (e.g. $M_{L}$ = 10\%, $M_{F}$ = 50\%, $N_{C}$ = 25). The Bhattacharyya Coefficient (BC) is the overlap of the distribution of tree similarity metrics between two combinations of missing data parameters, for example, BC(A,B) is the probability of overlap between the distributions A and B.}
- % \label{Fig_Bhattacharyya_Coefficients1}
- % \end{figure}
+ \begin{figure}[!h]
+ \centering
+     \includegraphics[width=0.5\textwidth]{TEM/Figures/Fig2.pdf}
+ \caption[Bhattacharyya Coefficient calculation outline 1]{\textbf{Bhattacharyya Coefficient calculation outline 1.} A, B and C are distributions of tree similarity metrics (Normalised Robinson-Foulds or Normalised Triplets metrics) for any combination of missing data parameters (e.g. $M_{L}$ = 10\%, $M_{F}$ = 50\%, $N_{C}$ = 25). The Bhattacharyya Coefficient (BC) is the overlap of the distribution of tree similarity metrics between two combinations of missing data parameters, for example, BC(A,B) is the probability of overlap between the distributions A and B.}
+ \label{Fig_Bhattacharyya_Coefficients1}
+ \end{figure}
 
 To assess the effect of the different tree inference and uncertainty methods (i.e. Maximum Likelihood, Bayesian consensus, Maximum Likelihood bootstrap trees and Bayesian posterior tree distribution) on our ability to recover the ``best'' tree topology, we calculated the Bhattacharyya Coefficient between the distributions of the different metrics scores (Normalised Robinson-Foulds and Normalised Triplets metric) for each pairwise combination of tree inference and uncertainty methods, i.e. Maximum Likelihood \textit{versus} Bayesian consensus; Maximum Likelihood \textit{versus} Maximum Likelihood bootstrap trees etc. (see Fig. \ref{Fig_Bhattacharyya_Coefficients2} for more details).
 Note that this procedure pools results from across all missing data parameter combinations so it results in just six pairwise comparisons.
 When two tree inference or uncertainty methods have a similar ability to recover the ``best'' tree topology the Bhattacharyya Coefficient will be close to one.
 Conversely, if the two tree inference or uncertainty methods differ, the Bhattacharyya Coefficient will be close to zero.
 
-% \begin{figure}[!h]
-% \centering
-%     \includegraphics[width=1\textwidth]{TEM/Figures/Fig3.pdf}
-% \caption[Bhattacharyya Coefficient calculation outline 2]{\textbf{Bhattacharyya Coefficient calculation outline 2.} A and B are distributions of tree similarity metrics (Normalised Robinson-Foulds or Normalised Triplets metrics) for any combination of missing data parameters (e.g. $M_{L}$ = 10\%, $M_{F}$ = 50\%, $N_{C}$ = 25). \textbf{(x)} and \textbf{(y)} are two different tree inference methods (e.g. Maximum Likelihood or Bayesian). The Bhattacharyya Coefficient (BC) is the overlap of the distribution of tree similarity metrics between two methods for the same combination of missing data parameters, for example, BC($A_{x}$,$A_{y}$) is the probability of overlap of the distribution A for methods $x$ and $y$.}
-% \label{Fig_Bhattacharyya_Coefficients2} 
-% \end{figure}
+\begin{figure}[!h]
+\centering
+    \includegraphics[width=1\textwidth]{TEM/Figures/Fig3.pdf}
+\caption[Bhattacharyya Coefficient calculation outline 2]{\textbf{Bhattacharyya Coefficient calculation outline 2.} A and B are distributions of tree similarity metrics (Normalised Robinson-Foulds or Normalised Triplets metrics) for any combination of missing data parameters (e.g. $M_{L}$ = 10\%, $M_{F}$ = 50\%, $N_{C}$ = 25). \textbf{(x)} and \textbf{(y)} are two different tree inference methods (e.g. Maximum Likelihood or Bayesian). The Bhattacharyya Coefficient (BC) is the overlap of the distribution of tree similarity metrics between two methods for the same combination of missing data parameters, for example, BC($A_{x}$,$A_{y}$) is the probability of overlap of the distribution A for methods $x$ and $y$.}
+\label{Fig_Bhattacharyya_Coefficients2} 
+\end{figure}
 
 %---------------------------------------------
 %
@@ -428,26 +438,10 @@ Conversely, if the two tree inference or uncertainty methods differ, the Bhattac
 As the amount of missing data in the morphological part of the Total Evidence matrix increases, our ability to recover the ``best'' tree topology decreases, regardless of the missing data parameter ($M_{L}$, $M_{F}$ or $N_{C}$), the tree inference method (Maximum Likelihood or Bayesian) or the tree comparison metric used (Normalised Robinson-Foulds or Normalised Triplets metric).
 Nonetheless, the different missing data parameters and tree inference methods do not affect the topology in the same way (Fig. \ref{Fig_Results-permeth_perparam} and Fig. \ref{Fig_Results-global_perparam}).
 
-%Moved here for not cutting paragraph above
- \begin{figure}[!h]
- \centering
-     \includegraphics[width=0.5\textwidth]{TEM/Figures/Fig2.pdf}
- \caption[Bhattacharyya Coefficient calculation outline 1]{\textbf{Bhattacharyya Coefficient calculation outline 1.} A, B and C are distributions of tree similarity metrics (Normalised Robinson-Foulds or Normalised Triplets metrics) for any combination of missing data parameters (e.g. $M_{L}$ = 10\%, $M_{F}$ = 50\%, $N_{C}$ = 25). The Bhattacharyya Coefficient (BC) is the overlap of the distribution of tree similarity metrics between two combinations of missing data parameters, for example, BC(A,B) is the probability of overlap between the distributions A and B.}
- \label{Fig_Bhattacharyya_Coefficients1}
- \end{figure}
-
 \subsection{Individual effects of missing data parameters}
 As the amount of missing data increases across all three parameters, our ability to recover the ``best'' tree topology decreases (Fig. \ref{Fig_Results-permeth_perparam}).
 The Normalised Robinson-Foulds metric is always lower for the Maximum Likelihood trees than for the Bayesian consensus trees (median Bhattacharrya Coefficient = 0.69, 0.48 and 0.66 for $M_{L}$, $M_{F}$ and $N_{C}$ respectively; Fig. \ref{Fig_Results-permeth_perparam}; Table \ref{Tab_Supp_summary_metric}). 
 The Normalised Triplets metric, however, is similar when comparing the Maximum Likelihood trees and the Bayesian consensus trees for all the parameters ($M_{L}$, $M_{F}$ and $N_{C}$) (median Bhattacharrya Coefficient = 0.84, 0.75 and 0.80 for $M_{L}$, $M_{F}$ and $N_{C}$ respectively; Fig. \ref{Fig_Results-permeth_perparam}; Table \ref{Tab_Supp_summary_metric}).
-
-%Moved here for not cutting paragraph above
-\begin{figure}[!h]
-\centering
-    \includegraphics[width=1\textwidth]{TEM/Figures/Fig3.pdf}
-\caption[Bhattacharyya Coefficient calculation outline 2]{\textbf{Bhattacharyya Coefficient calculation outline 2.} A and B are distributions of tree similarity metrics (Normalised Robinson-Foulds or Normalised Triplets metrics) for any combination of missing data parameters (e.g. $M_{L}$ = 10\%, $M_{F}$ = 50\%, $N_{C}$ = 25). \textbf{(x)} and \textbf{(y)} are two different tree inference methods (e.g. Maximum Likelihood or Bayesian). The Bhattacharyya Coefficient (BC) is the overlap of the distribution of tree similarity metrics between two methods for the same combination of missing data parameters, for example, BC($A_{x}$,$A_{y}$) is the probability of overlap of the distribution A for methods $x$ and $y$.}
-\label{Fig_Bhattacharyya_Coefficients2} 
-\end{figure}
 
 \begin{figure}[!ht]
 \centering
