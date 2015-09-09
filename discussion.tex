@@ -14,7 +14,7 @@ Finally, I discuss the overall importance of combining both living and fossil sp
 \section{The future of the Total Evidence method}
 The Total Evidence method is a promising way of testing macroevolutionary hypotheses using extinct and extant taxa \citep[e.g.][]{ronquista2012,slaterphylogenetic2013,Wood01032013,beckancient2014,Dembo2015}.
 However, as shown in the Chapters \ref{chap:TEM_paper} and \ref{chap:missing_mammals}, this method is quite sensitive to missing data.
-As discussed in both chapters, increasing the number of morphological characters and the number of living taxa with coded morphological characters is the most efficient way to improve the phylogenetic signal. % NC: Explain more clearly. You mean to get accurate topologies really. The signal by itself is not useful.
+As discussed in both chapters, increasing the number of morphological characters and the number of living taxa with coded morphological characters is the most efficient way to recover the correct topology.
 This data is available and reasonably easy to access in natural history museum collections worldwide. 
 In addition, software infrastructure has been developed to facilitate collaborative data collection of this kind \citep{morphobank}.
 Therefore, hopefully the scarcity of morphological data for living species will be gradually solved with time, provided the funding exists to make such efforts possible.
@@ -28,52 +28,62 @@ This second point, however, has been questioned by \cite{Arcila2015131} who comp
 It would therefore be interesting to run a similar analysis to the simulations in Chapter \ref{chap:TEM_paper} but adding a dating aspect to it.
 By comparing dated Total-Evidence matrices using both node-dating and tip-dating, one could formally test the two advantages outlined above as well as their resilience to missing data.
 
-Secondly, a more general problem is that the Total Evidence method relies on the M\textit{k} model \citep{lewisa2001} to measure the morphological distances among taxa.
+Secondly, a more general problem is that the Total Evidence method relies on the M\textit{k} model \citep{lewisa2001} to measure the morphological distances among taxa. %TG: In the Chapter 2 I talk about the Mkv model, not Mk. We did that following the p-value-lover-reviewer but semantically, Mk is the evolutionary model and Mkv is the algorithm using the Mk model + a correction for aquisition bias. Should I mention that?
 This model is a generalisation of the Jukes-Cantor evolutionary model \citep[JC69;][]{jukes1969evolution} that allows a single mutation rate $\mu$ between all character states.
 The JC69 model is a great simplification of reality and has been replaced in molecular phylogenetics with more complex models that are closer to biological reality \citep[e.g. the GTR model that allows a different rate for each different type of nucleotide change;][]{tavare1986}.
 It is therefore likely that the M\textit{k} model is also a crude underestimation of the complex reality of morphological evolution, especially as the assumption that there is a unique transition rate between character states has been shown to be wrong in at least some cases \citep[e.g. for Dollo traits that are irreversible;][]{WrightDollo}.
 \cite{spencerefficacy2013} even demonstrated that non-probabilistic methods such as maximum parsimony outperform the M\textit{k} model for the placement of contentious fossils such as \textit{Archaeopteryx}.
-However, more recent and thorough simulations have demonstrated the opposite, %although the M\textit{k} model underestimates the complex reality of morphological evolution % NC: Is this a result from Aprils' paper? If so make it clearer it's not just another comment about MKV not being complex enough. If it is just another repeat of that just cut it here.
-\citep{wrightbayesian2014}.  
-%As the statistician George Box wrote, ``all models are wrong, but some are useful'' \citep{box1987empirical}.
-%This can be typically the case for the Total Evidence method: despite the three major caveats discussed above (missing data, dating, and morphological evolution), this methods remains the only efficient method to date to include the diversity of life both past and present.
-% NC: The Box quote applies to models, TEM is a method.
-% NC: Need to finish this paragraph appropriately.
+However, more recent and thorough simulations have demonstrated the opposite and have shown that using the M\textit{k} model consistently outperforms the maximum parsimony method %TG: or just "outperforms MP" since it's not a method per se, more a optimality criterion for selecting the best tree. 
+especially in the presence of missing data \citep{wrightbayesian2014}.
+Additionally, incremental improvements on the M\textit{k} model are currently being made to solve at least the fact that some traits evolution are irreversible \citep[][and personal communications]{Klopfstein12082015}.
 
-Although the Total Evidence method claims to be total because it uses both molecular and morphological data \citep{eernissetaxonomic1993}, this does not represent all of the data available to biologists.
-Thus, one way to improve the Total Evidence method could be to use a \textit{Full} Total Evidence method.
-Other sources of data such as traits (e.g. body mass), ecology (e.g. habitat) or biogeography could also be added to Total Evidence methods with appropriate evolutionary models and hypotheses for each type of data \citep[e.g. respectively quantitative, multiple or geographic state speciation and extinction model -- Qua-Mu-GeoSSE models;][]{fitzjohndiversitree2012}.
-However, such data sets could improve the Total Evidence trees but also make them more complex statistical by increasing the number of parameters and assumptions.
-Finally, this is also likely to simply increase the data availability problem.
-% NC: Ummm my reaction to this paragraph is what are you talking about??? How would this help at all? Qua-Mu-GeoSSE are methods for looking at diversification rate shifts in response to quantitative, multiple, geographic traits. NOT a method of tree building. This paragraph is nonsense. Either develop these ideas more fully so it makes some kind of logical sense or just cut this.
+% Although the Total Evidence method claims to be total because it uses both molecular and morphological data \citep{eernissetaxonomic1993}, this does not represent all of the data available to biologists.
+% Thus, one way to improve the Total Evidence method could be to use a \textit{Full} Total Evidence method.
+% Other sources of data such as traits (e.g. body mass), ecology (e.g. habitat) or biogeography could also be added to Total Evidence methods with appropriate evolutionary models and hypotheses for each type of data \citep[e.g. respectively quantitative, multiple or geographic state speciation and extinction model -- Qua-Mu-GeoSSE models;][]{fitzjohndiversitree2012}.
+% However, such data sets could improve the Total Evidence trees but also make them more complex statistical by increasing the number of parameters and assumptions.
+% Finally, this is also likely to simply increase the data availability problem.
+% NC: Ummm my reaction to this paragraph is what are you talking about??? How would this help at all? Qua-Mu-GeoSSE are methods for looking at diversification rate shifts in response to quantitative, multiple, geographic traits. NOT a method of tree building. This paragraph is nonsense. Either develop these ideas more fully so it makes some kind of logical sense or just cut this. TG: this was initially an idea from Nick Matzke (to include biogeography) but you're right it's kind of weak. I changed the last paragraph something that links better with the rest.
+
+Despite the three major caveats discussed above (missing data, dating methods, and models for morphological evolution), the Total Evidence method still, remains the only efficient method to date to include the diversity of life both past and present.
+Even though this method is not recent \textit{per se} \citep[e.g.][]{eernissetaxonomic1993}, it's recent successful software implementations \citep{Ronquist2012mrbayes,BEAST2} allowed it to be widely used in the last three years \citep{ronquista2012,slaterphylogenetic2013,Wood01032013,schragocombining2013,beckancient2014,Arcila2015131,Dembo2015,Klopfstein12082015,Carrizo,Wittenberg2015TEM,gavryushkina2015bayesian}.
+This recent enthusiasm in this method method has been particularly highlighted by the contribution of studies that proposed incremental improvements \citep{Klopfstein12082015,gavryushkina2015bayesian} or that compared this method to the classic node-dating method \citep{ronquista2012,Arcila2015131}.
+%TG: in Thomas-English: "Because so many people are using this method, some of them have proposed really nice ways to fix the problems highlighted above."
+However, one important point to keep in mind when building phylogenies, is that phylogenetic trees (whether they use all the available data or not) are tools for observing evolutionary patterns and testing evolutionary hypotheses, not the end point of the scientific endeavour.
+Until now, only few studies have used a Total Evidence phylogeny as a tool for specifically testing macroevolutionary hypothesis \citep[e.g.][]{slaterphylogenetic2013,Wood01032013,Dembo2015}.
 
 % NC: Need to finish off this section
-\section{Diversity is multidimensional} % NC: I don't like the section name here, think of a more accurate subheading rather than a catchy one.
-% link to previous paragraph
-One important point to keep in mind when building phylogenies, is that phylogenetic trees (whether they use all the available data or not) are tools for observing evolutionary patterns and testing evolutionary hypotheses, not the end point of the scientific endeavour.
-% NC: I wonder if this sentence could be the end of the previous section?
+\section{FIND A BETTER TITLE} % NC: I don't like the section name here, think of a more accurate subheading rather than a catchy one.
 
 % NC: Past tense now, you've done this! In the intro it's present tense as you're going to do it.
+%
+% DISCUSS (should it be past tense here or is that just the comment?)
+%
 
-In Chapter \ref{chap:STD_paper}, I used two tip-dated Total Evidence trees to test whether the K-Pg mass extinction event influenced the diversity of mammals.
-%I believe that the use of Total Evidence tree improves the timing of diversification events \citep[][ which is a crucial aspect when studying effect of mass extinctions which are finites points in time]{ronquista2012} or the estimation of morphological diversity \citep[increasing accuracy in reconstructing node's ancestral characters;][]{Finarelli2006}. % NC: Not sure how this is relevant.
+In Chapter \ref{chap:STD_paper}, I used two tip-dated Total Evidence trees for testing whether the K-Pg mass extinction event influenced the diversity of mammals.
 Rather than using taxonomic richness as my proxy for diversity, I used disparity, i.e. morphological diversity (or in this case cladistic diversity), and tested whether mammalian disparity increased after the K-Pg extinction.
 Although it is becoming increasingly common to estimate the disparity of clades in palaeobiology \citep[e.g.]{Butler2012,brusattedinosaur2012,toljagictriassic-jurassic2013,brusattegradual2014,bensonfaunal2014,Claddis,Close2015}, methods for estimating disparity suffer from several biases that I did not discuss in Chapter \ref{chap:STD_paper}.
 
 %Morphological diversity - NC: Not really - more cladisto versus morpho space.
 %Firstly, morphological diversity is a complex concept to grasp or to interpret.
 % NC: Well no this isn't what you talk about in this paragraph. You talk about using a cladisto-space rather than a morpho-space. So just say that. Cut out irrelevant stuff. Remember the first line of the paragraph should be what the paragraph is about.
-Describing the shape of an organism is not straightforward and many mathematical methods exist (e.g. Elliptic Fourier; \citealt{Fourier1982}; Procrustes; \citealt{JamesRohlf1993129}; Convex Hull; \citealt{ANDREW1979216}). % NC: Many mathematical methods exist to do what?
-In biology, one approach is to describe shape as a summary of an ordinated distance matrix based on Procrustes % NC: Procrustes what? ordination? Analyses? theorem?
- \citep[i.e. a geometric morphometric approach][]{zelditch2012geometric}.
-
-In studies using this approach, shape is approximated by actual continuous measurement collected from the organisms \citep[e.g.][]{friedmanexplosive2010,hopkinsdecoupling2013,finlay2015morphological}.
-However, in our case, we used inter-taxon distances among particular morphological features \citep[e.g.][]{foote1997evolution,Wills2001,Wesley-Hunt2005}.
+Describing the shape of an organism is not straightforward and many mathematical methods exist for describing a shape (e.g. Elliptic Fourier; \citealt{Fourier1982}; Procrustes; \citealt{JamesRohlf1993129}; Convex Hull; \citealt{ANDREW1979216}).
+In biology, one approach is to describe organism's shape is to use geometric morphometrics \citep{zelditch2012geometric}.
+This consists in collecting Cartesian coordinates of a series of discrete spatial points (i.e. landmarks), transforming them to remove the effect of organism's size differences (i.e. Procrustes transformation) and then ordinating these transformed coordinates into a smaller number of variables (i.e. Principal Components Analysis; PCA).
+The organism's shape can then be described as a single value that summarizes the matrix \citep[e.g. the sum of the ranges of each PCA axis][]{zelditch2012geometric}.
+When using this approach, shape is approximated by actual continuous measurement collected from the organisms \citep[e.g.][]{friedmanexplosive2010,hopkinsdecoupling2013,finlay2015morphological}.
+However, in our case, we used inter-taxon distances among particular discrete morphological features to describe shape \citep[i.e. the cladistic disparity method; e.g.][]{foote1997evolution,Wills2001,Wesley-Hunt2005}.
 % NC: Get rid of the numbering and write the below out properly.
-This method has been criticised by some to be biased by: (1) the fact that these morphological features are not randomly collected and can distort reality by emphasising differences in the taxonomic group of interest \citep{Hopkins24032015} or (2) that they are highly dependant on the quality of the fossil record \citep{Butler2012}.
-However, these biases are overweighted by the advantages of (1) having many comparable morphological data among taxa \citep{Brusatte12092008} and by (2) the possibility of correcting for the fossil record quality through time \citep{Butler2012}.
-Additionally, it has been shown that even though morphometric based and cladistic based disparity are different, they seem to capture the same signal \citep{foth2012different,hetherington2015cladistic}.
+This method can be criticised because the morphological features are not randomly collected: they are cladistic characters usually collected in order to solve relationships among lineages \citep{O'Leary08022013}.
+This might distort reality because some authors will emphasise differences in the taxonomic groups of interest \citep{Hopkins24032015}.
+Additionally, when including fossil data to such analysis, the available characters are highly dependant on the quality of the fossil record.
+This can be biased against certain type of characters \citep[e.g. soft tissue ones;][]{sansomfossilization2013} or towards geological strata with more fossils \citep[e.g. \textit{Lagerst\"{a}tten};][]{Butler2012}.
+Nonetheless, these two biases are overweighted by the advantages of having many comparable morphological data among taxa, in fact, some morphological matrices have more than 1000 morphological characters \citep[e.g.][]{O'Leary08022013,ni2013oldest}; and by the possibility of correcting for the quality of the fossil record through time \citep{Butler2012}.
+Furthermore, empirical studies have shown that the same signal seem to be captured when using either geometric morphometric or cladistic disparity to describe organism's shape \citep{foth2012different,hetherington2015cladistic}. 
+
 % NC: Also a lot of the justification for this is just "this data is available and there's a lot of it". Hard to get comparable measurement data across large phylogenies for anything else.
+%
+% DISCUSS (not sure what you mean)
+%
 
 %Finally, which metric?
 Secondly, disparity is an abstraction of morphological diversity: it is an unique value that describes and multidimensional transformation of an actual shape \citep{Wills1994,foote1997evolution}. % NC: It's not really "shape" per se. Looking at the cladistic characters it's all the stuff that makes up an organism. It is more the cladisto-space you're summarizing too, not individual species "shapes"
@@ -95,6 +105,13 @@ It also encouraging to note that this is not only a palaeobiological approach to
 In fact, biodiversity is the combination of taxonomic diversity \citep[e.g.][]{Stadler12042011}, morphological diversity \citep[from cladistics or morphometrics;][]{hetherington2015cladistic} and phylogenetic diversity \citep[e.g. the evolutionary rates regimes;][]{Close2015}. % NC: Hmmm there are a lot of other aspects too. Be careful when making grand claims that you've actually read the literature (what about ecology, function, habitats, ecosystems, molecules, genes, etc?)
 However, similarly to the comment on the \textit{Full} Total Evidence method above, this multidimensionality could also include biogeographical or ecological diversity.
 Such analysis could lead to a better understanding of macroevolutionary patterns and could allow us to test more general evolutionary hypothesis such as the validity of the concept of ecological niches \citep{pearmanniche2008}. % NC: It's unclear HOW this would help. Need to make it clearer. Can't just randomly throw in comments like this with no justification. Also a LOT more recent lit than Pearmann on this.
+
+
+
+
+
+
+
 
 % NC: The section below is really loose and arm wavey. Needs a complete re-write. i.e. start over.
 \section{What is the real effect of combining living and fossil taxa in macroevolutionary studies?} %NC: What do you mean by a "real" effect?
@@ -129,4 +146,4 @@ Because the inherent characteristic of the deep past is to be unknown and myster
 %``grandeur [of] this view of life'' \citep{darwin}. % NC: This isn't the correct quote so don't use it, it just sounds forced.
 
 
-%\bibliography{References}
+\bibliography{References}
