@@ -37,33 +37,25 @@ However, more recent and thorough simulations have demonstrated the opposite and
 especially in the presence of missing data \citep{wrightbayesian2014}.
 Additionally, incremental improvements on the M\textit{k} model are currently being made to solve at least the fact that some traits evolution are irreversible \citep[][and personal communications]{Klopfstein12082015}.
 
-% Although the Total Evidence method claims to be total because it uses both molecular and morphological data \citep{eernissetaxonomic1993}, this does not represent all of the data available to biologists.
-% Thus, one way to improve the Total Evidence method could be to use a \textit{Full} Total Evidence method.
-% Other sources of data such as traits (e.g. body mass), ecology (e.g. habitat) or biogeography could also be added to Total Evidence methods with appropriate evolutionary models and hypotheses for each type of data \citep[e.g. respectively quantitative, multiple or geographic state speciation and extinction model -- Qua-Mu-GeoSSE models;][]{fitzjohndiversitree2012}.
-% However, such data sets could improve the Total Evidence trees but also make them more complex statistical by increasing the number of parameters and assumptions.
-% Finally, this is also likely to simply increase the data availability problem.
-% NC: Ummm my reaction to this paragraph is what are you talking about??? How would this help at all? Qua-Mu-GeoSSE are methods for looking at diversification rate shifts in response to quantitative, multiple, geographic traits. NOT a method of tree building. This paragraph is nonsense. Either develop these ideas more fully so it makes some kind of logical sense or just cut this
-% TG: this was initially an idea from Nick Matzke (to include biogeography) but you're right it's kind of weak. I changed the last paragraph something that links better with the rest.
-
-Despite the three major caveats discussed above (missing data, dating methods, and models for morphological evolution), the Total Evidence method still, remains the only efficient method to date to include the diversity of life both past and present.
+Despite the three major caveats discussed above (missing data, dating methods, and models for morphological evolution), the Total Evidence method still, remains one of the only efficient methods to date to include the diversity of life both past and present.
 Even though this method is not recent \textit{per se} \citep[e.g.][]{eernissetaxonomic1993}, it's recent successful software implementations \citep{Ronquist2012mrbayes,BEAST2} allowed it to be widely used in the last three years \citep{ronquista2012,Slater2012MEE,Wood01032013,schragocombining2013,beckancient2014,Arcila2015131,Dembo2015,Klopfstein12082015,Carrizo,Wittenberg2015TEM,gavryushkina2015bayesian}.
-This recent enthusiasm in this method method has been particularly highlighted by the contribution of studies that proposed incremental improvements \citep{Klopfstein12082015,gavryushkina2015bayesian} or that compared this method to the classic node-dating method \citep{ronquista2012,Arcila2015131}.
-%TG: in Thomas-English: "Because so many people are using this method, some of them have proposed really nice ways to fix the problems highlighted above."
+This method method has recently benefited of incremental improvements \citep{Klopfstein12082015,gavryushkina2015bayesian} and has been compared to the classic node-dating method \citep{ronquista2012,Arcila2015131}.
+This might suggest that this method will increase in popularity and will probably benefit from more improvements in the near future.
+
 However, one important point to keep in mind when building phylogenies, is that phylogenetic trees (whether they use all the available data or not) are tools for observing evolutionary patterns and testing evolutionary hypotheses, not the end point of the scientific endeavour.
 Until now, only few studies have used a Total Evidence phylogeny as a tool for specifically testing macroevolutionary hypothesis \citep[e.g.][]{Slater2012MEE,Wood01032013,Dembo2015}.
 
-% NC: Need to finish off this section
 \section{The cladisto-space as a proxy for describing macroevolutionary changes} % NC: I don't like the section name here, think of a more accurate subheading rather than a catchy one. TG: how about that one?
 In Chapter \ref{chap:STD_paper}, I used two tip-dated Total Evidence trees for testing whether the K-Pg mass extinction event influenced the diversity of mammals.
 Rather than using taxonomic richness as my proxy for diversity, I used disparity, i.e. morphological diversity (or in this case cladistic diversity), and tested whether mammalian disparity increased after the K-Pg extinction.
-Although it is becoming increasingly common to estimate the disparity of clades in palaeobiology \citep[e.g.]{Butler2012,brusattedinosaur2012,toljagictriassic-jurassic2013,brusattegradual2014,bensonfaunal2014,Claddis,Close2015}, methods for estimating disparity suffer from several biases that I did not discuss in Chapter \ref{chap:STD_paper}.
+Although it is becoming increasingly common to estimate the disparity of clades in palaeobiology \citep[e.g.]{Butler2012,brusattedinosaur2012,toljagictriassic-jurassic2013,brusattegradual2014,bensonfaunal2014,Claddis,Close2015}, methods for estimating disparity suffer from several biases that I didn't fully discussed in Chapter \ref{chap:STD_paper}.
 
 %Cladisto vs morpho space (kind of)
-Describing the shape of an organism is not straightforward and many mathematical methods exist for describing a shape (e.g. Elliptic Fourier; \citealt{Fourier1982}; Procrustes; \citealt{JamesRohlf1993129}; Convex Hull; \citealt{ANDREW1979216}).
+Describing the shape of an organism is not straightforward and many mathematical methods exist for doing it (e.g. Elliptic Fourier; \citealt{Fourier1982}; Procrustes; \citealt{JamesRohlf1993129}; Convex Hull; \citealt{ANDREW1979216}).
 In biology, one approach is to describe organism's shape is to use geometric morphometrics \citep{zelditch2012geometric}.
 This consists in collecting Cartesian coordinates of a series of discrete spatial points (i.e. landmarks), transforming them to remove the effect of organism's size differences (i.e. Procrustes transformation) and then ordinating these transformed coordinates into a smaller number of variables (i.e. Principal Components Analysis; PCA).
-The organism's shape can then be described as a single value that summarizes the matrix \citep[e.g. the sum of the ranges of each PCA axis][]{zelditch2012geometric}.
-When using this approach, shape is approximated by actual continuous measurement collected from the organisms \citep[e.g.][]{friedmanexplosive2010,hopkinsdecoupling2013,finlay2015morphological}.
+The organism's shape can then be described as a single value that summarizes the matrix \citep[e.g. the sum of the ranges of each PCA axis;][]{zelditch2012geometric}. 
+When using this approach, shape is approximated by actual continuous measurement collected from the organisms \citep[e.g.][]{friedmanexplosive2010,hopkinsdecoupling2013,finlay2015morphological}.  %TG: Or maybe the whole morphometrics bit is useless here.
 However, in our case, we used inter-taxon distances among particular discrete morphological features to describe shape \citep[i.e. the cladistic disparity method; e.g.][]{foote1997evolution,Wills2001,Wesley-Hunt2005}.
 This method can be criticised because the morphological features are not randomly collected: they are cladistic characters usually collected in order to solve relationships among lineages \citep{O'Leary08022013}.
 This might distort reality because some authors will emphasise differences in the taxonomic groups of interest \citep{Hopkins24032015}.
@@ -72,74 +64,44 @@ This can be biased against certain type of characters \citep[e.g. soft tissue on
 Nonetheless, these two biases are overweighted by the advantages of having many morphological data \citep[some morphological matrices have more than 1000 morphological characters; e.g.][]{O'Leary08022013,ni2013oldest} that can be compared among many taxa sometimes even from different taxonomic groups \citep[e.g. among all mammals;][]{O'Leary08022013,Slater2012MEE,beckancient2014}.
 Furthermore, empirical studies have shown that the same signal seem to be captured when using either geometric morphometric or cladistic disparity to describe organism's shape \citep{foth2012different,hetherington2015cladistic}. 
 
-%Finally, which metric?
-Secondly, disparity is an abstraction of morphological diversity: it is an unique value that describes the cladisto-space, which is in turn based on a multidimensional transformation of the discrete shape differences among the tax in the analysis \citep{Wills1994,foote1997evolution}.
+%Which metric?
+Secondly, disparity is an abstraction of morphological diversity: it is an unique value that describes the cladisto-space, which is in turn based on a multidimensional transformation of the discrete shape differences among the taxa in the analysis \citep{Wills1994,foote1997evolution}.
 Classically people have used the four metrics proposed by \cite{Wills1994} (sum and product of variance and range).
-I discussed the caveats of discussing such metrics in Chapter \ref{chap:STD_paper} but several other, more general, problems have never been explored.
-Even though some attempts have been made for measuring the efficiency of these metrics \citep{Ciampaglio2001} there been no global assessment of the statistical power of each metric for describing multidimensional space occupancy.
+I discussed the caveats of using such metrics in Chapter \ref{chap:STD_paper} but several other, more general, problems have never been explored.
 For example, it is not clear what the variations of these metrics really reflects biologically apart from a variation in the ranges or variance contained in each dimension of the cladisto-space.
 These metrics are actually only describing the $n$ dimensions (i.e. the columns in the ordinated matrix) but are not directly describing the placement of the tips or nodes in the $n$ dimensions (cf. the distance between taxa and the centroid).
-This is more likely to describe the cladisto-space rather than what is happening in the cladisto-space % rephrase
-In fact, an interesting aspect of disparity studies is to use them as a proxy for describing macroevolutionary patterns (such as in Chapter \ref{chap:STD_paper} where we expect that an observed increase in disparity would have reflected an increase in \textit{ba\"{u}plans}).
-Therefore, I argue that using disparity metrics based on the placement of the taxa in the cladisto-space might be more interesting for some macroevolutionary questions such as the one tested in Chapter \ref{chap:STD_paper} % rephrase
+An interesting aspect of disparity studies is to use them as a proxy for describing macroevolutionary patterns.% (such as in Chapter \ref{chap:STD_paper} where we expected that an observed increase in disparity would have reflected a morphological diversification).
+Therefore, I argue that using disparity metrics based on the placement of the taxa in the cladisto-space might be more interesting for some macroevolutionary questions such as the one tested in Chapter \ref{chap:STD_paper}.
+Even though some attempts have been made for measuring the efficiency of disparity metrics \citep{Ciampaglio2001} there has been no global assessment of the statistical power of each metric for describing multidimensional space occupancy.
 Future developments of disparity through time studies would require a better understanding of the statistical performance of these disparity metrics and how each of them would be more appropriate to specific empirical situations.
 In a near future, I will assess the power of the different available disparity metrics \citep[e.g.][]{Wills1994,Ciampaglio2004,Hughes20082013,huang2015origins} through simulation studies by testing how they perform at assessing various types of changes in ordinated matrices such as the distribution of the taxa in the cladisto-space (being randomly or evenly distributed or clustered) or the changes in cumulative (i.e. explanatory) variance among the dimensions of the cladisto-space.
 
-% %Multidimensionality
-% Finally, the exciting results from the latest disparity through time stuides underline the importance of studying the multidimensionality of biodiversity \citep[cf. just taxonomic richness;][]{Butler2012,brusattedinosaur2012,toljagictriassic-jurassic2013,brusattegradual2014,bensonfaunal2014,Claddis,Close2015}.
-% It also encouraging to note that this is not only a palaeobiological approach to describing biodiversity but is also trending in other disciplines such as ecology \citep{DonohueDim}.
-% In fact, biodiversity is the combination of taxonomic diversity \citep[e.g.][]{Stadler12042011}, morphological diversity \citep[from cladistics or morphometrics;][]{hetherington2015cladistic} and phylogenetic diversity \citep[e.g. the evolutionary rates regimes;][]{Close2015}. % NC: Hmmm there are a lot of other aspects too. Be careful when making grand claims that you've actually read the literature (what about ecology, function, habitats, ecosystems, molecules, genes, etc?)
-% However, similarly to the comment on the \textit{Full} Total Evidence method above, this multidimensionality could also include biogeographical or ecological diversity.
-% Such analysis could lead to a better understanding of macroevolutionary patterns and could allow us to test more general evolutionary hypothesis such as the validity of the concept of ecological niches \citep{pearmanniche2008}. % NC: It's unclear HOW this would help. Need to make it clearer. Can't just randomly throw in comments like this with no justification. Also a LOT more recent lit than Pearmann on this.
-% TG: I've removed that whole part about multidimensionality: you're right, I don't really do that in the thesis and therefore this § just sounds arm weaving and weakens the project above that's more real (by the time of the viva I'll probably already have a clear idea of the protocol).
+%Transition - back to using both living and fossil species
+One final important aspect of disparity through time studies is the timing dimension.
+In fact, in the example used in Chapter \ref{chap:STD_paper}, it is important to be confident about the events around the K-Pg boundary.
+As discussed in Chapter \ref{chap:STD_paper}, palaeontological or neontological approaches seems to display a different pattern of diversification that occurs either just after the K-Pg event \citep[suggesting an effect of K-Pg;][]{O'Leary08022013} or before \citep[rejecting an effect of K-Pg]{meredithimpacts2011,dosReis2014}.
+Because it is impossible to be certain which scenario is correct, I argue that using all the available data \citep[both living and fossil][]{Slater2012MEE,beckancient2014} is therefore a good way to describe the observed patterns with more confidence (because all the available data has been used).
+Combining living and fossil species can therefore be really useful for macroevolutionary studies.
 
 \section{Future directions for combining living and fossil species in macroevolutionary studies}
-% §1 In this thesis, I combine both data to see how it goes with the TEM or STD.
-% I've shown the sensitivity to missing data and the effort needed in collecting more data
+In general, combining living and fossil species has lead to substantial improvements in macroevolutionary studies \citep{Finarelli2006,Slateretal2012,Slater2012MEE,SlaterPennel2014,pant2014complex,Mitchell2015}.
+This as lead to a consensus that combining living and fossil species is crucial to understand macroevolutionary patterns \citep{jacksonwhat2006,quentaldiversity2010,dietlconservation2011,slaterunifying2013,fritzdiversity2013,benton2015}.
+However, combining living and fossils species in such studies often require extra work and specific expertise \citep{ronquista2012} and can suffer from additional problems than when using the data separately (e.g. the missing data problem described in Chapters \ref{chap:TEM_paper} and \ref{chap:missing_mammals}).
+Therefore, one can argue that combining living and fossil species might be futile in some cases.
+In fact, it could be useless when studying clades that have no living relatives (e.g. Trilobita; \citealt{hopkinsdecoupling2013}; Pterosauria; \citealt{Butler2012}; etc.).
+Or, conversely, we studying clades that underwent a really recent radiation \citep[e.g. Cichlidae][]{Genner01052007}.
+One could argue that in both cases, adding fossil or living species would not significantly change the observed macroevolutionary patterns.
 
-% §2 but some people say it's useless
-Therefore, one might argue that combining living and fossil species in macroevolutionary studies should not be useful in every cases, especially because of the efforts it requires.
-For example, if you study groups with no living descendants (e.g. trilobites) or, on the converse, groups that radiated only really recently (e.g. Ciclids).
-I argue that it is still good to try to do this because
-Janvier's story (old groups) or lemurs story (young groups).
+However, several studies have suggested that it is still important to combine living and fossils species in such cases.
+For example, when studying Ostracoderma (armoured jawless fishes that went extinct during the Devonian; 358 Ma), some morphological features can only be interpreted in the light of living species and it is therefore important to combine them to living vertebrates to understand the ``dawn of vertebrates evolution'' \citep{Janvier2015}.
+On the other hand, for groups that have a recent history, some species within this group might have gone extinct only recently and bear some really particular features.
+For example, when studying how environmental conditions structured Strepsirrhines (lemurs and lorises) communities \citep{Kamilar}, including Paleogene Strepsirrhines does probably not influence the results since climatic conditions where different and the Paleogene species never interacted with the living species.
+Nonetheless, some other more recent fossils, such as the giant lemurs \citep[that went extinct only 600 years ago and were two order of magnitude bigger than living lemurs;][]{goodman2003introduction} might probably change the structure of the Strepsirrhines communities.
 
-% §3 maybe a future direction should be to properly test it
-In future what would be useful to test that properly
-%Avoid getting in the literature review stylish stuff. MAKE IT SHORT
-
-
-
-% NC: The section below is really loose and arm wavey. Needs a complete re-write. i.e. start over.
-\section{What is the real effect of combining living and fossil taxa in macroevolutionary studies?} %NC: What do you mean by a "real" effect?
-This thesis tackles practical and theoretical aspects of using both living and fossil species in macroevolutionary studies.
-% NC: Again, be careful here. You don't actually do that! Be more specific about what you actually really do. for example you haven't actually modified any methods for use with fossil and living taxa. They already existed. You modified the methods in other ways yes, but they could always cope with the data.
-Several studies have already demonstrated the challenges and the importance of including fossils into phylogenies \citep[e.g.][]{ronquista2012,Slater2012MEE,Wood01032013,beckancient2014,Dembo2015}.
-However, all these studies (including my thesis) do not focus on the effect of adding fossil taxa to phylogenies but rather perform empirical or theoretical analyses while including fossil taxa and demonstrate the superiority of their findings to previous studies.
-In fact, even though there is a strong consensus on the importance of such analysis \citep{jacksonwhat2006,quentaldiversity2010,dietlconservation2011,slaterunifying2013,fritzdiversity2013,benton2015}, the effect of combining both living and fossil has yet, to my knowledge, never been tested in a theoretical way.
-
-This might be due to the difficulties to propose a generalised theoretical framework on which to test the effect of combining living and fossil species.
-Yet, it is important to note that this thesis, along with several other studies, actually investigated this effect on some empirical data sets and consistently found an important effect of adding fossil data in macroevolutionary studies \citep{Finarelli2006,Slateretal2012,Slater2012MEE,SlaterPennel2014,pant2014complex,Mitchell2015}. % NC: OK I see what you're trying to say in this paragraph. I think a lot of people are working on this, and actually I'm sure Graham has some stuff. I guess what you're trying to say is everyone is saying with fossils is better, but not many people are testing if it's true? Note that is is still an empirical question. GEIGER can deal with non ultrametric trees, so you could easily test some of this. Also I'm sure there's a Pennell and Slater paper on early burst that adds fossils and tests the effects, also something on OU somewhere. So I think you're wrong to say it hasn't been done at all, but it hasn't been done systematically or entirely quantitatively. 
-
-One question arising from these studies is whether there is a \textit{real} effect of combining both living and fossil species into macroevolutionary studies.
-% NC: Again what is a "real" effect? Do you mean an important effect? A Biologically meaningful effect?
-In fact, one can argue that the conclusions from these studies are linked to the peculiarity of the groups studied (or the simulation protocol) that displayed a rather dynamic evolution that can only be revealed by combining all available data. % NC: How so? Explain.
-Because the methods for combining living and fossil species are still challenging, it could be a futile and time consuming exercise in some scenarios such as: (1) when studying some clades that have no living relatives (e.g. Trilobita; \citealt{hopkinsdecoupling2013}; Pterosauria; \citealt{Butler2012}; etc.); (2) when studying clades with a really poor fossil record \citep[e.g. Aves where there are three orders of magnitude more known living than fossil taxa;][]{jetzthe2012,Mitchell2015}; (3) or when studying clades that have undergone a recent radiation \citep[e.g. Cichlidae][]{Genner01052007}. % NC: Explain
-
-Ironically, % NC: Is it really ironic?
-however, each of these three scenarios can also be used to demonstrate the importance of combining living and fossil taxa into macroevolutionary studies:
-% NC: ARGH stop putting everything into lists and hoping you can just not explain anything properly!!!
-\begin{enumerate}
-\item counter intuitively, combining clades % NC: with what?
- with no living relatives might be really important for understanding macroevolutionary patterns in living taxa. For example morphological study of long extinct Ostracoderma (armoured jawless fishes) can help understanding characters evolution in later Gnatostoma \citep[jawed vertebrates;][]{Janvier2015}. % NC: explain
-\item in fossil poor clades, the few available fossils can actually bring precious information on the early history of the group. For example, in Aves, disparity is underestimated when ignoring fossils, even if there are only a handful of fossils available \citep[e.g. 58 fossil genera against 604 living ones;][]{Mitchell2015}.
-\item finally, excluding fossils from recent clades might also be detrimental to macroevolutionary interpretations, for example, in Lemuroidea, some sub-fossils species had a body mass several orders of magnitudes bigger than all living lemurs \citep{hartwig2002primate,Jungers2008} and only went extinct at latest around 600 years ago \citep{goodman2003introduction}. % NC: explain implications more clearly.
-\end{enumerate}
-
-% NC: Needs a bit more thought
-Therefore I argue that there is no biological justification to not jointly using living and fossil species since the effect of combining them can not be known \textit{a priori}. %NC: This conclusion does not follow from earlier paragraphs at all!!!
+In general, discarding some part of the data on an arbitrary basis is not a good scientific practice.
+Therefore I argue that there is no biological justification to not jointly use living and fossil species since the effect of combining them can not be known \textit{a priori}.
 Our knowledge in biology has tremendously advanced since the last half century ranging from the amazing revelation of the few glimpses of the deep past provided by the the fossil record to the understanding of the complexity and dynamics of modern ecosystems.
 Because the inherent characteristic of the deep past is to be unknown and mysterious, it is therefore crucial to incorporate all of this knowledge in macroevolutionary studies to continue revealing the complexities of biodiversity.
-%``grandeur [of] this view of life'' \citep{darwin}. % NC: This isn't the correct quote so don't use it, it just sounds forced.
 
 
-%\bibliography{References}
+\bibliography{References}
