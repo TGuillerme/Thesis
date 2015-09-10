@@ -79,7 +79,7 @@ Neither approach, however, uses all the available data.
 
 A final approach, known as the Total Evidence method, uses matrices containing molecular data from living taxa and morphological data from both living and fossil taxa \citep{eernissetaxonomic1993}.
 This approach treats every taxon as a tip in the phylogeny, uses the occurrence age of the fossils to time calibrate the phylogeny \citep[known as tip-dating;][]{ronquista2012}, and allows the use of probabilistic methods for estimating phylogenetic uncertainty \citep{ronquista2012}.
-The Total Evidence method is becoming an increasingly popular way of adding fossil taxa to phylogenies \citep[e.g.][]{pyrondivergence2011,ronquista2012,schragocombining2013,slaterphylogenetic2013,beckancient2014,Arcila2015131}.
+The Total Evidence method is becoming an increasingly popular way of adding fossil taxa to phylogenies \citep[e.g.][]{pyrondivergence2011,ronquista2012,schragocombining2013,Slater2012MEE,beckancient2014,Arcila2015131}.
 Although the Total Evidence approach seems very promising, there is one big drawback in using this approach: it requires both molecular and morphological data, both of which can be difficult (or impossible) to collect for every living and fossil taxon in the tree.
 Morphological data for living taxa are rarely collected when molecular data are available (e.g. \citealp{O'Leary08022013} \textit{vs.} \citealp{meredithimpacts2011}), and for fossil taxa, data can only be collected from features preserved in the fossil record.
 For example, in vertebrates, the hardest parts of the skeleton are more often preserved than soft parts \citep{sansomfossilization2013}; and molecular data are (nearly) always unavailable.
@@ -101,7 +101,7 @@ In addition, we test the effect of missing data by measuring two crucial aspects
 
 We focus on the effects of missing data on our ability to recover tree topology because it is a crucial aspect of a phylogeny in many macroevolutionary studies, for example when trying to elucidate the evolutionary relationships among species \citep[e.g.][]{meredithimpacts2011,jetzthe2012}, or for studying evolutionary transitions \citep[e.g.][]{friedmanexplosive2010}.
 Although branch length estimation is also important \citep[namely for timing extinction and/or speciation events; e.g.][]{ronquista2012}, we do not consider branch lengths in this study.
-This is partially due to difficulties with simulating branch lengths and topology simultaneously, but also because previous studies have already empirically assessed the effect of the Total Evidence method on branch length variation but using topological constraints \citep{ronquista2012,schragocombining2013,slaterphylogenetic2013,beckancient2014}.
+This is partially due to difficulties with simulating branch lengths and topology simultaneously, but also because previous studies have already empirically assessed the effect of the Total Evidence method on branch length variation but using topological constraints \citep{ronquista2012,schragocombining2013,Slater2012MEE,beckancient2014}.
 Thus understanding the sensitivity of topology to missing data is important for assessing the accuracy of tree estimation in the Total Evidence framework. To our knowledge, this question has never been formally assessed.
 
 Here we use a simulation approach to assess the effect of missing data on tree topologies inferred from Total Evidence matrices.
@@ -156,7 +156,7 @@ We repeated these four steps 50 times.}
 First we randomly generated a ``true'' tree of 50 taxa in R v. 3.0.2 \citep{R} using the package diversitree v. 0.9-6 \citep{fitzjohndiversitree2012}.
 We generated the tree using a birth death process by sampling speciation ($\lambda$) and extinction ($\mu$) rates from a uniform distribution (bounded between 0 and 1) but maintaining $\lambda$ $>$ $\mu$ \citep{paradistime-dependent2011}.
 Empirical Total Evidence matrices vary in whether they have more fossil than living taxa or vice versa.
-For example, fossil taxa make up 88\% \citep{beckancient2014}, 58\% \citep{schragocombining2013}, 48\% \citep{pyrondivergence2011}, 31\% \citep{ronquista2012} and 31\% \citep{slaterphylogenetic2013} of taxa in various studies.
+For example, fossil taxa make up 88\% \citep{beckancient2014}, 58\% \citep{schragocombining2013}, 48\% \citep{pyrondivergence2011}, 31\% \citep{ronquista2012} and 31\% \citep{Slater2012MEE} of taxa in various studies.
 To avoid biasing our simulations towards either living or fossil taxa and to make each simulation comparable, we implemented a rejection sampling algorithm to select only trees with 25 living and 25 fossil taxa.
 The fossil taxa were considered as unique tips at the end of extinct lineages.
 We then added an outgroup to the tree, using the mean branch length of the tree to separate the outgroup from the rest of the taxa, and with the branch length leading to the outgroup set as the sum of the mean branch length and the longest root-to-tip length of the tree.
@@ -750,5 +750,5 @@ Doing so will increase overlap of morphological characters among living and foss
 
 Additionally, the topologies of the Bayesian consensus trees, regardless of the amount of missing data, were always closer to the ``best'' tree topology than the Maximum Likelihood trees.
 This has also been observed in empirical data \citep[e.g.][]{Arcila2015131} where Maximum Likelihood trees inferred from a Total Evidence matrix were less supported than the Bayesian consensus tree.
-This might have an important impact on estimating topologies in the Total Evidence framework, because previous studies had to rely either on molecular scaffolds \citep[e.g.][]{slaterphylogenetic2013}, taxonomic constraints \citep[e.g.][]{slaterphylogenetic2013,beckancient2014} or even on fixing the topology \citep[e.g.][]{ronquista2012}.
+This might have an important impact on estimating topologies in the Total Evidence framework, because previous studies had to rely either on molecular scaffolds \citep[e.g.][]{Slater2012MEE}, taxonomic constraints \citep[e.g.][]{Slater2012MEE,beckancient2014} or even on fixing the topology \citep[e.g.][]{ronquista2012}.
 Therefore, we suggest extracting such topological backbones from the Bayesian consensus tree if needed.
