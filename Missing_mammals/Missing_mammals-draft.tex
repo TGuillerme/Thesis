@@ -142,13 +142,6 @@ We designated as ``living'' all OTUs that were either present in the phylogeny o
 For OTUs that did not appear in these three sources, we first decomposed the name (i.e. \textit{Homo sapiens} became \textit{Homo} and \textit{sapiens}) and tried to match the first element with a higher taxonomic level (genus or family).
 Any OTUs that still had no matches in the sources above were designated as non-applicable (NA; see Fig. \ref{Supp_figure_Taxonomic_algorithm}).
 
-\begin{figure}[!h]
-\centering
-    \includegraphics[width=1\textwidth]{Missing_mammals/Figures/Supp_figure_Taxonomic_algorithm.pdf}
-\caption[Taxonomic matching algorithm used in this study.]{Taxonomic matching algorithm used in this study. For each matrix, each operational taxonomic units (OTU) is matched with the super tree from Bininda-Emonds 2007. If the OTU matches, then it is classified as living. Else it is matched with the Wilson \& Reeders 2005 taxonomy list. If the OTU matches, then it is classified as living. Else it is matched with the Paleo Database list of mammals. If the OTU matches, then it is classified as fossil. Else it is ignored.}
-\label{Supp_figure_Taxonomic_algorithm}
-\end{figure}
-
 The number of characters in each matrix ranged from 6 to 4541.
 Matrices with few characters are problematic when comparing available data among matrices because (1) they have less chance of having characters that overlap with those of other matrices \citep{wagner2000} and (2) they are more likely to contain a higher proportion of specific characters that are not-applicable across large clades \citep[e.g. ``antler ramifications'' is a character that is only applicable to Cervidae not all mammals][]{Brazeau2011}.
 Therefore we selected only matrices containing \textgreater 100 characters for each OTU.
@@ -164,6 +157,13 @@ We consider orders with \textless 25\% of living taxa with cladistic data as hav
 For orders with \textless 100\% cladistic data coverage at any taxonomic level, we investigated whether the available cladistic data was (i) randomly distributed, (ii) overdispersed or (iii) clustered, with respect to phylogeny, using two metrics from community phylogenetics: the Nearest Taxon Index (NTI; \citep{webb2002phylogenies} and the Net Relatedness Index (NRI; \citep{webb2002phylogenies}. 
 NTI is most sensitive to clustering or overdispersion near the tips, whereas NRI is more sensitive to clustering or overdispersion across the whole phylogeny \citep{Cooper2008}. 
 Both metrics were calculated using the \texttt{picante} package in R \citep{picante,R}.
+
+\begin{figure}[!h]
+\centering
+    \includegraphics[width=1\textwidth]{Missing_mammals/Figures/Supp_figure_Taxonomic_algorithm.pdf}
+\caption[Taxonomic matching algorithm used in this study.]{Taxonomic matching algorithm used in this study. For each matrix, each operational taxonomic units (OTU) is matched with the super tree from Bininda-Emonds 2007. If the OTU matches, then it is classified as living. Else it is matched with the Wilson \& Reeders 2005 taxonomy list. If the OTU matches, then it is classified as living. Else it is matched with the Paleo Database list of mammals. If the OTU matches, then it is classified as fossil. Else it is ignored.}
+\label{Supp_figure_Taxonomic_algorithm}
+\end{figure}
 
 NTI \citep{webb2002phylogenies} is based on mean nearest neighbour distance (MNND) and is calculated as follows:
   \begin{equation}
