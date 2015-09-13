@@ -5,7 +5,7 @@
 %
 % DISCUSSION
 %
-%--------------------- % NC: You've picked up a weird "it's" fetish. It's = it is. Its = something that belongs to it. It's cold. Its jumper. 
+%---------------------
 
 In this final chapter of my thesis, I first discuss the implications of the results of Chapters \ref{chap:TEM_paper} and \ref{chap:missing_mammals} and then of Chapter \ref{chap:STD_paper}.
 In both sections, I discuss the methodological caveats of my approaches and propose future research avenues to solve these problems and expand into new areas.
@@ -28,7 +28,7 @@ This second point, however, has been questioned by \cite{Arcila2015131} who comp
 It would therefore be interesting to run a similar analysis to the simulations in Chapter \ref{chap:TEM_paper} but adding a dating aspect to it.
 By comparing dated Total-Evidence matrices using both node-dating and tip-dating, one could formally test the two advantages outlined above as well as their resilience to missing data.
 
-Secondly, a more general problem is that the Total Evidence method relies on the M\textit{k} model \citep{lewisa2001} to measure the morphological distances among taxa. %TG: In the Chapter 2 I talk about the Mkv model, not Mk. We did that following the p-value-lover-reviewer but semantically, Mk is the evolutionary model and Mkv is the algorithm using the Mk model + a correction for aquisition bias. Should I mention that? % NC: Nah I think it's ok as is. You can discuss in the viva if needed.
+Secondly, a more general problem is that the Total Evidence method relies on the M\textit{k} model \citep{lewisa2001} to measure the morphological distances among taxa.
 This model is a generalisation of the Jukes-Cantor model \citep[JC69;][]{jukes1969evolution} that allows a single mutation rate $\mu$ among all character states.
 The JC69 model is a great simplification of reality and has been replaced in molecular phylogenetics with more complex models that are closer to biological reality \citep[e.g. the GTR model that allows a different rate for each different type of nucleotide change;][]{tavare1986}.
 It is therefore likely that the M\textit{k} model is also a crude underestimation of the complex reality of morphological evolution, especially as the assumption that there is a unique transition rate between character states has been shown to be wrong in at least some cases \citep[e.g. for Dollo traits that are irreversible;][]{WrightDollo}.
@@ -42,10 +42,10 @@ Even though this method was first proposed decades ago \citep[e.g.][]{eernisseta
 % NC: I don't get this sentence. 
 % This suggests that this method will increase in popularity as it will better understood in compared to the node-dating method probably and it will probably benefit from more improvements in the near future.
 % NC: I don't get this sentence or the logic of it. Just need a sentence saying that increased study of the method will probably result in further improvements and increasing popularity as time goes on.
-
+This increasing number of studies using the Total Evidence method will probably result in further improvements and popularity as time goes on.
 % NC: STILL NEED ONE MORE CONCLUDING SENTENCE HERE.
+This is really encouraging because it will eventually result in more accurate phylogenies (based on molecular and morphological data) including both living and fossil species being available for macroevolutionary studies in the near future. 
 
-% NC: I moved the ending back to the next paragraph as it didn't finish the idea well.
 
 \section{The cladisto-space as a proxy for describing macroevolutionary changes} 
 One important point to keep in mind when building phylogenies, however, is that phylogenetic trees (whether they use all the available data or not) are tools for observing evolutionary patterns and testing evolutionary hypotheses, not the end point of the scientific endeavour.
@@ -55,13 +55,14 @@ Rather than using taxonomic richness as my proxy for diversity, I used disparity
 Although it is becoming increasingly common to estimate the disparity of clades in palaeobiology \citep[e.g.][]{Butler2012,brusattedinosaur2012,toljagictriassic-jurassic2013,brusattegradual2014,bensonfaunal2014,Claddis,Close2015}, methods for estimating disparity suffer from several biases that I did not fully discuss in Chapter \ref{chap:STD_paper}.
 
 %Cladisto vs morpho space (kind of)
-Describing the shape of an organism is not straightforward and many mathematical methods exist for doing it (e.g. Elliptic Fourier; \citealt{Fourier1982}; Procrustes; \citealt{JamesRohlf1993129}; Convex Hull; \citealt{ANDREW1979216}).
-In biology, one approach is to describe an organism's shape by using geometric morphometrics \citep{zelditch2012geometric}.
-By shape here I am referring to... % NC Need to define shape, to many it's the 2D outline of an individual, here you mean biological variation in form. Cladistic characters definitely aren't giving you "shape" per se ar they? Maybe replace the word shape by form to save this problem?
+Describing the shape or form of an organism is not straightforward and many mathematical methods exist for doing it (e.g. Elliptic Fourier; \citealt{Fourier1982}; Procrustes; \citealt{JamesRohlf1993129}; Convex Hull; \citealt{ANDREW1979216}).
+% NC Need to define shape, to many it's the 2D outline of an individual, here you mean biological variation in form. Cladistic characters definitely aren't giving you "shape" per se ar they? Maybe replace the word shape by form to save this problem? TG: I've changed shape to form + added what I mean by form.
+By form here, I am referring to the biological variations in morphology of the organisms (cf. the shape as in the 2D outlines of an individual).
+In biology, one approach is to describe an organism's form by using geometric morphometrics \citep{zelditch2012geometric}.
 This involves collecting Cartesian coordinates of a series of discrete spatial points (landmarks), transforming them to remove the effect of size differences via Procrustes transformation, and then ordinating these transformed coordinates into a smaller number of variables, for example by using Principal Components Analysis (PCA).
-The organism's shape can then be described as a single value that summarises the matrix \citep[e.g. the sum of the ranges of each PCA axis;][]{zelditch2012geometric}. % NC: Watch out for american spellings. izes
-When using this approach, shape is approximated by actual continuous measurements collected from the organisms \citep[e.g.][]{friedmanexplosive2010,hopkinsdecoupling2013,finlay2015morphological}.  %TG: Or maybe the whole morphometrics bit is useless here. Not sure, btu doesn't hurt to leave it in.
-In our case, however, we instead used inter-taxon distances based on discrete morphological features to describe shape \citep[i.e. the cladistic disparity method; e.g.][]{foote1997evolution,Wills2001,Wesley-Hunt2005}.
+The organism's form can then be described as a single value that summarises the matrix \citep[e.g. the sum of the ranges of each PCA axis;][]{zelditch2012geometric}.
+When using this approach, form is approximated by actual continuous measurements collected from the organisms \citep[e.g.][]{friedmanexplosive2010,hopkinsdecoupling2013,finlay2015morphological}.
+In our case, however, we instead used inter-taxon distances based on discrete morphological features to describe form \citep[i.e. the cladistic disparity method; e.g.][]{foote1997evolution,Wills2001,Wesley-Hunt2005}.
 This method is sometimes criticised because the morphological features are not randomly collected: cladistic characters are usually collected to resolve relationships among lineages \citep{O'Leary08022013}.
 This might distort reality because some authors will emphasise differences in the taxonomic groups of interest \citep{Hopkins24032015}.
 Additionally, when including fossil data to such analyses, the available characters are highly dependent on the quality of the fossil record.
@@ -70,15 +71,15 @@ Nonetheless, these two biases are overshadowed by the advantages of having a gre
 Furthermore, empirical studies have shown that the same signal seems to be captured when using either geometric morphometric or cladistic methods to describe disparity \citep{foth2012different,hetherington2015cladistic}. 
 
 %Which metric?
-Secondly, disparity is an abstraction of morphological diversity; it is a unique value that describes the cladisto-space, that is in turn based on a multidimensional transformation of the discrete shape differences among the taxa in the analysis \citep{Wills1994,foote1997evolution}.
+Secondly, disparity is an abstraction of morphological diversity; it is a unique value that describes the cladisto-space, that is in turn based on a multidimensional transformation of the discrete form differences among the taxa in the analysis \citep{Wills1994,foote1997evolution}.
 There are many different ways of doing this, though generally people have used the four metrics proposed by \cite{Wills1994} (sum and product of variance and range) to calculate disparity.
 I discussed the caveats of using such metrics in Chapter \ref{chap:STD_paper} but I did not explore several other, more general, problems.
-% NC: Not sure how happy I am with the paragraph below. I tried to make it clearer what you mean, but it's not well justified WHY that would be important in a macro question versus the space.
-For example, it is not clear what variations in these metrics really reflect biologically apart from variation in the ranges or variance contained in each dimension of the cladisto-space.
-These metrics are actually only describing the dimensions of the the ordinated matrix, and are not directly describing the relative placement of the tips or nodes in that space, unlike measures such as the distance between taxa and the centroid. 
+% NC: Not sure how happy I am with the paragraph below. I tried to make it clearer what you mean, but it's not well justified WHY that would be important in a macro question versus the space. TG: I've added this sentence to make the point: what we want in macroevolutionary studies is to be able to describe biological patterns, not just variation in numbers.
+In fact, in macroevolutionary studies, one of the purpose of such metric is to describe biological changes in the cladisto-space: for example, when species go extinct the occupancy of the species in the cladisto-space can decrease suggesting a biological loss of forms.
+It is not clear what variations in these metrics really reflect biologically apart from variation in the ranges or variance contained in each dimension of the cladisto-space.
+These metrics are actually only describing the dimensions of the ordinated matrix, and are not directly describing the relative placement of the tips or nodes in that space, unlike measures such as the distance between taxa and the centroid. 
 The latter may be of more interest when answering particular macroevolutionary questions such as the one tested in Chapter \ref{chap:STD_paper}, thus disparity metrics based on the placement of the taxa in the cladisto-space should be developed further.
-Even though some attempts have been made for measuring the efficiency % NC: What do you mean by efficiency? Efficient means doing something well and with as little time/money etc as possible. I think you might mean accuracy? or effectiveness?
- of disparity metrics \citep{Ciampaglio2001} there has been no systematic assessment of the statistical power of each metric for describing multidimensional space occupancy.
+Even though some attempts have been made for measuring the effectiveness of disparity metrics \citep{Ciampaglio2001} there has been no systematic assessment of the statistical power of each metric for describing multidimensional space occupancy.
 Future developments of disparity through time studies require a better understanding of the statistical performance of disparity metrics and which metrics are most appropriate in specific empirical situations.
 In the future, I plan to assess the power of the different available disparity metrics \citep[e.g.][]{Wills1994,Ciampaglio2004,Hughes20082013,huang2015origins} through simulation studies by testing their performance at assessing various types of changes in ordinated matrices such as the distribution of the taxa in the cladisto-space (being randomly- or evenly-distributed or clustered) or changes in cumulative (i.e. explanatory) variance among the dimensions of the cladisto-space.
 
@@ -90,9 +91,8 @@ Because it is impossible to be certain which scenario is correct, I argue that u
 Future disparity studies should include both living and fossil taxa to get a true understanding of patterns in disparity-through-time
 
 \section{Future directions for combining living and fossil species in macroevolutionary studies}
-Using data from both living and fossil species has lead to substantial improvements in macroevolutionary studies \citep{Finarelli2006,Slateretal2012,Slater2012MEE,SlaterPennel2014,pant2014complex,Mitchell2015}. % NC: That's a lot of citations with no explanation. How/why has it led to improvements? What di you mean by "improvements"
-However, combining living and fossils species in such studies often requires extra work and specific expertise \citep[e.g.][]{ronquista2012} % NC: What kind of specific expertise?
- and can suffer from more problems than those arising from using living and fossil data separately (e.g. the missing data problem described in Chapters \ref{chap:TEM_paper} and \ref{chap:missing_mammals}).
+Using data from both living and fossil species has lead to substantial improvements in macroevolutionary studies (e.g. improving ancestral characters estimations; \citealt{Finarelli2006}; mode of evolution testing; \citealt{Slater2012MEE,pant2014complex}; or disparity through time analysis; \citealt{Mitchell2015}).
+However, combining living and fossils species in such studies often requires extra work and specific expertise \citep[e.g. the study by][gathered statistic, bioinformatic, phylogenetic and palaeontology experts]{ronquista2012} and can suffer from more problems than those arising from using living and fossil data separately (e.g. the missing data problem described in Chapters \ref{chap:TEM_paper} and \ref{chap:missing_mammals}).
 Additionally, it could be counterproductive to add living species when studying fossil clades that have very few or no living relatives (e.g. Trilobita; \citealt{hopkinsdecoupling2013}; Pterosauria; \citealt{Butler2012}; etc.).
 Likewise, when studying clades that underwent a recent explosive radiation \citep[e.g. Cichlidae;][]{Genner01052007}, it may not be sensible to add fossil species.
 In both specific cases, adding fossil or living species would not significantly change the observed macroevolutionary patterns, but would take a lot of extra time, effort and expertise.
@@ -104,9 +104,9 @@ For example, when studying Strepsirrhini (lemurs and lorises), it may be importa
 In general, discarding part of your data on an arbitrary basis is not good scientific practice. 
 In addition, the effect of adding fossil species to analyses of living species (and vice versa) cannot be known \textit{a priori}.
 Therefore I argue that we should always use both living and fossil species in our analyses wherever feasible.
-Our knowledge in biology has tremendously advanced since the last half century ranging from the amazing revelation of the few glimpses of the deep past provided by the the fossil record to the understanding of the complexity and dynamics of modern ecosystems.
+Our knowledge in biology has tremendously advanced since the last half century ranging from the amazing revelation of the few glimpses of the deep past provided by the fossil record to the understanding of the complexity and dynamics of modern ecosystems.
 Because the inherent characteristic of the deep past is to be unknown and mysterious, it is therefore crucial to incorporate all of this knowledge in macroevolutionary studies to continue revealing the complexities of biodiversity.
 
-% NC: I don't like this ending but it's ok.
+% NC: I don't like this ending but it's ok. TG: to be honest I'm also not happy with this whole discussion (that's probably why it doesn't come out so well). I think it definitely contrasts in quality with the papers discussion where we were not weaving arms but actually describing and discussing what we found. Here it sounds more like a bullet point list of what to improve (first two parts) with dubious transitions and an final air brassing part...
 
 %\bibliography{References}
