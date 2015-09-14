@@ -113,12 +113,13 @@ These results suggest that the extinction of non-avian dinosaurs and other terre
 \section{Methods}
 
 \subsection{Cladistic data and phylogenies}
+\label{phylogenies}
 We used the cladistic morphological matrices and the Total Evidence tip-dated trees \citep{ronquista2012} from \citet[][103 taxa with 446 morphological characters;]{Slater2012MEE} and \citet[][102 taxa with 421 morphological characters]{beckancient2014}.
 We chose these two datasets because they have a similar number of taxa and morphological characters.
 \cite{Slater2012MEE} ranges from 310 million years ago (Ma; Late Carboniferous) to the present and focuses on the clade Mammaliaformes at the family-level and is called hereafter the Mammaliaformes dataset.
 \cite{beckancient2014} ranges from 170 Ma (Middle Jurassic) to the present and focuses on Eutheria at the genus-level and is called hereafter the Eutheria dataset.
 We used the first and last occurrences reported in \cite{Slater2012MEE} and \cite{beckancient2014} as the temporal range of each taxon in our analysis.
-Both phylogenies are illustrated in the supplementary material (see Fig \ref{fig:SlaterTree} and \ref{fig:BeckTree}).
+Both phylogenies are illustrated in the supplementary material (see Fig. \ref{fig:SlaterTree} and \ref{fig:BeckTree}).
 Both trees contain few taxa compared to the overall species richness of living and fossil mammals \citep{bininda-emondsthe2007,archibald2011extinction}.
 This is because Total Evidence trees need a lot of data, particularly morphological data for living taxa that can be hard to locate \citep{GuillermeCooper}.
 Therefore, most Total Evidence studies to date contain one or two orders of magnitude fewer taxa than phylogenies based solely on molecular data (e.g. thousands of taxa in \citealt{bininda-emondsthe2007,meredithimpacts2011} \textit{vs.} hundreds in \citealt{ronquista2012,Slater2012MEE,Wood01032013,beckancient2014}).
@@ -173,6 +174,7 @@ Note that our cladisto-spaces represent an ordination of all possible mammalian 
 It is unlikely that all morphologies will co-occur at each time point, therefore, the disparity of the whole cladisto-space is expected to be greater than the disparity at any specific point in time.
 
 \subsection{Calculating disparity}
+\label{disparity_calc}
 Disparity can be estimated in many different ways \citep[e.g.][]{Wills1994,Ciampaglio2004,thorneresetting2011,hopkinsdecoupling2013,huang2015origins}, however most studies estimate disparity using four metrics: the sum and products of ranges and variances, each of which gives a slightly different estimate of how the data fits within the cladisto-space \citep{Foote01071994,Wills1994,brusatte50,Brusatte12092008,cisneros2010,thorneresetting2011,prentice2011,brusattedinosaur2012,toljagictriassic-jurassic2013,ruta2013,bentonmodels2014,bensonfaunal2014}.
 Nonetheless, these methods suffer several methodological caveats.
 First, the range metrics are affected by the uneven sampling of the fossil record \citep{Butler2012}
@@ -192,9 +194,10 @@ where:
 
 \noindent
 and $\mathbf{v}_{n}$ is any of the $n$ eigenvectors (i.e. any of the $n$ dimensions of the cladisto-space), $Centroid_{n}$ is the mean value of the $n^{th}$ eigenvector (equation \ref{centroid}) and $k$ is the total number of tips and nodes.
-Note that we also calculated the sum and products of ranges and variances and refer to these results in the appendix \ref{chap:Appendix_STD} (Fig \ref{Supp_disparity_all_Mammaliaformes}, \ref{Supp_disparity_all_Eutheria}, \ref{Supp_disparity_all_Mammaliaformes_rarefied}, \ref{Supp_disparity_all_Eutheria_rarefied}). % link to supp.
+Note that we also calculated the sum and products of ranges and variances and refer to these results in the appendix \ref{chap:Appendix_STD} (Fig. \ref{Supp_disparity_all_Mammaliaformes}, \ref{Supp_disparity_all_Eutheria}, \ref{Supp_disparity_all_Mammaliaformes_rarefied}, \ref{Supp_disparity_all_Eutheria_rarefied}). % link to supp.
 
 \subsection{Estimating disparity through time} 
+\label{time_slicing}
 Changes in disparity through time are generally investigated by calculating the disparity of taxa that occupy the cladisto-space during specific time intervals \citep[e.g][]{cisneros2010,prentice2011,Hughes20082013,hopkinsdecoupling2013,bentonmodels2014,bensonfaunal2014}.
 These time intervals are usually defined based on biostratigraphy \citep[e.g.][]{cisneros2010,prentice2011,Hughes20082013,bentonmodels2014} but can also be arbitrarily chosen time periods of equal duration \citep{Butler2012,hopkinsdecoupling2013,bensonfaunal2014}.
 However, this approach suffers from two main biases. 
@@ -217,7 +220,7 @@ When the phylogenetic elements are branches we chose the eigenvector score for t
       \item randomly selecting either the eigenvector score of the ancestral node or the descendant node/tip of the branch (random).
     \end{enumerate}
     Method (i) assumes that changes always occur early on the branch (accelerated transition, ACCTRAN) and (ii) assumes that changes always occur later (delayed transition, DELTRAN).
-    We prefer not to make either assumption so we report the results from (iii), although the ACCTRAN and DELTRAN results are available in the appendix \ref{chap:Appendix_STD} (Fig \ref{Supp_disparity_all_Mammaliaformes}, \ref{Supp_disparity_all_Eutheria}, \ref{Supp_disparity_all_Mammaliaformes_rarefied}, \ref{Supp_disparity_all_Eutheria_rarefied}).
+    We prefer not to make either assumption so we report the results from (iii), although the ACCTRAN and DELTRAN results are available in the appendix \ref{chap:Appendix_STD} (Fig. \ref{Supp_disparity_all_Mammaliaformes}, \ref{Supp_disparity_all_Eutheria}, \ref{Supp_disparity_all_Mammaliaformes_rarefied}, \ref{Supp_disparity_all_Eutheria_rarefied}).
     \item{\textbf{Gradual evolution.}}
     This model also selects the eigenvector score from either the ancestral node or the descendant node/tip of the branch, but the choice depends on the distance between the sampling time point and the end of the branch.
     If the sampling time point falls in the first half of the branch length the eigenvector score is taken from the ancestral node, conversely, if the sampling time point falls in the second half of the branch length the eigenvector score is taken from the descendant node/tip.
@@ -232,10 +235,11 @@ To reduce the influence of outliers on our disparity estimates, we bootstrapped 
 We then calculated the median disparity value for each subsample along with the 50\% and 95\% confidence intervals.
 We also recorded the number of phylogenetic elements (nodes and tips) in each subsample as a proxy for taxonomic diversity.
 To compare our results to previous studies we also repeated our analyses using the time interval approach based on biostratigraphy \citep[e.g.][]{cisneros2010,prentice2011,Hughes20082013,bentonmodels2014} using each geological stage from the Middle Jurassic to the present.
-We report the results of these analyses in the appendix \ref{chap:Appendix_STD} (Fig \ref{Supp_disparity_all_Mammaliaformes}, \ref{Supp_disparity_all_Eutheria}, \ref{Supp_disparity_all_Mammaliaformes_rarefied}, \ref{Supp_disparity_all_Eutheria_rarefied}).
+We report the results of these analyses in the appendix \ref{chap:Appendix_STD} (Fig. \ref{Supp_disparity_all_Mammaliaformes}, \ref{Supp_disparity_all_Eutheria}, \ref{Supp_disparity_all_Mammaliaformes_rarefied}, \ref{Supp_disparity_all_Eutheria_rarefied}).
 
 %Testing the difference section
 \subsection{Testing the effects of the K-Pg extinction event on mammalian disparity}
+\label{testing_disparity}
 If the K-Pg extinction event had a significant effect on mammalian disparity, we should see a significant difference between disparity at the end of the Cretaceous and disparity at the start of the Paleogene.
 To test this, we performed \textit{t}-tests to look for differences in disparity between the time subsamples of interest \citep[e.g. as used in][]{anderson2012using,zelditch2012geometric,smith2014joined}.
 We compared the last time subsample before the K-Pg boundary (70 Ma) to the first subsample of the Paleocene (65 Ma) for both the Mammaliaformes and Eutheria datasets and using both the gradual and punctuated evolutionary models.
@@ -259,11 +263,11 @@ To make both datasets comparable, we used eight as a minimum number of taxa for 
 %---------------------------------------------
 
 \section{Results}
-Disparity in the Mammaliaformes reaches a plateau during the Middle Triassic around 240 Ma, and fluctuates slightly around this during the rest of the Mesozoic and the Cenozoic (Fig \ref{fig:Fig_Raw_results} and Fig \ref{Supp_Mammaliaformes_rarefied}).
-The number of tips and nodes in each time subsample (a proxy for taxonomic richness), however, show a more idiosyncratic pattern with a steady increase until the Middle Jurassic around 170 Ma (Fig S5) followed by random fluctuations during the rest of the Mesozoic and the Cenozoic (Fig \ref{fig:Fig_Raw_results}).
-Disparity in the Eutheria reaches a plateau at the end of the Jurassic around 150 Ma, whereas the number of tips and nodes increases up to the K-Pg boundary and then decreases throughout the Cenozoic (Fig \ref{fig:Fig_Raw_results}).
-For both Mammaliaformes and Eutheria the same patterns in changes in disparity appear in the rarefied analyses (Fig \ref{fig:Fig_Raw_results} and \ref{fig:Fig_Rar_results}).
-In both datasets the two evolutionary models (gradual or punctuated) also yield similar results (Fig \ref{fig:Fig_Raw_results}).
+Disparity in the Mammaliaformes reaches a plateau during the Middle Triassic around 240 Ma, and fluctuates slightly around this during the rest of the Mesozoic and the Cenozoic (Fig. \ref{fig:Fig_Raw_results} and Fig. \ref{Supp_Mammaliaformes_rarefied}).
+The number of tips and nodes in each time subsample (a proxy for taxonomic richness), however, show a more idiosyncratic pattern with a steady increase until the Middle Jurassic around 170 Ma (Fig. S5) followed by random fluctuations during the rest of the Mesozoic and the Cenozoic (Fig. \ref{fig:Fig_Raw_results}).
+Disparity in the Eutheria reaches a plateau at the end of the Jurassic around 150 Ma, whereas the number of tips and nodes increases up to the K-Pg boundary and then decreases throughout the Cenozoic (Fig. \ref{fig:Fig_Raw_results}).
+For both Mammaliaformes and Eutheria the same patterns in changes in disparity appear in the rarefied analyses (Fig. \ref{fig:Fig_Raw_results} and \ref{fig:Fig_Rar_results}).
+In both datasets the two evolutionary models (gradual or punctuated) also yield similar results (Fig. \ref{fig:Fig_Raw_results}).
 
 We found no significant differences in disparity between the last subsample of the Cretaceous (70 Ma) and the first subsample of the Paleogene (65 Ma; Table \ref{tab:Tab_results}), using both datasets and under both evolutionary models. 
 We also found no significant differences in disparity between the last subsample of the Cretaceous (70 Ma) and any subsamples of the Paleocene and Eocene in Mammaliaformes under both evolutionary models and in Eutheria under a gradual evolutionary model (Table \ref{tab:Tab_results}).
@@ -366,7 +370,7 @@ However, we did not detect any significant changes in mammalian disparity before
 Additionally, we tested whether the absence of a detectable effect might be due to a lag effect, with the effect only becoming obvious later in the Paleocene.
 Even when accounting for such a lag effect, we did not detect any significant effect of the K-Pg extinction event on mammalian disparity.
 Our results imply that mammals did not diversify morphologically in response to the K-Pg extinction event.
-Instead, their diversification appears to have begun before the end of the Cretaceous \citep[Fig \ref{fig:Fig_Raw_results}, Table \ref{tab:Tab_results} and see ][]{meredithimpacts2011,dosReis2014,Close2015,Lee2015R759}.
+Instead, their diversification appears to have begun before the end of the Cretaceous \citep[Fig. \ref{fig:Fig_Raw_results}, Table \ref{tab:Tab_results} and see ][]{meredithimpacts2011,dosReis2014,Close2015,Lee2015R759}.
 
 % §3 - but PETM story
 We did, however, detect a small, yet significant, increase in disparity during the Eocene (45 Ma) under a punctuated evolutionary model using the Eutheria dataset.
@@ -375,10 +379,10 @@ Note however, that this is double the lag time observed in other mass extinction
 Therefore, it may be more likely to be attributed to a lag effect of the Palaeocene-Eocene Thermal Maximum \citep[PETM; $\sim$11 Ma afterwards;][]{bininda-emondsthe2007}.
 However, this significant increase in disparity is only detected at 45 Ma but not afterwards (which would be expected if the increase was due to an evolutionary radiation) and is not seen under the gradual evolution model.
 This indicates that it is more likely due to differences in the evolutionary models rather than an actual increase in disparity.
-The 45 Ma subsample samples the long branch ($\sim$50 Ma) leading to \textit{Lepidictis} (33.9 to 33.3 Ma) that branches with its closest relative \textit{Gypsonictops} (66.8 to 66 Ma) in the early Upper Cretaceous $\sim$90 Ma (see Fig \ref{fig:BeckTree}).
+The 45 Ma subsample samples the long branch ($\sim$50 Ma) leading to \textit{Lepidictis} (33.9 to 33.3 Ma) that branches with its closest relative \textit{Gypsonictops} (66.8 to 66 Ma) in the early Upper Cretaceous $\sim$90 Ma (see Fig. \ref{fig:BeckTree}).
 Therefore, in this time-slice under the gradual evolution model, the data for \textit{Lepidictis} is always sampled, but under the punctuated evolution model the algorithm can also randomly sample the data from its ancestor in the early Upper Cretaceous (see methods).
 This may inflate differences compared to other slices.
-Incidentally, this increase can also be linked to the number of tips and nodes used in the comparison (43 versus 23 tips and nodes at respectively 70 and 45 Ma), because the increase is not significant in the rarefied analysis (see Fig \ref{fig:Fig_Rar_results} with only eight tips and nodes).
+Incidentally, this increase can also be linked to the number of tips and nodes used in the comparison (43 versus 23 tips and nodes at respectively 70 and 45 Ma), because the increase is not significant in the rarefied analysis (see Fig. \ref{fig:Fig_Rar_results} with only eight tips and nodes).
 Given these caveats we believe that no strong conclusions can be drawn from the increase in disparity during the Eocene.
 
 % §4 - How does that compare to other people
@@ -395,7 +399,7 @@ Interestingly, however, our results also differ from \cite{Slater2012MEE}, the s
 \cite{Slater2012MEE} found support for a shift in the mode of body mass evolution (from an Ornstein--Uhlenbeck to a Brownian Motion model) directly after K-Pg suggesting a release in competition pressure or new niches becoming availabile for mammals in the early Paleocene.
 Our studies may show different results due to the difference between changes observed in one continuous life-history trait \citep[body mass;][]{Slater2012MEE} versus changes in an aggregate of 446 discrete morphological traits (the cladistic characters) in the present analysis.
 Body mass and disparity might be decoupled in a similar way to taxonomic diversity and disparity \citep[e.g.][]{slaterCetacean,ruta2013,hopkinsdecoupling2013} because the latter does not rely on size but rather on discrete morphological features.
-It is not unlikely that mammalian disparity increased rapidly early in their evolutionary history and then remained constant \citep[Fig \ref{fig:Fig_Raw_results};][]{Close2015,Lee2015R759} while body mass variation continued to increase, especially after K-Pg \citep{Slater2012MEE}.
+It is not unlikely that mammalian disparity increased rapidly early in their evolutionary history and then remained constant \citep[Fig. \ref{fig:Fig_Raw_results};][]{Close2015,Lee2015R759} while body mass variation continued to increase, especially after K-Pg \citep{Slater2012MEE}.
 Note, however, that our methods did not investigate changes in body mass across the K-Pg boundary so they do not allow us to test this hypothesis.
 We remain confident in our results because we recovered the same pattern from two independent datasets \citep{Slater2012MEE,beckancient2014}.
 
