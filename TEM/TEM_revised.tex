@@ -14,7 +14,7 @@
 \begin{center}
 
 \noindent{\Large \bf Effects of missing data on topological inference using a Total Evidence approach}
-\footnote{A similar version of this chapter has been published as: "Thomas Guillerme, Natalie Cooper. 2016. Effects of missing data on topological inference using a Total Evidence approach. \textbf{Molecular Phylogenetics and Evolution}, 94:146-158; doi: \href{http://www.sciencedirect.com/science/article/pii/S1055790315002547}{doi:10.1016/j.ympev.2015.08.023}".}\footnote{\textit{Author contributions}: I designed the study, ran the analyses and wrote the paper. NC helped design the study and commented on drafts of the manuscript.}\\
+\footnote{A similar version of this chapter has been published as: "Guillerme, T \& Cooper, N. 2016. Effects of missing data on topological inference using a Total Evidence approach. \textbf{Molecular Phylogenetics and Evolution}, 94:146-158; doi: \href{http://www.sciencedirect.com/science/article/pii/S1055790315002547}{doi:10.1016/j.ympev.2015.08.023}".}$^{,}$\footnote{\textit{Author contributions}: I designed the study, ran the analyses and wrote the paper. NC helped design the study and commented on drafts of the manuscript.}\\
 
 \end{center}
 
@@ -25,13 +25,13 @@
 %---------------------------------------------
 
 % Illustration for TEM and Missing living data chapters (2 and 3)
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=\textwidth]{TEM/Figures/MissingDataFigure.pdf}
-  \caption*{Fossil species can only branch with living ones that have morphological data available.}
-\end{figure}
+% \begin{figure}[h]
+%   \centering
+%   \includegraphics[width=\textwidth]{TEM/Figures/MissingDataFigure.pdf}
+%   \caption*{Fossil species can only branch with living ones that have morphological data available.}
+% \end{figure}
 
-\newpage
+% \newpage
 
 \section*{Abstract}
 To fully understand macroevolutionary patterns and processes, we need to include both extant and extinct species in our models.
@@ -51,8 +51,6 @@ Additionally, we find that Bayesian methods consistently outperform other tree i
 We therefore recommend using Bayesian consensus trees to fix the tree topology prior to further analyses.
 
 \bigskip
-\noindent
-\textbf{Keywords:} morphological characters, Bayesian, Maximum Likelihood, topology, fossil, living.
 
 %---------------------------------------------
 %
@@ -459,7 +457,7 @@ The Normalised Triplets metric, however, is similar when comparing the Maximum L
 %Summary of metrics values for the ML parameter
 \begin{landscape}
 \begin{table}[!ht]
-\caption[Summary of the tree comparisons for the $M_{L}$, $M_{F}$ and $N_{C}$ parameters.]{Summary of the comparisons between the "best" tree and the "missing-data" trees for each different tree inference method using either the Normalised Robinson-Foulds metric (RF) or the Normalised Triplets metric (Tr) for each parameters separately.}
+\caption[Summary of the tree comparisons for the $M_{L}$, $M_{F}$ and $N_{C}$ parameters]{Summary of the comparisons between the "best" tree and the "missing-data" trees for each different tree inference method using either the Normalised Robinson-Foulds metric (RF) or the Normalised Triplets metric (Tr) for each parameters separately.}
 \label{Tab_Supp_summary_metric}
 \centering
 \begin{tabular}{lccccccc}
@@ -506,7 +504,7 @@ The Normalised Triplets metric, however, is similar when comparing the Maximum L
 %Summary of the BC between pairs of methods for the ML parameter
 \begin{landscape}
 \begin{table}[!htb]
-\caption[Bhattacharyya Coefficients of the pairwise method comparisons ($M_{L}$ and $M_{F}$).]{Bhattacharyya Coefficients of the pairwise method comparisons.
+\caption[Bhattacharyya Coefficients of the pairwise method comparisons ($M_{L}$ and $M_{F}$)]{Bhattacharyya Coefficients of the pairwise method comparisons.
 Each line summarizes the probabilities of overlap between the distributions of the ``best'' tree versus trees from each inference method (Maximum Likelihood; Bayesian consensus; Maximum Likelihood Bootstraps and Bayesian posterior trees) pooled across all combinations of missing data parameter values, using the Normalised Robinson-Foulds (RF) and Triplets (Tr) metrics. 
 Values highlighted in bold are the extreme values of high or low probability of overlap between two methods. If two methods have a high probability of overlap, they have a similar ability to recover the ``correct'' tree topology.
 Values $>$ 0.95 denote significantly similar distributions and values $<$ 0.05 denote significantly different distributions.}
@@ -553,7 +551,7 @@ Values $>$ 0.95 denote significantly similar distributions and values $<$ 0.05 d
 %Summary of the BC between pairs of methods for the MC parameter
 \begin{landscape}
 \begin{table}[!htb]
-\caption[Bhattacharyya Coefficients of the pairwise method comparisons ($N_{C}$ and all parameters combination).]{Bhattacharyya Coefficients of the pairwise method comparisons.
+\caption[Bhattacharyya Coefficients of the pairwise method comparisons ($N_{C}$ and all parameters combination)]{Bhattacharyya Coefficients of the pairwise method comparisons.
 Each line summarizes the probabilities of overlap between the distributions of the ``best'' tree versus trees from each inference method (Maximum Likelihood; Bayesian consensus; Maximum Likelihood Bootstraps and Bayesian posterior trees) pooled across all combinations of missing data parameter values, using the Normalised Robinson-Foulds (RF) and Triplets (Tr) metrics. 
 Values highlighted in bold are the extreme values of high or low probability of overlap between two methods. If two methods have a high probability of overlap, they have a similar ability to recover the ``correct'' tree topology.
 Values $>$ 0.95 denote significantly similar distributions and values $<$ 0.05 denote significantly different distributions.}
@@ -633,7 +631,7 @@ These two methods, however, perform worse than the Bayesian consensus trees usin
 %
 %---------------------------------------------
 
-
+\newpage
 \section{Discussion}
 
 Our results show that the ability to recover the ``best'' tree topology in a Total Evidence framework decreases as the amount of missing data increases, regardless of how data were removed or the method of tree inference used.

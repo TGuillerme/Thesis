@@ -190,7 +190,7 @@
   % Copyright:
   %{\footnotesize{\copyright} \@author, \@year}
   % No! Creative commons!
-  {\footnotesize{\includegraphics[width=20mm]{CC-BY-SA.png}}}
+  {\footnotesize{\includegraphics[width=20mm]{CC-BY-SA.png}}\\CC-BY-SA}
 \end{center}
 \textspacing
 \newpage
