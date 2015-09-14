@@ -12,7 +12,8 @@
 
 \section{Rarefied results for each datasets.}
 This section (Fig \ref{Supp_Mammaliaformes_rarefied} and \ref{Supp_Eutheria_rarefied}) contains the rarefied results of the Mammaliaformes and Eutheria datasets.
-We ran the rarefaction
+We ran the rarefaction analysis to test whether, disparity might be higher in subsamples with more phylogenetic elements simply because there are more taxa represented (see Chapter \ref{chap:STD_paper}).
+For each dataset, we rarefied the number of tips and nodes to the strict minimum (i.e. 3 tips or nodes per subsamples) and to the minimum number of Mammaliaformes in the subsamples from 170 Ma to the present (8 tips or nodes per subsamples; see Chapter \ref{chap:STD_paper}).
 
 \begin{figure}
 \centering
@@ -33,23 +34,27 @@ Ma).}
 \end{figure}
 
 \newpage
-This section (Fig \ref{Supp_disparity_all_Mammaliaformes}, \ref{Supp_disparity_all_Eutheria}, \ref{Supp_disparity_all_Mammaliaformes_rarefied} and \ref{Supp_disparity_all_Eutheria_rarefied}) contains the results of the analysis of the Mammaliaformes and Eutherian relationships among lineages
-dataset with all the disparity measurements and methods for sampling disparity through time.
-The different disparity measurements are the median distance from centroid (see methods section in the main text for details) as well as the median sum and products of ranges and variances from \cite{Wills1994}.
-The different methods for sampling disparity through time are:
+\section{Comparison of different disparity metrics and time sampling methods.}
+This section (Fig \ref{Supp_disparity_all_Mammaliaformes}, \ref{Supp_disparity_all_Eutheria}, \ref{Supp_disparity_all_Mammaliaformes_rarefied} and \ref{Supp_disparity_all_Eutheria_rarefied}) contains the results of the variation of disparity through time for the Mammaliaformes and Eutheria dataset with all the disparity metrics and methods for sampling disparity through time.
+The different disparity metric are the median distance from centroid (see methods section in Chapter \ref{chap:STD_paper}) as well as the sum and products of ranges and variances of the cladisto-space dimensions \cite{Wills1994}.
+The different time sampling methods are:
 \begin{enumerate}
-\item \textbf{Intervals (tips only)}. We selected every tip present at every stages from the early Middle Jurassic (Bajocian, starting at 170.3 relationships among lineages
-Ma) to the present. We collapsed together every stage containing less than 3 tips. Note that some tips where present in multiple stages due to their occurrence data (see methods section in the main text for details on the occurrence data).
-\item \textbf{Intervals (tips and nodes)}. We selected every stage tips and nodes present at every stages from the early Middle Jurassic (Bajocian, starting at 170.3 relationships among lineages
-Ma) to the present. We collapsed together every stage containing less than 3 elements (tips and/or nodes).
-\item \textbf{Slices (punctuated)}. These are the results presented in the main text where time is sample equidistantly and evolution is assumed to be punctuated (randomly selecting either data from the descendant or the ancestor when slicing through a branch; see methods section in the main text for details).
-\item \textbf{Slices (punctuated: acctran)}. Similar as slices (punctuated) method but data is always selected from the descendant (see methods section in the main text for details).
-\item \textbf{Slices (punctuated: deltran)}. Similar as slices (punctuated) method but data is always selected from the ancestor (see methods section in the main text for details).
-\item \textbf{Slices (gradual)}. SThese are the results presented in the main text where time is sample equidistantly and evolution is assumed to be gradual (data is selected from the descendant or the ancestor based on branch length; see methods section in the main text for details).
+\item \textbf{Intervals (tips only)}.
+We selected every tip present at every stages from the early Middle Jurassic (Bajocian, starting at 170.3 Ma) to the present.
+We collapsed together every stage containing less than 3 tips so that every time interval contained at least 3 tips. Note that some tips where present in multiple stages due to their occurrence data (see methods section in Chapter \ref{chap:STD_paper}).
+\item \textbf{Intervals (tips and nodes)}.
+We selected every stage tips and nodes present at every stages from the early Middle Jurassic (Bajocian, starting at 170.3 Ma) to the present.
+We collapsed together every stage containing less than 3 elements (tips and/or nodes).
+\item \textbf{Slices (punctuated)}.
+These are the results presented in the main text where the cladisto-space is sampled every 5 Ma and evolution between each subsample is assumed to be punctuated (randomly selecting either data from the descendant or the ancestor when slicing through a branch; see methods section in Chapter \ref{chap:STD_paper}).
+\item \textbf{Slices (punctuated: acctran)}.
+Similar as the slices (punctuated) method but data is always selected from the descendant (see methods section in Chapter \ref{chap:STD_paper}).
+\item \textbf{Slices (punctuated: deltran)}.
+Similar as the slices (punctuated) method but data is always selected from the ancestor (see methods section in Chapter \ref{chap:STD_paper}).
+\item \textbf{Slices (gradual)}.
+These are the results presented in the main text where the cladisto-space is sampled every 5 Ma and evolution is assumed to be gradual (data is selected from the descendant or the ancestor based on branch length; see methods section in the main text for details).
 \end{enumerate}
-We also rarefied both relationships among lineages
-datasets for all the metrics and all the methods using only 3 taxa for the interval methods and 8 taxa for the slices methods.
-
+We also rarefied both datasets for all the metrics and all the methods using the minimum of 3 taxa for the interval methods and 8 taxa for the slices methods.
 
 \begin{landscape}
 \begin{figure}[!htbp]
