@@ -63,14 +63,14 @@ A downside of the Total Evidence method is that it requires a lot of data.
 One must collect molecular data for living taxa and morphological data for both living and fossil taxa; two types of data that require fairly different technical skills (e.g. molecular sequencing \textit{vs.} anatomical description).
 Additionally, large chunks of this data can be difficult, or even impossible, to collect for every taxon present in the analysis.
 For example, fossils very rarely have molecular data and incomplete fossil preservation (e.g. soft \textit{vs.} hard tissues) may restrict the amount of morphological data available \citep{sansomfossilization2013}.
-Additionally, since the molecular phylogenetics revolution, it has become less common to collect morphological characters for living taxa when molecular data are available (e.g. in \citep{Slater2012MEE}, only 13\% of the 169 living taxa have coded morphological data).
-Unfortunately this missing data can lead to errors in phylogenetic inference; in fact, simulations show that the ability of the Total Evidence method to recover the correct phylogenetic topology decreases when there is a low overlap between morphological data in the living and fossil taxa \citep{GuillermeCooper}, regardless the overall amount of morphological data available for the fossils (or the amount of molecular data available for the living species).
+Additionally, since the molecular phylogenetics revolution, it has become less common to collect morphological characters for living taxa when molecular data are available \citep[e.g. in][ only 13\% of the 169 living taxa have coded morphological data]{Slater2012MEE}.
+Unfortunately this missing data can lead to errors in phylogenetic inference; in fact, simulations show that the ability of the Total Evidence method to recover the correct phylogenetic topology decreases when there is a low overlap between morphological data in the living and fossil taxa \citep[Chapter \ref{chap:TEM_paper};][]{GuillermeCooper}, regardless the overall amount of morphological data available for the fossils (or the amount of molecular data available for the living species).
 The effect of missing data on topology is greatest when living taxa have few morphological data.
-This is because (1) a fossil cannot branch in the correct clade if there is no overlapping morphological data in the clade; and (2) a fossil has a higher probability of branching within a clade with more morphological data available for living taxa, regardless of whether this is the correct clade or not \citep{GuillermeCooper}. 
+This is because (1) a fossil cannot branch in the correct clade if there is no overlapping morphological data in the clade; and (2) a fossil has a higher probability of branching within a clade with more morphological data available for living taxa, regardless of whether this is the correct clade or not \citep[Chapter \ref{chap:TEM_paper};][]{GuillermeCooper}. 
 
 The issues above highlight that it is crucial to have sufficient morphological data for living taxa in a clade before using a Total Evidence approach.
 However, it is unclear how much morphological data for living taxa is actually available (i.e. already coded from museum specimens and deposited in phylogenetic matrices accessible online), and how this data are distributed across clades.
-Intuitively, most people assume this kind of data has already been collected, but empirical data suggest otherwise (e.g. in \citep{ronquista2012,Slater2012MEE,beckancient2014}.
+Intuitively, most people assume this kind of data has already been collected, but empirical data suggest otherwise \citep[e.g. in][]{ronquista2012,Slater2012MEE,beckancient2014}.
 To investigate this further, we assess the amount of available morphological data for living mammals to determine whether sufficient data exists to build reliable Total Evidence phylogenies in this group.
 We collected cladistic data (i.e. discrete morphological characters used in phylogenetics) from 286 phylogenetic matrices available online and measured the proportion of cladistic data available for each mammalian order.
 %Additionally, if the available data are randomly distributed across clades, the topological errors should be less extreme than if the data are biased towards particulars groups.
@@ -87,21 +87,20 @@ We recommend that efforts be made to collect and share more cladistic data for l
 %---------------------------------------------
 \section{Methods}
 \subsection{Data collection and standardisation}
-We downloaded all cladistic matrices containing any living and/or fossil mammal taxa from three major public databases (accessed 10th of June 2015): Morphobank (\url{http://www.morphobank.org/}) \citep{morphobank}, Graeme Lloyd's website (\url{graemetlloyd.com/matrmamm.html}) and Ross Mounce's GitHub repository (\url{https://github.com/rossmounce/cladistic-data}).
+We downloaded all cladistic matrices containing any living and/or fossil mammal taxa from three major public databases (accessed 10th of June 2015): \textit{MorphoBank} (\url{http://www.morphobank.org/}) \citep{morphobank}, Graeme Lloyd's website (\url{graemetlloyd.com/matrmamm.html}) and Ross Mounce's GitHub repository (\url{https://github.com/rossmounce/cladistic-data}).
 We also performed a systematic Google Scholar search (accessed 11th of June 2015) for matrices that were not uploaded to these databases. We downloaded available matrices containing fossil and/or living mammal taxa from the three data bases using the following list of keywords:
 
-\texttt{Mammalia; Monotremata; Marsupialia; Placentalia; Macroscelidea;\\
-        Afrosoricida; Tubulidentata; Hyracoidea; Proboscidea; Sirenia; Pilosa;\\
-        Cingulata; Scandentia; Dermoptera; Primates; Lagomorpha; Rodentia;\\
-        Erinaceomorpha; Soricomorpha; Cetacea; Artiodactyla; Cetartiodactyla;\\
-        Chiroptera; Perissodactyla; Pholidota; Carnivora; Didelphimorphia;\\
-        Paucituberculata; Microbiotheria; Dasyuromorphia; Peramelemorphia;\\
-        Notoryctemorphia; Diprotodontia}.
+\noindent\texttt{Mammalia; Monotremata; Marsupialia; Placentalia; Macroscelidea; Afrosoricida;\\
+                 Tubulidentata; Hyracoidea; Proboscidea; Sirenia; Pilosa; Cingulata; Scandentia;\\
+                 Dermoptera; Primates; Lagomorpha; Rodentia; Erinaceomorpha; Soricomorpha;\\
+                 Cetacea; Artiodactyla; Cetartiodactyla; Chiroptera; Perissodactyla; Pholidota;\\
+                 Carnivora; Didelphimorphia; Paucituberculata; Microbiotheria; Dasyuromorphia;\\
+                 Peramelemorphia; Notoryctemorphia; Diprotodontia}.
 
-Note that some matrices have been downloaded from more than one database but that it is not an issue since we are interested in the total number of unique living OTUs and that if some where present in more than one matrix, they still only counted as one single OTU.
+Note that some matrices have been downloaded from more than one database but that it is not an issue since we are interested in the total number of unique living operational taxonomic units (OTU) and that if some where present in more than one matrix, they still only counted as one single OTU.
 
-\subsubsection*{Morphobank}
-We used the keywords listed above in the search menu of the Morphobank repository and downloaded the data associated with each project matching with the keywords.
+\subsubsection*{MorphoBank}
+We used the keywords listed above in the search menu of the \textit{MorphoBank} repository and downloaded the data associated with each project matching with the keywords.
 
 \subsubsection*{Graeme Lloyd}
 We downloaded all the matrices that were available with a direct download link in the mammal data section of Graeme Lloyd's website repository.
@@ -115,13 +114,12 @@ To make sure we didn't miss any extra matrix that wasn't available on one of the
 We downloaded the additional cladistic matrices from the 20 first search results matching with our selected keywords and with any of the 35 taxonomic levels (mammals Orders, Infraclasses and Class).
 We used the following key words:
 
-\texttt{\textit{order} ("morphology" OR "morphological" OR "cladistic") AND characters matrix paleontology phylogeny}
+\noindent\texttt{\textit{order} ("morphology" OR "morphological" OR "cladistic") AND characters matrix\\paleontology phylogeny}
 
-were \textit{order} was replaced by all the keywords listed above. For each 33 keywords, we selected the 20 first papers to match the Google search published since 2010 resulting in 660 papers.
+\noindent were \texttt{\textit{order}} was replaced by all the keywords listed above. For each 33 keywords, we selected the 20 first papers to match the Google search published since 2010 resulting in 660 papers.
 Among these papers, not all contained relevant data (discrete morphological characters AND mammalian data).
-We selected only the 20 first results per search term to avoid downloading articles that were to irrelevant. Among the 660 papers, only 50 contained a total of 425 extra living OTUs (Fig. ~\ref{Supp_figure_google_searches}).
+We selected only the 20 first results per search term to avoid downloading articles that were to irrelevant. Among the 660 papers, only 50 contained a total of 425 extra living OTUs (Fig. \ref{Supp_figure_google_searches}).
 Also we decided to select only the articles published since 2010 because nearly every one of the recent published matrix contains both a fraction of morphological characters and OTUs from previous studies.
-For example in primates the character \textit{p7} coded first by \cite{ross1998phylogenetic} is reused with the same living species in \cite{seiffert2003fossil}, \cite{marivaux2005anthropoid}, \cite{seiffert2005basal}, \cite{bloch2007new}, \cite{bloch2007new}, \cite{kay2008anatomy}, \cite{silcox2008biogeographic}, \cite{seiffert2009convergent}, \cite{tabuce2009anthropoid}, \cite{boyer2010astragalar}, \cite{seiffert2010fossil}, \cite{marivaux2013djebelemur} and \cite{ni2013oldest}.
 
 \begin{figure}[!h]
 \centering
@@ -130,22 +128,29 @@ For example in primates the character \textit{p7} coded first by \cite{ross1998p
 \label{Supp_figure_google_searches}
 \end{figure}
 
-We transformed all the non-nexus matrices (tnt, word, excel, jpeg) to nexus format manually.
-In total, we downloaded 286 matrices containing a total of 11010 operational taxonomic units (OTUs) of which 5228 were unique.
+We transformed all the non-NEXUS matrices (tnt, word, excel, jpeg) to NEXUS format manually.
+In total, we downloaded 286 matrices containing a total of 11010 OTUs of which 5228 were unique.
 In this study, we refer to OTUs rather than species since the entries in the downloaded matrices were not standardised and ranged from specific individual specimen names (i.e. the name of a collection item) to the family-level.
 Where possible, we considered OTUs at their lowest valid taxonomic level (i.e. species) but some OTUs were only valid at a higher taxonomic level (e.g. genus or family).
 Therefore for some orders, we sampled more genera than species (Table \ref{Table_results}).
 
 To select the lowest valid taxonomic level for each OTU, we standardised their taxonomy by correcting species names so they matched standard taxonomic nomenclature (e.g., \textit{H. sapiens} was transformed to \textit{Homo sapiens}).
-We designated as ``living'' all OTUs that were either present in the phylogeny of \citep{bininda-emondsthe2007} or the taxonomy of \citep{wilson2005mammal}, and designated as ``fossil'' all OTUs that were present in the Paleobiology database (\url{https://paleobiodb.org/}).
+We designated as ``living'' all OTUs that were either present in the phylogeny of \cite{bininda-emondsthe2007} or the taxonomy of \cite{wilson2005mammal}, and designated as ``fossil'' all OTUs that were present in the Paleobiology database (\url{https://paleobiodb.org/}).
 
 For OTUs that did not appear in these three sources, we first decomposed the name (i.e. \textit{Homo sapiens} became \textit{Homo} and \textit{sapiens}) and tried to match the first element with a higher taxonomic level (genus or family).
 Any OTUs that still had no matches in the sources above were designated as non-applicable (NA; see Fig. \ref{Supp_figure_Taxonomic_algorithm}).
 
+\begin{figure}[!h]
+\centering
+    \includegraphics[width=0.8\textwidth]{Missing_mammals/Figures/Supp_figure_Taxonomic_algorithm.pdf}
+\caption[Taxonomic matching algorithm used in this study]{\textbf{Taxonomic matching algorithm used in this study}. For each matrix, each operational taxonomic units (OTU) is matched with the super tree from \cite{bininda-emondsthe2007}. If the OTU matches, then it is classified as living. Else it is matched with the \cite{wilson2005mammal} taxonomy list. If the OTU matches, then it is classified as living. Else it is matched with the Paleobiology Database list of fossil mammals. If the OTU matches, then it is classified as fossil. Else it is ignored.}
+\label{Supp_figure_Taxonomic_algorithm}
+\end{figure}
+
 The number of characters in each matrix ranged from 6 to 4541.
-Matrices with few characters are problematic when comparing available data among matrices because (1) they have less chance of having characters that overlap with those of other matrices \citep{wagner2000} and (2) they are more likely to contain a higher proportion of specific characters that are not-applicable across large clades \citep[e.g. ``antler ramifications'' is a character that is only applicable to Cervidae not all mammals][]{Brazeau2011}.
+Matrices with few characters are problematic when comparing available data among matrices because (1) they have less chance of having characters that overlap with those of other matrices \citep{wagner2000} and (2) they are more likely to contain a higher proportion of specific characters that are not-applicable across large clades \citep[e.g. ``antler ramifications'' is a character that is only applicable to Cervidae not all mammals;][]{Brazeau2011}.
 Therefore we selected only matrices containing \textgreater 100 characters for each OTU.
-This threshold was chosen to correspond with the number of characters used in \citep{GuillermeCooper} and \citep{harrisonamong-character2014}.
+This threshold was chosen to correspond with the number of characters used in Chapter \ref{chap:TEM_paper} \citep{GuillermeCooper} and \cite{harrisonamong-character2014}.
 Note that results of analyses with no character threshold are available in Supplementary Material. 
 After removing all matrices with \textless 100 characters, we retained 1074 unique living mammal OTUs from 126 matrices for our analyses. % 1601 unique living OTUs for 286 matrices (no threshold)
 
@@ -155,32 +160,25 @@ To assess the availability of cladistic data for each mammalian order, we calcul
 %We used these different taxonomic levels because some clades are well covered at the family- or genus-level, but poorly covered at the species-level. % NC: Probably obvious?
 We consider orders with \textless 25\% of living taxa with cladistic data as having poor data coverage (``low'' coverage), and orders with \textgreater 75\% of living taxa with cladistic data as having good data coverage (hereafter ``high'' coverage). 
 
-For orders with \textless 100\% cladistic data coverage at any taxonomic level, we investigated whether the available cladistic data was (i) randomly distributed, (ii) overdispersed or (iii) clustered, with respect to phylogeny, using two metrics from community phylogenetics: the Nearest Taxon Index (NTI; \citep{webb2002phylogenies} and the Net Relatedness Index (NRI; \citep{webb2002phylogenies}. 
+For orders with \textless 100\% cladistic data coverage but more than one OTU at any taxonomic level, we investigated whether the available cladistic data was (i) randomly distributed, (ii) overdispersed or (iii) clustered, with respect to phylogeny, using two metrics from community phylogenetics: the Nearest Taxon Index \citep[NTI;][]{webb2002phylogenies} and the Net Relatedness Index \citep[NRI;][]{webb2002phylogenies}. 
 NTI is most sensitive to clustering or overdispersion near the tips, whereas NRI is more sensitive to clustering or overdispersion across the whole phylogeny \citep{Cooper2008}. 
-Both metrics were calculated using the \texttt{picante} package in R \citep{picante,R}.
+Both metrics were calculated using the \texttt{picante} package in \texttt{R} \citep{picante,R}.
 
-\begin{figure}[!h]
-\centering
-    \includegraphics[width=0.8\textwidth]{Missing_mammals/Figures/Supp_figure_Taxonomic_algorithm.pdf}
-\caption[Taxonomic matching algorithm used in this study]{Taxonomic matching algorithm used in this study. For each matrix, each operational taxonomic units (OTU) is matched with the super tree from Bininda-Emonds 2007. If the OTU matches, then it is classified as living. Else it is matched with the Wilson \& Reeders 2005 taxonomy list. If the OTU matches, then it is classified as living. Else it is matched with the Paleo Database list of mammals. If the OTU matches, then it is classified as fossil. Else it is ignored.}
-\label{Supp_figure_Taxonomic_algorithm}
-\end{figure}
-
-NTI \citep{webb2002phylogenies} is based on mean nearest neighbour distance (MNND) and is calculated as follows:
+NTI \citep{webb2002phylogenies} is based on mean nearest neighbour distance ($MNND$) and is calculated as follows:
   \begin{equation}
-    NTI=-\left(\frac{\overline{MNND}_{obs}-\overline{MNND}_{n}}{\sigma(MNND_{n})}\right)
+    \text{NTI}=-\left(\frac{\overline{MNND}_{obs}-\overline{MNND}_{n}}{\sigma(MNND_{n})}\right)
   \end{equation}
 where $\overline{MNND}_{obs}$ is the observed mean distance between each of $n$ taxa with cladistic data and its nearest neighbour with cladistic data in the phylogeny, 
-$\overline{MNND}_{n}$ is the mean of 1000 mean MNND between $n$ randomly drawn taxa, and $\sigma(MNND_{n})$ is the standard deviation of these 1000 random MNND values.
-NRI is similar but is based on mean phylogenetic distance (MPD) as follows:
+$\overline{MNND}_{n}$ is the mean of 1000 $MNND$ between $n$ randomly drawn taxa, and $\sigma(MNND_{n})$ is the standard deviation of these 1000 random $MNND$ values.
+NRI is similar but is based on mean phylogenetic distance ($MPD$) as follows:
   \begin{equation}
-    NRI=-\left(\frac{\overline{MPD}_{obs}-\overline{MPD}_{n}}{\sigma(MPD_{n})}\right)
+    \text{NRI}=-\left(\frac{\overline{MPD}_{obs}-\overline{MPD}_{n}}{\sigma(MPD_{n})}\right)
   \end{equation}
-where $\overline{MPD}_{obs}$ is the observed mean phylogenetic distance of the tree containing only the $n$ taxa with cladistic data, $\overline{MPD}_{n}$ is the expected random MPD for $n$ taxa estimated by calculating the MPD from $n$ taxa randomly drawn from the phylogeny and repeated 1000 times, and $\sigma(MPD_{n})$ is the standard deviation of the 1000 random MPD values. % NC: This can be shortened a bit but it's only gonna save you 50 words max.
+where $\overline{MPD}_{obs}$ is the observed mean phylogenetic distance of the tree containing only the $n$ taxa with cladistic data, $\overline{MPD}_{n}$ is the expected random $MPD$ for $n$ taxa estimated by calculating the $MPD$ from $n$ taxa randomly drawn from the phylogeny and repeated 1000 times, and $\sigma(MPD_{n})$ is the standard deviation of the 1000 random $MPD$ values. % NC: This can be shortened a bit but it's only gonna save you 50 words max.
 Negative NTI and NRI values show that the focal taxa are more overdispersed across the phylogeny than expected by chance, and positive values reflect significant clustering.
 
 We calculated NTI and NRI values for each mammalian order separately, at each different taxonomic level. 
-For each analysis our focal taxa were those with available cladistic data at that taxonomic level and the phylogeny was the phylogeny of the order pruned from \citep{bininda-emondsthe2007}.
+For each analysis our focal taxa were those with available cladistic data at that taxonomic level and the phylogeny was the one of the order pruned from \citep{bininda-emondsthe2007}.
 
 %---------------------------------------------
 %
@@ -189,14 +187,14 @@ For each analysis our focal taxa were those with available cladistic data at tha
 %---------------------------------------------
 
 \section{Results}
-Across the 126 cladistic matrices we extracted, 22 out of 28 mammalian orders have low coverage (\textless 25\% of species with cladistic data) and six have high coverage (\textgreater 75\% of species with cladistic data) at the species-level.
+Across the 126 cladistic matrices we analysed, 22 out of 28 mammalian orders have low coverage (\textless 25\% of species with cladistic data) and six have high coverage (\textgreater 75\% of species with cladistic data) at the species-level.
 At the genus-level, three orders have low coverage and 12 have high coverage, and at the family-level, no orders have low coverage and 23 have high coverage (Table \ref{Table_results}).
 
 \input{Missing_mammals/Table_results}
 
 Among the mammalian orders containing OTUs with no available cladistic data, only six orders had significantly clustered data (Carnivora, Cetartiodactyla, Chiroptera and Soricomorpha at both species- and genus-level and Afrosoricida and Pholidota at the species-level only) and no order had significantly overdispersed data at any taxonomic level (Table \ref{Table_results}).
 
-Two contrasting results are shown in Fig. \ref{Figure_example_coverage} with randomly distributed OTUs with cladistic data in Primates (Fig. \ref{Figure_example_coverage}A) and phylogenetically clustered OTUs with cladistic data in Carnivora (mainly Canidae; Fig. \ref{Figure_example_coverage}B).
+Two contrasting results are shown in figure \ref{Figure_example_coverage} with randomly distributed OTUs with cladistic data in Primates (Fig. \ref{Figure_example_coverage}A) and phylogenetically clustered OTUs with cladistic data in Carnivora (mainly Canidae; Fig. \ref{Figure_example_coverage}B).
 
 \begin{figure}[!h]
 \centering
@@ -214,13 +212,13 @@ Edges are colored in grey when no cladistic data are available for a species and
 
 \section{Discussion}
 Our results show that although phylogenetic relationships among living mammals are well-resolved \citep[e.g.][]{bininda-emondsthe2007,meredithimpacts2011} , most of the data used to build these phylogenies is molecular, and very little cladistic data are available for living mammals compared to fossil mammals \citep[e.g.][]{O'Leary08022013,ni2013oldest}.
-This has implications for building Total Evidence phylogenies containing both living and fossil mammals, as without sufficient cladistic data for living species, fossil placements in these trees are very uncertain \citep{GuillermeCooper}.
+This has implications for building Total Evidence phylogenies containing both living and fossil mammals, as without sufficient cladistic data for living species, fossil placements in these trees are very uncertain \citep[Chapter \ref{chap:TEM_paper};][]{GuillermeCooper}.
 Cladistic data coverage in living mammals varies across taxonomic levels and in its phylogenetic distribution.
-Higher taxonomic levels are always better sampled than lower ones and within these taxonomic levels, the available data are mostly randomly distributed across the phylogeny, apart from in six orders).
+Higher taxonomic levels are always better sampled than lower ones and within these taxonomic levels, the available data are mostly randomly distributed across the phylogeny, apart for six orders).
 
 The number of living mammalian taxa with no available cladistic data was surprisingly high at the species-level: only six out of 28 orders have a high coverage of taxa with available cladistic data (and two of the 28 orders are monospecific!).
-This high coverage threshold of 75\% of taxa with available cladistic data represents the minimum amount of data required before missing data has a significant effect on the topology of Total Evidence trees \citep{GuillermeCooper}.
-Beyond this threshold, there is considerable displacement of wildcard taxa \citep[\textit{sensu}][]{kearneyfragmentary2002} and decreases in clade conservation \citep{GuillermeCooper}.
+This high coverage threshold of 75\% of taxa with available cladistic data represents the minimum amount of data required before missing data has a significant effect on the topology of Total Evidence trees \citep[Chapter \ref{chap:TEM_paper};][]{GuillermeCooper}.
+Beyond this threshold, there is considerable displacement of wildcard taxa \citep[\textit{sensu}][]{kearneyfragmentary2002} and decreases in clade conservation \citep[Chapter \ref{chap:TEM_paper};][]{GuillermeCooper}.
 Therefore we expect a high probability of topological artefacts for the placement of fossil taxa at the species-level in most mammalian orders.
 However, data coverage seems to be less of an issue at higher taxonomic levels (i.e. genus- and family-level).
 This point is important from a practical point of view because of the slight discrepancy between the neontological and palaeontological concept of species.
@@ -228,15 +226,15 @@ While neontological species are described using morphology, genetic distance, sp
 Because of this, most palaeontological studies are using the genus as their smallest OTU \citep[e.g.][]{ni2013oldest,O'Leary08022013}.
 Thus data availability at the genus-level in living mammals should be our primary concern when aiming to build phylogenies of living and fossil taxa.
 
-When only a few species with cladistic data are available, the ideal scenario is for them to be phylogenetically overdispersed (i.e. that there is data for at least every sub-clade) to maximize the possibilities of a fossil branching from the right clade.
-The second best scenario is that species with cladistic data are randomly distributed across the phylogeny. 
-In this scenario we expect no special bias in the placement of the fossil \citep{GuillermeCooper}, it is therefore encouraging that for most orders, species with cladistic data were randomly distributed across the phylogeny of each order.
+When only a few species with cladistic data are available, the ideal scenario is for them to be phylogenetically overdispersed (i.e. that there is data for at least every sub-clade) to maximize the possibilities of a fossil branching in the right clade.
+The second best scenario is that species with cladistic data are randomly distributed across the phylogenies. 
+In this scenario we expect no special bias in the placement of the fossil \citep[Chapter \ref{chap:TEM_paper};][]{GuillermeCooper}, it is therefore encouraging that for most orders, species with cladistic data were randomly distributed across the phylogeny of each order.
 The worst case scenario for fossil placement is that species with cladistic data are phylogenetically clustered. 
 In this situation we expect two major biases to occur: first, the fossil will not be able to branch within a clade containing no data, and second, the fossil will have a higher probability, at random, of branching within the clade containing most of the available data.
-This means that fossils with uncertain phylogenetic affinities (\textit{incertae sedis} will have a higher probability of branching within the most sampled clade just by chance).
+This means that fossils with uncertain phylogenetic affinities (\textit{incertae sedis}) will have a higher probability of branching within the most sampled clade just by chance.
 Our results suggest that this may be an issue, at the genus-level, in Carnivora, Cetartiodactyla, Chiroptera and Soricomorpha. 
-For example, a Carnivora fossil will be unable to branch in the Herpestidae that has no species with cladistic data, and will also have more chance to branch, randomly, within the Canidae clade than any other clade in Carnivora (Fig. \ref{Figure_example_coverage}B).
-Thus, in Total Evidence trees, placements of some carnivoran fossils should considered with caution. 
+For example, a Carnivora fossil will be unable to branch in the Herpestidae that has no living species with cladistic data, and will also have more chance to branch, randomly, within the Canidae clade than any other clade in Carnivora (Fig. \ref{Figure_example_coverage}B).
+Thus, in Total Evidence trees, placements of some carnivoran fossils should be considered with caution. 
 % NC: Trying not to piss off GraHam - really it's weird stuff appearing in Carnivora that we are concerned by, not all Carnivora. TG: I think it's mainly Graham's work that focuses on canids.
 In this study, we treated all cladistic matrices as equal in a similar way to molecular matrices. 
 For example, if matrix A contained 100 characters for taxa X and Y, and matrix B contained 50 different characters for taxa X and Z, we assumed that both matrices can be combined in a supermatrix containing 150 independent characters for taxon X, 100 for taxon Y and 50 for taxon Z.
@@ -247,7 +245,7 @@ For example, within the Primate cladistic literature, the character \textit{p7} 
 A conservative approach to avoid compound characters would be to select only the most recent matrix for each group, but this would result in the loss of a lot of data.
 
 Despite the absence of good cladistic data coverage for living mammals, the Total Evidence methods still seems to be the most promising way of combining living and fossil data for macroevolutionary analyses. 
-Following the recommendations in \citep{GuillermeCooper}, we need to code cladistic characters for as many living species possible. 
+Following the recommendations in \citep[Chapter \ref{chap:TEM_paper};][]{GuillermeCooper}, we need to code cladistic characters for as many living species possible. 
 Fortunately, data for living mammals is usually readily available in natural history collections, therefore, we propose that an increased effort be put into coding morphological characters from living species, possibly by engaging in collaborative data collection projects through web portals such as \textit{MorphoBank} \citep{morphobank}.
 % NC: Still feels like it needs one final sentence to round it all off. Many something like below, but less crappy:
 Such an effort would be valuable not only to phylogeneticists, but also to any researcher focusing understanding macroevolutionary patterns and processes.%interested in the diversity of life on Earth.
