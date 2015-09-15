@@ -46,9 +46,9 @@
 Popular science accounts state that after the extinction of the non-avian dinosaurs at the Cretaceous-Paleogene (K-Pg) boundary 66 million years ago, mammals rapidly diversified to fill their empty ecological niches.
 However, evidence for this is mixed. 
 Palaeontological analyses suggest that mammals radiated in response to the K-Pg extinction event, whereas neontological analyses suggest that mammals began to radiate before K-Pg and were not greatly affected by it. 
-Here we aim to end this debate by looking at fossil and living taxa simultaneously.
+Here we aim to end this debate by looking at living and fossil taxa simultaneously.
 
-We investigated the effect of the K-Pg extinction event on mammalian morphological diversity (disparity) using two Total Evidence tip-dated phylogenies of Mammaliaformes and Eutheria, containing both fossil and living taxa. 
+We investigated the effect of the K-Pg extinction event on mammalian morphological diversity (disparity) using two Total Evidence tip-dated phylogenies of Mammaliaformes and Eutheria, containing both living and fossil taxa. 
 Using a novel, continuous time-slicing method for measuring changes in disparity-through-time, we found no significant change in disparity before and after the K-Pg boundary, under either a gradual or punctuated model of evolution.
 This implies that the extinctions at the end of the Cretaceous did not affect mammalian morphological evolution. 
 Our findings contradict the popular theory that the non-avian dinosaurs and other Mesozoic tetrapods were restricting mammalian evolution, and that their extinction liberated ecological niches for mammals to evolve into.
@@ -81,7 +81,7 @@ There are two main reasons why there is still debate about the timing of the div
 Firstly, palaeontological and neontological data show different patterns; palaeontological data generally suggest that placental mammals diversified after K-Pg \citep[e.g.][]{O'Leary08022013}, whereas neontological data suggest that K-Pg extinction event had little to no effect on mammalian diversification \citep{bininda-emondsthe2007,meredithimpacts2011,Stadler12042011}.
 We can solve this issue by using both palaeontological and neontological data in our analyses. 
 The Total Evidence method allows us to use cladistic data for both living and fossil taxa, along with molecular data for living taxa, to build phylogenies \citep{ronquista2012}. %eernissetaxonomic1993
-This method can also be combined with the tip-dating method \citep{ronquista2012,Wood01032013} to get more accurate estimates of diversification times for both fossil and living species \citep[but see][]{Arcila2015131}.
+This method can also be combined with the tip-dating method \citep{ronquista2012,Wood01032013} to get more accurate estimates of diversification times for both living and fossil species \citep[but see][]{Arcila2015131}.
 Here we use two recent Total Evidence tip-dated phylogenies of mammals \citep{Slater2012MEE,beckancient2014} to investigate palaeontological and neontological taxa simultaneously.
 
 A second issue is that diversity can be defined in many different ways.
@@ -93,7 +93,7 @@ Many methods for quantifying changes in morphological diversity were proposed $>
 Additionally, previous methods are based on an underlying assumption that changes in disparity occur by punctuated evolution \citep[e.g.][]{Wesley-Hunt2005} which is not always the case \citep{Hunt21042015}.
 Finally, most studies of disparity through time use unequal time units based on biostratigraphy \citep{Brusatte12092008,brusattedinosaur2012,toljagictriassic-jurassic2013}. 
 This can be tautological as biostratigraphy is already based on changes in fossil assemblages and morphology through time.
-To deal with these issues, we propose an updated approach to test whether mammals diversified in response to the K-Pg event, using morphological disparity, measured as cladistic disparity (see Methods), as our proxy for diversity.
+To deal with these issues, we propose an updated approach to test whether mammals diversified in response to the K-Pg event, using morphological disparity, measured as cladistic disparity (see Methods, section \ref{disparity_calc}), as our proxy for diversity.
 
 Here we measure the disparity of living and fossil mammals before or after K-Pg, using data taken from two previously published studies \citep{Slater2012MEE,beckancient2014}. 
 Using a novel time-slicing approach, we produce fine-grained estimates of disparity through time under two different models of morphological character evolution (either gradual or punctuated). 
@@ -119,10 +119,10 @@ We chose these two datasets because they have a similar number of taxa and morph
 \cite{Slater2012MEE} ranges from 310 million years ago (Ma; Late Carboniferous) to the present and focuses on the clade Mammaliaformes at the family-level and is called hereafter the Mammaliaformes dataset.
 \cite{beckancient2014} ranges from 170 Ma (Middle Jurassic) to the present and focuses on Eutheria at the genus-level and is called hereafter the Eutheria dataset.
 We used the first and last occurrences reported in \cite{Slater2012MEE} and \cite{beckancient2014} as the temporal range of each taxon in our analysis.
-Both phylogenies are illustrated in the supplementary material (see Fig. \ref{fig:SlaterTree} and \ref{fig:BeckTree}).
+Both phylogenies are illustrated in figures \ref{fig:SlaterTree} and \ref{fig:BeckTree}.
 Both trees contain few taxa compared to the overall species richness of living and fossil mammals \citep{bininda-emondsthe2007,archibald2011extinction}.
-This is because Total Evidence trees need a lot of data, particularly morphological data for living taxa that can be hard to locate \citep{GuillermeCooper}.
-Therefore, most Total Evidence studies to date contain one or two orders of magnitude fewer taxa than phylogenies based solely on molecular data (e.g. thousands of taxa in \citealt{bininda-emondsthe2007,meredithimpacts2011} \textit{vs.} hundreds in \citealt{ronquista2012,Slater2012MEE,Wood01032013,beckancient2014}).
+This is because Total Evidence trees need a lot of data, particularly morphological data for living taxa that can be hard to locate \citep[Chapter \ref{chap:TEM_paper} and \ref{chap:missing_mammals};][]{GuillermeCooperMissing,GuillermeCooper}.
+Therefore, most Total Evidence studies to date contain one or two orders of magnitude fewer taxa than phylogenies based solely on molecular data (e.g. thousands of taxa in \citealt{bininda-emondsthe2007,meredithimpacts2011} \textit{vs.} hundreds in \citealt{ronquista2012,Slater2012MEE,beckancient2014}).
 
 \begin{figure}[!h]
 \centering
@@ -139,6 +139,7 @@ Therefore, most Total Evidence studies to date contain one or two orders of magn
 \end{figure}
 
 \subsection{Estimating ancestral character states}
+\label{ace}
 For both datasets we used the re-rooting method \citep{Yang01121995,Garland2000} to get Maximum Likelihood estimates of the ancestral states for each character at every node in the tree, using the \texttt{rerootingMethod} function from the \texttt{R} package \texttt{phytools} version 0.4-45 \citep{phytools,R}.
 Where there was missing character data for a taxon we followed the method of \cite{Claddis} and treated missing data as any possible observed state for each character.
 For example, if a character had two observed states ($0$ and $1$) across all taxa, we attributed the multi-state ``$0$\&$1$" value to the taxon with missing data, representing an equal probability of being either $0$ or $1$.
@@ -159,7 +160,7 @@ For each dataset separately, we calculated the $k$$\times$$k$ distances using th
 This allows us to correct for distances between two taxa that share many characters and could be closer to each other than to taxa with fewer characters in common (i.e. because some pairs of taxa share more characters in common than others, they are more likely to be similar).
 For cladistic matrices, using this corrected distance is preferable to the raw Euclidean distance because of its ability to deal with discrete or/and ordinated characters as well as with missing data \citep{anderson2012using}.
 However, the Gower distance cannot calculate distances when taxa have no overlapping data.
-Therefore, we used the \texttt{TrimMorphDistMatrix} function from the \texttt{Claddis} R package \citep{Claddis} to remove pairs of taxa with no cladistic characters in common.
+Therefore, we used the \texttt{TrimMorphDistMatrix} function from the \texttt{Claddis} \texttt{R} package \citep{Claddis} to remove pairs of taxa with no cladistic characters in common.
 This led to us removing 11 taxa from the Mammaliaformes dataset but none from the Eutheria dataset.
 
 %\subsubsection{Ordination}
@@ -179,11 +180,11 @@ Disparity can be estimated in many different ways \citep[e.g.][]{Wills1994,Ciamp
 Nonetheless, these methods suffer several methodological caveats.
 First, the range metrics are affected by the uneven sampling of the fossil record \citep{Butler2012}
 Second, because we include all $n$ dimensions in the analysis (see above), the products of ranges and variances will tend towards zero since the scores of the last dimension are usually really close to zero themselves. 
-These features make using the sum and products of ranges and variances unfeasible in our study.
+These features make using the sum and products of ranges and variances problematic in our study.
 Instead, we use a different metric that comes with no statistical assumptions for measuring the dispersion of the data in the cladisto-space: the median distance between tips and nodes and the centroid (similar but not equivalent to \citealt{Wills1994,kornextinction2013,huang2015origins}) calculated as:
 
 \begin{equation}
-   Disparity=median{\displaystyle\sqrt{\sum{(\mathbf{v}_{n}-Centroid_{n})^2}}}
+   \text{Disparity}=median{\displaystyle\sqrt{\sum{(\mathbf{v}_{n}-Centroid_{n})^2}}}
     \label{disparity}
 \end{equation}
 where:
@@ -207,7 +208,7 @@ Second, this approach assumes that all characters evolve following a punctuated 
 To address these issues, we used a ``time-slicing'' approach that considers subsets of taxa in the cladisto-space at specific equidistant points in time, as opposed to considering subsets of taxa between two points in time.
 This results in even-sampling of the cladisto-space across time and permits us to define the underlying model of character evolution (punctuated or gradual).  
 In practice, time-slicing considers the disparity of any element present in the phylogeny (branches, nodes and tips) at any point in time.
-When the phylogenetic elements are nodes or tips, the eigenvector scores for the nodes (estimated using ancestral state reconstruction as described above) or tips are directly used for estimating disparity.
+When the phylogenetic elements are nodes or tips, the eigenvector scores for the nodes (estimated using ancestral state reconstruction as described in section \ref{ace}) or tips are directly used for estimating disparity.
 When the phylogenetic elements are branches we chose the eigenvector score for the branch using one of two evolutionary models:
 \begin{enumerate}
     \item{\textbf{Punctuated evolution.}} 
@@ -254,7 +255,7 @@ Finally, disparity may be higher in subsamples with more phylogenetic elements s
 To test whether this influenced our results, we repeated the \textit{t}-tests using the rarefied Mammaliaformes and Eutheria disparities.
 In the Mammaliaformes, the minimum number of taxa in each subsample from 170 Ma to present was eight.
 In the Eutheria, the minimum number of taxa in each subsample was three, however, from 150 Ma until the present, the minimum number of taxa is eight.
-To make both datasets comparable, we used eight as a minimum number of taxa for the rarefied bootstrap measurements, therefore in the Eutheria we ignored the subsample between 170 and 150 Ma that only contains three taxa.
+To make both datasets comparable, we used eight as a minimum number of taxa for the rarefied bootstrap measurements, therefore in the Eutheria we ignored the subsample between 170 and 150 Ma that contained less than eight taxa.
 
 %---------------------------------------------
 %
@@ -325,7 +326,7 @@ Otherwise the results of the rarefied analyses are the same as when using the co
 \end{table}
 
 \begin{table}[ht]
-\caption[Effect of the K-Pg boundary on mammlian disparity (rarefied)]{Results of rarefied t-tests comparing disparity at the last subsample of the Cretaceous (70 Ma) to subsamples of the Paleocene and Eocene, under both gradual and punctuated evolutionary models, in Mammaliaformes and Eutheria. Difference = mean difference in disparity between the two subsamples being compared; df = degrees of freedom; p value = original p value prior to Bonferonni correction.}
+\caption[Effect of the K-Pg boundary on mammlian disparity (rarefied)]{Results of rarefied \textit{t}-tests comparing disparity at the last subsample of the Cretaceous (70 Ma) to subsamples of the Paleocene and Eocene, under both gradual and punctuated evolutionary models, in Mammaliaformes and Eutheria. Difference = mean difference in disparity between the two subsamples being compared; df = degrees of freedom; p value = original p value prior to Bonferonni correction.}
 \label{tab:Tab_rare}
 \centering
 \begin{tabular}{c|cccc|cccc}
@@ -379,7 +380,7 @@ Note however, that this is double the lag time observed in other mass extinction
 Therefore, it may be more likely to be attributed to a lag effect of the Palaeocene-Eocene Thermal Maximum \citep[PETM; $\sim$11 Ma afterwards;][]{bininda-emondsthe2007}.
 However, this significant increase in disparity is only detected at 45 Ma but not afterwards (which would be expected if the increase was due to an evolutionary radiation) and is not seen under the gradual evolution model.
 This indicates that it is more likely due to differences in the evolutionary models rather than an actual increase in disparity.
-The 45 Ma subsample samples the long branch ($\sim$50 Ma) leading to \textit{Lepidictis} (33.9 to 33.3 Ma) that branches with its closest relative \textit{Gypsonictops} (66.8 to 66 Ma) in the early Upper Cretaceous $\sim$90 Ma (see Fig. \ref{fig:BeckTree}).
+The 45 Ma subsample samples the long branch ($\sim$50 million years) leading to \textit{Lepidictis} (33.9 to 33.3 Ma) that branches with its closest relative \textit{Gypsonictops} (66.8 to 66 Ma) in the early Upper Cretaceous $\sim$90 Ma (see Fig. \ref{fig:BeckTree}).
 Therefore, in this time-slice under the gradual evolution model, the data for \textit{Lepidictis} is always sampled, but under the punctuated evolution model the algorithm can also randomly sample the data from its ancestor in the early Upper Cretaceous (see methods).
 This may inflate differences compared to other slices.
 Incidentally, this increase can also be linked to the number of tips and nodes used in the comparison (43 versus 23 tips and nodes at respectively 70 and 45 Ma), because the increase is not significant in the rarefied analysis (see Fig. \ref{fig:Fig_Rar_results} with only eight tips and nodes).
@@ -396,7 +397,7 @@ In this study, however, we use Total Evidence tip-dated trees based on both pala
 
 % §5 - However, our results differ from Slater
 Interestingly, however, our results also differ from \cite{Slater2012MEE}, the source of data for the Mammaliaformes dataset.
-\cite{Slater2012MEE} found support for a shift in the mode of body mass evolution (from an Ornstein--Uhlenbeck to a Brownian Motion model) directly after K-Pg suggesting a release in competition pressure or new niches becoming availabile for mammals in the early Paleocene.
+\cite{Slater2012MEE} found support for a shift in the mode of body mass evolution (from an Ornstein--Uhlenbeck to a Brownian Motion model) directly after K-Pg suggesting a release in competition pressure or new ecological niches becoming availabile for mammals in the early Paleocene.
 Our studies may show different results due to the difference between changes observed in one continuous life-history trait \citep[body mass;][]{Slater2012MEE} versus changes in an aggregate of 446 discrete morphological traits (the cladistic characters) in the present analysis.
 Body mass and disparity might be decoupled in a similar way to taxonomic diversity and disparity \citep[e.g.][]{slaterCetacean,ruta2013,hopkinsdecoupling2013} because the latter does not rely on size but rather on discrete morphological features.
 It is not unlikely that mammalian disparity increased rapidly early in their evolutionary history and then remained constant \citep[Fig. \ref{fig:Fig_Raw_results};][]{Close2015,Lee2015R759} while body mass variation continued to increase, especially after K-Pg \citep{Slater2012MEE}.
@@ -426,10 +427,10 @@ Throughout this paper, we propose several incremental changes to the classical w
 Firstly we used all the axes of the cladisto-space, as opposed to previous studies that selected a subsample of the cladisto-space arguing that the $m$ first axes usually contain most of the dataset's variance \citep[e.g][]{brusatte50,cisneros2010,prentice2011,anderson2012using,Hughes20082013,bentonmodels2014}.
 We argue that even if the last dimensions of the cladisto-space contain a trivial amount of variance, there is no statistical justification for excluding them.
 However, by doing so, we included dimensions of the cladisto-space with near zero variance and range (the last dimension's variance was $2\times10^{-14}$ and $1.15\times10^{-15}$ and the range was $7.31\times10^{-7}$ and $3.33\times10^{-7}$ for respectively the Mammaliaformes and Eutheria datasets).
-An alternative method avoids this problem by simply not ordinating the data and using the raw distance matrix \citep[e.g.][]{bensonfaunal2014,Close2015}. 
+An alternative method avoids this problem by simply not ordinating the data and using the raw inter-taxon distance matrix \citep[e.g.][]{bensonfaunal2014,Close2015}. 
 However, in both this method and our method, the calculation of the products of ranges and variances is impossible.
-
-Secondly, we used median distance between tips and nodes to centroid as a disparity metric, rather than the classical sums and products of ranges and variances \citep{Wills1994}.
+problematic
+Secondly, we used median distance between tips and nodes to centroid as a disparity metric, rather than the classical sum and products of ranges and variances \citep{Wills1994}.
 This metric is not affected by problems with using the last dimensions of the cladisto-space (see above).
 Also, it has several other advantages over other metrics.
 For example, it measures directly the median spread of the taxa in the cladisto-space unlike the sum and products of ranges and variances that measure the size of the cladisto-space dimensions \citep{Wills1994}.
@@ -443,6 +444,6 @@ Our approach allowed us to fit different evolutionary models to our data - eithe
 This is an improvement on previous approaches but could be improved further by implementing other common but more complex models for example, a combined stasis and random walk \citep{Hunt21042015} or models based on morphological rates rather than just branch lengths.
 
 \subsection{Conclusion}
-Evidence for whether mammals diversified before or after the K-Pg boundary is mixed \citep{meredithimpacts2011,O'Leary08022013,dosReis2014,beckancient2014}, and appears to be related to the kind of data used (fossils or living species) and how the analyses were conducted.
-Using both fossil and living taxa, and investigating morphological disparity through time rather than taxonomic diversity, we find no direct effect of the K-Pg extinction event on the diversity of mammals. 
+Evidence for whether mammals diversified before or after the K-Pg boundary is mixed \citep{meredithimpacts2011,O'Leary08022013,dosReis2014,beckancient2014}, and appears to be related to the kind of data used (paleontological or neontological) and how the analyses were conducted.
+Using both living and fossil taxa, and investigating morphological disparity through time rather than taxonomic diversity, we find no direct effect of the K-Pg extinction event on the diversity of mammals. 
 We therefore suggest that, contrary to popular belief, the extinction of many terrestrial vertebrates including the non-avian dinosaurs 66 million years ago, did not significantly affect the evolution of mammals throughout the Cenozoic.
