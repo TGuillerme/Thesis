@@ -176,6 +176,13 @@ These matrices contained a cumulative number of 22563 characters that had betwee
 We then extracted the proportion of characters with each number of states (two to 10) to give us an empirical estimate of the average number of character states for each character, as shown in Fig. \ref{Fig_AppendixCharacters}.
 Most morphological characters have two or three states, therefore we only simulate characters with two or three states, and sampled these in proportion to their occurrence in our empirical data (probability of 0.85 for two states characters and 0.15 for three state characters).
 
+\begin{figure}[!h] % print version
+\centering
+    \includegraphics[keepaspectratio=true,width=0.8\textwidth]{TEM/Figures/TEM_Fig-AppendixCharacters.pdf}
+\caption[Empirical proportion of morphological characters]{The proportion of morphological characters with between two and 10 character states extracted from 100 randomly selected empirical matrices downloaded from TreeBASE.}
+\label{Fig_AppendixCharacters}
+\end{figure}
+
 We then ran an independent discrete character simulation for each character using the ``true'' tree with the character's randomly selected number of states (two or three) and assuming an equal rate of change (i.e. evolutionary rate) from one character state to another \citep{Pagel22011994}.
 This method allows us to have only two parameters for each character: the number of states and the evolutionary rate.
 For each character, the evolutionary rate was sampled from a gamma distribution with $\alpha$ = 0.5.
@@ -183,12 +190,12 @@ We used low evolutionary rate parameters to be consistent with the molecular rat
 Topological error has been shown to be minimal at a morphological rate of 0.5 when using the M\textit{kv} model \citep{lewisa2001,wrightbayesian2014}.
 Note, however, that \cite{wrightbayesian2014} have shown that low morphological rates ($<$ 0.5) increase variance in topological error, but we discarded simulations with such topological error by selecting only matrices with a ``fair'' phylogenetic signal (see section \ref{estimating_phylogenies}; \citealt{zanderminimal2004}) so this should not influence our results.
 
-\begin{figure}[!h]
-\centering
-    \includegraphics[keepaspectratio=true,width=0.8\textwidth]{TEM/Figures/TEM_Fig-AppendixCharacters.pdf}
-\caption[Empirical proportion of morphological characters]{The proportion of morphological characters with between two and 10 character states extracted from 100 randomly selected empirical matrices downloaded from TreeBASE.}
-\label{Fig_AppendixCharacters}
-\end{figure}
+% \begin{figure}[!h] % online version
+% \centering
+%     \includegraphics[keepaspectratio=true,width=0.8\textwidth]{TEM/Figures/TEM_Fig-AppendixCharacters.pdf}
+% \caption[Empirical proportion of morphological characters]{The proportion of morphological characters with between two and 10 character states extracted from 100 randomly selected empirical matrices downloaded from TreeBASE.}
+% \label{Fig_AppendixCharacters}
+% \end{figure}
 
 
 Finally, we combined the morphological and molecular matrices obtained from the ``true'' tree.
@@ -276,7 +283,8 @@ To assess if this had an effect on the topology of the ``best'' tree, we ran a s
 We tested this effect on five trees with the five levels of missing data (i.e. first tree: $M_L$=0\%, $M_F$=0\% and $N_C$=100 (i.e. 0\% ``missing''); second tree: $M_L$=10\%, $M_F$=10\% and $N_C$=90, etc.) on the first 20 simulation chains.
 We then compared the trees inferred using a random starting tree to the ``best'' tree using the normalised Robinson-Foulds and Triplets metrics in an identical way as described below (Fig. ~\ref{Fig_startingTree}).
 
-\begin{figure}[!htbp]
+%\begin{figure}[!htbp] % online version
+\begin{figure}[!h] % print version
 \centering
 \includegraphics[keepaspectratio=true, width=\textwidth]{TEM/Figures/Starting_tree.pdf}
 \caption[Effect of using the ``true'' tree as a starting tree]{Effect of using the ``true'' tree (black) or a random tree (red) as the starting tree for the Bayesian inference. The x axis, represents the amount of missing data (see below).}
@@ -413,6 +421,19 @@ Note that this procedure pools results from across all missing data parameter co
 When two tree inference or uncertainty methods have a similar ability to recover the ``best'' tree topology the Bhattacharyya Coefficient will be close to one.
 Conversely, if the two tree inference or uncertainty methods differ, the Bhattacharyya Coefficient will be close to zero.
 
+%  \begin{figure}[!h] % print version
+%  \centering
+%      \includegraphics[width=0.6\textwidth]{TEM/Figures/Fig2.pdf}
+%  \caption[Bhattacharyya Coefficient calculation outline 1]{\textbf{Bhattacharyya Coefficient calculation outline 1.} A, B and C are distributions of tree similarity metrics (Normalised Robinson-Foulds or Normalised Triplets metrics) for any combination of missing data parameters (e.g. $M_{L}$ = 10\%, $M_{F}$ = 50\%, $N_{C}$ = 25). The Bhattacharyya Coefficient (\textit{BC}) is the overlap of the distribution of tree similarity metrics between two combinations of missing data parameters, for example, \textit{BC}(A,B) is the probability of overlap between the distributions A and B.}
+%  \label{Fig_Bhattacharyya_Coefficients1}
+%  \end{figure}
+
+% \begin{figure}[!h] % print version
+% \centering
+%     \includegraphics[width=1\textwidth]{TEM/Figures/Fig3.pdf}
+% \caption[Bhattacharyya Coefficient calculation outline 2]{\textbf{Bhattacharyya Coefficient calculation outline 2.} A and B are distributions of tree similarity metrics (Normalised Robinson-Foulds or Normalised Triplets metrics) for any combination of missing data parameters (e.g. $M_{L}$ = 10\%, $M_{F}$ = 50\%, $N_{C}$ = 25). (x) and (y) are two different tree inference methods (e.g. Maximum Likelihood or Bayesian). The Bhattacharyya Coefficient (\textit{BC}) is the overlap of the distribution of tree similarity metrics between two methods for the same combination of missing data parameters, for example, \textit{BC}(A$_{\text{(x)}}$,A$_{\text{(y)}}$) is the probability of overlap of the distribution A for methods $\text{(x)}$ and $\text{(y)}$.}
+% \label{Fig_Bhattacharyya_Coefficients2} 
+% \end{figure}
 %---------------------------------------------
 %
 %       RESULTS
@@ -423,7 +444,7 @@ Conversely, if the two tree inference or uncertainty methods differ, the Bhattac
 As the amount of missing data in the morphological part of the Total Evidence matrix increases, our ability to recover the ``best'' tree topology decreases, regardless of the missing data parameter ($M_{L}$, $M_{F}$ or $N_{C}$), the tree inference method (Maximum Likelihood or Bayesian) or the tree comparison metric used (Normalised Robinson-Foulds or Normalised Triplets metric).
 Nonetheless, the different missing data parameters and tree inference methods do not affect the topology in the same way (Fig. \ref{Fig_Results-permeth_perparam} and Fig. \ref{Fig_Results-global_perparam}).
  
- \begin{figure}[!h]
+ \begin{figure}[!h] % online version
  \centering
      \includegraphics[width=0.6\textwidth]{TEM/Figures/Fig2.pdf}
  \caption[Bhattacharyya Coefficient calculation outline 1]{\textbf{Bhattacharyya Coefficient calculation outline 1.} A, B and C are distributions of tree similarity metrics (Normalised Robinson-Foulds or Normalised Triplets metrics) for any combination of missing data parameters (e.g. $M_{L}$ = 10\%, $M_{F}$ = 50\%, $N_{C}$ = 25). The Bhattacharyya Coefficient (\textit{BC}) is the overlap of the distribution of tree similarity metrics between two combinations of missing data parameters, for example, \textit{BC}(A,B) is the probability of overlap between the distributions A and B.}
@@ -434,7 +455,8 @@ Nonetheless, the different missing data parameters and tree inference methods do
 As the amount of missing data increases across all three parameters, our ability to recover the ``best'' tree topology decreases (Fig. \ref{Fig_Results-permeth_perparam}).
 The Normalised Robinson-Foulds metric is always lower for the Maximum Likelihood trees than for the Bayesian consensus trees (median Bhattacharrya Coefficient = 0.69, 0.48 and 0.66 for $M_{L}$, $M_{F}$ and $N_{C}$ respectively; Fig. \ref{Fig_Results-permeth_perparam}; Table \ref{Tab_Supp_summary_metric}). 
 The Normalised Triplets metric, however, is similar when comparing the Maximum Likelihood trees and the Bayesian consensus trees for all the parameters ($M_{L}$, $M_{F}$ and $N_{C}$) (median Bhattacharrya Coefficient = 0.84, 0.75 and 0.80 for $M_{L}$, $M_{F}$ and $N_{C}$ respectively; Fig. \ref{Fig_Results-permeth_perparam}; Table \ref{Tab_Supp_summary_metric}).
-\begin{figure}[!h]
+
+\begin{figure}[!h] % online version
 \centering
     \includegraphics[width=1\textwidth]{TEM/Figures/Fig3.pdf}
 \caption[Bhattacharyya Coefficient calculation outline 2]{\textbf{Bhattacharyya Coefficient calculation outline 2.} A and B are distributions of tree similarity metrics (Normalised Robinson-Foulds or Normalised Triplets metrics) for any combination of missing data parameters (e.g. $M_{L}$ = 10\%, $M_{F}$ = 50\%, $N_{C}$ = 25). (x) and (y) are two different tree inference methods (e.g. Maximum Likelihood or Bayesian). The Bhattacharyya Coefficient (\textit{BC}) is the overlap of the distribution of tree similarity metrics between two methods for the same combination of missing data parameters, for example, \textit{BC}(A$_{\text{(x)}}$,A$_{\text{(y)}}$) is the probability of overlap of the distribution A for methods $\text{(x)}$ and $\text{(y)}$.}
@@ -505,10 +527,10 @@ The Normalised Triplets metric, however, is similar when comparing the Maximum L
 %Summary of the BC between pairs of methods for the ML parameter
 \begin{landscape}
 \begin{table}[!htb]
-\caption[Bhattacharyya Coefficients of the pairwise method comparisons ($M_{L}$ and $M_{F}$)]{\textbf{Bhattacharyya Coefficients of the pairwise method comparisons.}
+\caption[Bhattacharyya Coefficients of the pairwise method comparisons ($M_{L}$ and $M_{F}$)]{\footnotesize{\textbf{Bhattacharyya Coefficients of the pairwise method comparisons.}
 Each line summarizes the probabilities of overlap between the distributions of the ``best'' tree versus trees from each inference method (Maximum Likelihood; Bayesian consensus; Maximum Likelihood bootstraps and Bayesian posterior trees) pooled across all combinations of missing data parameter values, using the Normalised Robinson-Foulds ($RF$) and Triplets ($Tr$) metrics. 
 Values highlighted in bold are the extreme values of high or low probability of overlap between two methods. If two methods have a high probability of overlap, they have a similar ability to recover the ``correct'' tree topology.
-Values $>$ 0.95 denote significantly similar distributions and values $<$ 0.05 denote significantly different distributions.}
+Values $>$ 0.95 denote significantly similar distributions and values $<$ 0.05 denote significantly different distributions.}} % Small tag for online version
 \label{Tab_Supp_summary_BC_ML_MF}
 \centering
 \begin{tabular}{lccccccc}
@@ -552,10 +574,10 @@ Values $>$ 0.95 denote significantly similar distributions and values $<$ 0.05 d
 %Summary of the BC between pairs of methods for the MC parameter
 \begin{landscape}
 \begin{table}[!htb]
-\caption[Bhattacharyya Coefficients of the pairwise method comparisons ($N_{C}$ and all parameters combination)]{\textbf{Bhattacharyya Coefficients of the pairwise method comparisons.}
+\caption[Bhattacharyya Coefficients of the pairwise method comparisons ($N_{C}$ and all parameters combination)]{\footnotesize{\textbf{Bhattacharyya Coefficients of the pairwise method comparisons.}
 Each line summarizes the probabilities of overlap between the distributions of the ``best'' tree versus trees from each inference method (Maximum Likelihood; Bayesian consensus; Maximum Likelihood bootstraps and Bayesian posterior trees) pooled across all combinations of missing data parameter values, using the Normalised Robinson-Foulds ($RF$) and Triplets ($Tr$) metrics. 
 Values highlighted in bold are the extreme values of high or low probability of overlap between two methods. If two methods have a high probability of overlap, they have a similar ability to recover the ``correct'' tree topology.
-Values $>$ 0.95 denote significantly similar distributions and values $<$ 0.05 denote significantly different distributions.}
+Values $>$ 0.95 denote significantly similar distributions and values $<$ 0.05 denote significantly different distributions.}} % Small tag for online version
 \label{Tab_Supp_summary_BC_NC_Global}
 \centering
 \begin{tabular}{lccccccc}

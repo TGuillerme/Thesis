@@ -140,12 +140,12 @@ We designated as ``living'' all OTUs that were either present in the phylogeny o
 For OTUs that did not appear in these three sources, we first decomposed the name (i.e. \textit{Homo sapiens} became \textit{Homo} and \textit{sapiens}) and tried to match the first element with a higher taxonomic level (genus or family).
 Any OTUs that still had no matches in the sources above were designated as non-applicable (NA; see Fig. \ref{Supp_figure_Taxonomic_algorithm}).
 
-\begin{figure}[!h]
-\centering
-    \includegraphics[width=0.8\textwidth]{Missing_mammals/Figures/Supp_figure_Taxonomic_algorithm.pdf}
-\caption[Taxonomic matching algorithm used in this study]{\textbf{Taxonomic matching algorithm used in this study}. For each matrix, each operational taxonomic units (OTU) is matched with the super tree from \cite{bininda-emondsthe2007}. If the OTU matches, then it is classified as living. Else it is matched with the \cite{wilson2005mammal} taxonomy list. If the OTU matches, then it is classified as living. Else it is matched with the Paleobiology Database list of fossil mammals. If the OTU matches, then it is classified as fossil. Else it is ignored.}
-\label{Supp_figure_Taxonomic_algorithm}
-\end{figure}
+% \begin{figure}[!h] % online version
+% \centering
+%     \includegraphics[width=0.8\textwidth]{Missing_mammals/Figures/Supp_figure_Taxonomic_algorithm.pdf}
+% \caption[Taxonomic matching algorithm used in this study]{\textbf{Taxonomic matching algorithm used in this study}. For each matrix, each operational taxonomic units (OTU) is matched with the super tree from \cite{bininda-emondsthe2007}. If the OTU matches, then it is classified as living. Else it is matched with the \cite{wilson2005mammal} taxonomy list. If the OTU matches, then it is classified as living. Else it is matched with the Paleobiology Database list of fossil mammals. If the OTU matches, then it is classified as fossil. Else it is ignored.}
+% \label{Supp_figure_Taxonomic_algorithm}
+% \end{figure}
 
 The number of characters in each matrix ranged from 6 to 4541.
 Matrices with few characters are problematic when comparing available data among matrices because (1) they have less chance of having characters that overlap with those of other matrices \citep{wagner2000} and (2) they are more likely to contain a higher proportion of specific characters that are not-applicable across large clades \citep[e.g. ``antler ramifications'' is a character that is only applicable to Cervidae not all mammals;][]{Brazeau2011}.
@@ -153,6 +153,14 @@ Therefore we selected only matrices containing \textgreater 100 characters for e
 This threshold was chosen to correspond with the number of characters used in Chapter \ref{chap:TEM_paper} \citep{GuillermeCooper} and \cite{harrisonamong-character2014}.
 Note that results of analyses with no character threshold are available in Supplementary Material. 
 After removing all matrices with \textless 100 characters, we retained 1074 unique living mammal OTUs from 126 matrices for our analyses. % 1601 unique living OTUs for 286 matrices (no threshold)
+
+\begin{figure}[!h] % print version
+\centering
+    \includegraphics[width=0.8\textwidth]{Missing_mammals/Figures/Supp_figure_Taxonomic_algorithm.pdf}
+\caption[Taxonomic matching algorithm used in this study]{\textbf{Taxonomic matching algorithm used in this study}. For each matrix, each operational taxonomic units (OTU) is matched with the super tree from \cite{bininda-emondsthe2007}. If the OTU matches, then it is classified as living. Else it is matched with the \cite{wilson2005mammal} taxonomy list. If the OTU matches, then it is classified as living. Else it is matched with the Paleobiology Database list of fossil mammals. If the OTU matches, then it is classified as fossil. Else it is ignored.}
+\label{Supp_figure_Taxonomic_algorithm}
+\end{figure}
+
 
 \subsection{Data availability and distribution}
 \label{data_distrib}
@@ -196,19 +204,26 @@ Among the mammalian orders containing OTUs with no available cladistic data, onl
 
 Two contrasting results are shown in figure \ref{Figure_example_coverage} with randomly distributed OTUs with cladistic data in Primates (Fig. \ref{Figure_example_coverage}A) and phylogenetically clustered OTUs with cladistic data in Carnivora (mainly Canidae; Fig. \ref{Figure_example_coverage}B).
 
-\begin{figure}[!h]
+% \begin{figure}[!h] %online version
+% \centering
+%     \includegraphics[width=1\textwidth]{Missing_mammals/Figures/example_coverage.pdf}
+% \caption[Phylogenetic distribution of species with available cladistic data across Primates and Carnivora]{Phylogenetic distribution of species with available cladistic data across two mammalian orders (A: Primates; B: Carnivora).
+% Edges are colored in grey when no cladistic data are available for a species and in blue when data are available.}
+% \label{Figure_example_coverage}
+% \end{figure}
+\newpage %print version
+%---------------------------------------------
+%
+%       DISCUSSION
+%
+%---------------------------------------------
+\begin{figure}[!h] %print version
 \centering
     \includegraphics[width=1\textwidth]{Missing_mammals/Figures/example_coverage.pdf}
 \caption[Phylogenetic distribution of species with available cladistic data across Primates and Carnivora]{Phylogenetic distribution of species with available cladistic data across two mammalian orders (A: Primates; B: Carnivora).
 Edges are colored in grey when no cladistic data are available for a species and in blue when data are available.}
 \label{Figure_example_coverage}
 \end{figure}
-
-%---------------------------------------------
-%
-%       DISCUSSION
-%
-%---------------------------------------------
 
 \section{Discussion}
 Our results show that although phylogenetic relationships among living mammals are well-resolved \citep[e.g.][]{bininda-emondsthe2007,meredithimpacts2011} , most of the data used to build these phylogenies is molecular, and very little cladistic data are available for living mammals compared to fossil mammals \citep[e.g.][]{O'Leary08022013,ni2013oldest}.
