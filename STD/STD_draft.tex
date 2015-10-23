@@ -67,8 +67,7 @@ Throughout history, life on Earth has suffered a series of mass extinction event
 The long-term effects of mass extinctions, however, are more varied \citep{Erwin1998344}, and include species richness increases in some clades \citep{friedmanexplosive2010} and declines in others \citep{Benton85}, changes in morphological diversity \citep{Ciampaglio2001,Ciampaglio2004,kornextinction2013} and shifts in ecological dominance \citep[e.g.][]{Brusatte12092008,toljagictriassic-jurassic2013,bensonfaunal2014}.
 These shifts are characterised by the decline of one clade that is replaced by a different unrelated clade with a similar ecological role (e.g. Brachiopoda and Bivalvia at the end Permian extinction; \citealt{Liow2015} %Sepkiski1981, CLAPHAM01102006
  but see \citealt{Payne22052014}). 
-Shifts in ecological dominance are of particular interest because they are a fairly common pattern observed in the fossil record (e.g. Foraminifera; \citealt{Coxall01042006} %D'Hondt01011996
-; Ichtyosauria; \citealt{thorneresetting2011}; Plesiosauria; \citealt{bensonfaunal2014}) and are often linked to major macroevolutionary processes such as adaptive \citep{Losos2010} or competitive \citep{Brusatte12092008} radiations.
+Shifts in ecological dominance are of particular interest because they are a fairly common pattern observed in the fossil record (e.g. Foraminifera; \citealt{Coxall01042006}; Icthyosauria; \citealt{thorneresetting2011}; Plesiosauria; \citealt{bensonfaunal2014}) and are often linked to major macroevolutionary processes such as adaptive \citep{Losos2010} or competitive \citep{Brusatte12092008} radiations.
 
 One classical example of a shift in ecological dominance is at the Cretaceous-Palaeogene (K-Pg) mass extinction 66 million years ago \citep{rennetime2013}, where many terrestrial vertebrates (including the dominant non-avian dinosaur group; \citealt{archibald2011extinction,rennetime2013,Brusatte2015}) went extinct, allowing placental mammals to dominate the fauna \citep{archibald2011extinction,Lovergrove}. 
 Some authors suggest this reflects placental mammals filling the ``empty'' niches left after the K-Pg extinction event \citep{archibald2011extinction,O'Leary08022013}, others suggest it reflects a release from predation and/or competition \citep{Slater2012MEE,Lovergrove}.
@@ -89,7 +88,7 @@ In many studies it is measured as taxonomic diversity or species richness \citep
 Sometimes taxonomic diversity is used as a proxy for other kinds of diversity, however, species richness can be decoupled from morphological diversity \citep[e.g.][]{slaterCetacean,ruta2013,hopkinsdecoupling2013}, so it may not be the best proxy for ecological diversity.
 We can instead use morphological diversity, also known as disparity \citep[e.g.][]{Wills1994,Erwin2007,Hughes20082013}, as a way to quantify changes in mammalian morphology that should relate to the ecology of the species.
 However some methods for measuring disparity are outdated and make inappropriate assumptions.
-Many methods for quantifying changes in morphological diversity were proposed $>$ 20 years ago \citep{Foote01071994,Wills1994} and are sometimes used without modifications \citep[e.g.,][]{brusatte50,Brusatte12092008,cisneros2010,thorneresetting2011,prentice2011,brusattedinosaur2012,toljagictriassic-jurassic2013,ruta2013,bentonmodels2014,bensonfaunal2014}.
+Many methods for quantifying changes in morphological diversity were proposed more than 20 years ago \citep{Foote01071994,Wills1994} and are sometimes used without modifications \citep[e.g.,][]{brusatte50,Brusatte12092008,cisneros2010,thorneresetting2011,prentice2011,brusattedinosaur2012,toljagictriassic-jurassic2013,ruta2013,bentonmodels2014,bensonfaunal2014}.
 Additionally, previous methods are based on an underlying assumption that changes in disparity occur by punctuated evolution \citep[e.g.][]{Wesley-Hunt2005} which is not always the case \citep{Hunt21042015}.
 Finally, most studies of disparity through time use unequal time units based on biostratigraphy \citep{Brusatte12092008,brusattedinosaur2012,toljagictriassic-jurassic2013}. 
 This can be tautological as biostratigraphy is already based on changes in fossil assemblages and morphology through time.
@@ -185,7 +184,7 @@ It is unlikely that all morphologies will co-occur at each time point, therefore
 \label{disparity_calc}
 Disparity can be estimated in many different ways \citep[e.g.][]{Wills1994,Ciampaglio2004,thorneresetting2011,hopkinsdecoupling2013,huang2015origins}, however most studies estimate disparity using four metrics: the sum and products of ranges and variances, each of which gives a slightly different estimate of how the data fits within the cladisto-space \citep{Foote01071994,Wills1994,brusatte50,Brusatte12092008,cisneros2010,thorneresetting2011,prentice2011,brusattedinosaur2012,toljagictriassic-jurassic2013,ruta2013,bentonmodels2014,bensonfaunal2014}.
 Nonetheless, these methods suffer several methodological caveats.
-First, the range metrics are affected by the uneven sampling of the fossil record \citep{Butler2012}
+First, the range metrics are affected by the uneven sampling of the fossil record \citep{Butler2012}.
 Second, because we include all $n$ dimensions in the analysis (see above), the products of ranges and variances will tend towards zero since the scores of the last dimension are usually really close to zero themselves. 
 These features make using the sum and products of ranges and variances problematic in our study.
 Instead, we use a different metric that comes with no statistical assumptions for measuring the dispersion of the data in the cladisto-space: the median distance between tips and nodes and the centroid (similar but not equivalent to \citealt{Wills1994,kornextinction2013,huang2015origins}) calculated as:
@@ -233,7 +232,7 @@ When the phylogenetic elements are branches we chose the eigenvector score for t
     This model also selects the eigenvector score from either the ancestral node or the descendant node/tip of the branch, but the choice depends on the distance between the sampling time point and the end of the branch.
     If the sampling time point falls in the first half of the branch length the eigenvector score is taken from the ancestral node, conversely, if the sampling time point falls in the second half of the branch length the eigenvector score is taken from the descendant node/tip.
     This reflects a model of gradual evolution where changes in disparity are gradual and cumulative along the branch.
-    Under this model, the gradual changes could be either directional or random, however, directional evolution have been empirically shown to be rare \citep[only 5\% of the time][]{Hunt20112007}.
+    Under this model, the gradual changes could be either directional or random, however, directional evolution has been empirically shown to be rare \citep[only 5\% of the time][]{Hunt20112007}.
     We therefore considered that changes from a character state A to B were only dependent on the branch length.
 \end{enumerate}
 %What did we do (the main figure)
@@ -251,7 +250,7 @@ We report the results of these analyses in the appendix \ref{chap:Appendix_STD} 
 If the K-Pg extinction event had a significant effect on mammalian disparity, we should see a significant difference between disparity at the end of the Cretaceous and disparity at the start of the Paleogene.
 To test this, we performed \textit{t}-tests to look for differences in disparity between the time subsamples of interest \citep[e.g. as used in][]{anderson2012using,zelditch2012geometric,smith2014joined}.
 We compared the last time subsample before the K-Pg boundary (70 Ma) to the first subsample of the Paleocene (65 Ma) for both the Mammaliaformes and Eutheria datasets and using both the gradual and punctuated evolutionary models.
-Even though one million year after the K-Pg event (66 to 65 Ma) seems to be a rather short geological time frame, effects on mammalian evolution have been detected as early as half a million year after K-Pg \citep{Wilson2013}.
+Even though one million years after the K-Pg event (66 to 65 Ma) seems to be a rather short geological time frame, effects on mammalian evolution have been detected as early as half a million year after K-Pg \citep{Wilson2013}.
 However, the effect of extinction on a group's evolution might not be detectable directly after the event due to delays in recovery \citep[e.g.][estimated that ecosystems only fully recovered 8-9 Ma after the Permo-Triassic mass extinction]{chen2012timing}.
 Therefore, we also tested whether there was a significant difference in disparity between the end of the Cretaceous (70 Ma) and all subsamples from the Paleocene (65, 60 and 55 Ma).
 Additionally, some authors argue that the major diversification event in mammals took place during the Paleocene-Eocene Thermal Maximum (PETM; $\sim$ 56 Ma; \citealt{bininda-emondsthe2007} but see \citealt{meredithimpacts2011} and \citealt{Stadler12042011}) with the extinctions at K-Pg providing the ``empty'' ecological space required for this diversification to occur.
@@ -506,7 +505,6 @@ We argue that even if the last dimensions of the cladisto-space contain a trivia
 However, by doing so, we included dimensions of the cladisto-space with near zero variance and range (the last dimension's variance was $2\times10^{-14}$ and $1.15\times10^{-15}$ and the range was $7.31\times10^{-7}$ and $3.33\times10^{-7}$ for respectively the Mammaliaformes and Eutheria datasets).
 An alternative method avoids this problem by simply not ordinating the data and using the raw inter-taxon distance matrix \citep[e.g.][]{bensonfaunal2014,Close2015}. 
 However, in both this method and our method, the calculation of the products of ranges and variances is impossible.
-problematic
 Secondly, we used median distance between tips and nodes to centroid as a disparity metric, rather than the classical sum and products of ranges and variances \citep{Wills1994}.
 This metric is not affected by problems with using the last dimensions of the cladisto-space (see above).
 Also, it has several other advantages over other metrics.

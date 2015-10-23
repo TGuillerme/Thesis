@@ -236,7 +236,7 @@ Note that $M_L$ and $M_F$ differ not only because of the region of the matrix af
 We created matrices using all parameter combinations resulting in 125 ($5^3$) ``missing-data'' matrices.
 Note that one of these combinations ($M_L$=0\%; $M_F$=0\% and $N_C$=100) has no missing data so is equivalent to the ``complete'' matrix, thus we have one effectively complete matrix in our 125 ``missing-data'' matrices.
 In practice, we first removed the data following the two missing data parameters $M_L$ and $M_F$ and then removed data following the $N_C$ parameters.
-To avoid avoid matrices containing taxa without any data (morphological or molecular), we repeated the random deletion until the matrices contained at least 5\% of data for any taxon.
+To avoid matrices containing taxa without any data (morphological or molecular), we repeated the random deletion until the matrices contained at least 5\% of data for any taxon.
 Note that the living taxa always had at least 90\% of data (the 1000 molecular characters).
 
 %---------------------------------------------
@@ -402,7 +402,7 @@ and
 The precision of the Bhattacharyya Coefficient is directly related to the number of bins, $n$. If $n$ is low, the overlap will be overestimated and if $n$ is too high, the overlap will be underestimated. In this analysis, we determined the number of bins using Silverman's rule of thumb which states that $n$ should be 0.9 times the minimum of the standard deviation and the interquartile range of the distribution, divided by 1.34 times the sample size of the distribution to the negative one-fifth power (\texttt{bw.nrd0()} function in \texttt{R}; \citealt{silverman1986density}).
 When the Bhattacharyya Coefficient between two distributions is $<$0.05, the distributions are significantly different.
 When this coefficient is $>$0.95 both distributions are significantly similar.
-Values in between these two threshold just show the probability of overlap between the distributions but are not conclusive to assess the similarity or differences between the distributions.
+Values in between these two thresholds just show the probability of overlap between the distributions but are not conclusive to assess the similarity or differences between the distributions.
 
 Note that this is comparable to performing a two-sided t-test, but we use the Bhattacharyya Coefficient here because we are comparing whole distributions not just their means.
 When the Bhattacharyya Coefficient between two distributions is $<$0.05, the distributions are significantly different.
